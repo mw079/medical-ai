@@ -1,0 +1,19 @@
+{
+  "name": "panel-test",
+  "purpose": "Held-out comparison of the baseline and the hand-written panel prompt under policy v4.",
+  "policy": "reviewed-cpt-bedside-v4",
+  "splits": {
+    "same_source_test": 50,
+    "external_test": 50
+  },
+  "modes": [
+    "budget_1000",
+    "budget_4000"
+  ],
+  "arms": {
+    "baseline": null,
+    "panel": "evaluation/harnesses/panel.py"
+  },
+  "runs": 3,
+  "held_out": true
+}

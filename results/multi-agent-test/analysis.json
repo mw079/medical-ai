@@ -1,0 +1,102 @@
+{
+  "budget_1000": {
+    "independent_3": {
+      "encounters": 100,
+      "team_correct": 39,
+      "member_had_correct": 40,
+      "missed_by_selection": 1,
+      "no_member_correct": 60,
+      "proposed_diagnoses": 204
+    },
+    "independent_5": {
+      "encounters": 100,
+      "team_correct": 34,
+      "member_had_correct": 44,
+      "missed_by_selection": 10,
+      "no_member_correct": 56,
+      "proposed_diagnoses": 282
+    },
+    "decentralized_3": {
+      "encounters": 100,
+      "team_correct": 40,
+      "member_had_correct": 45,
+      "missed_by_selection": 5,
+      "no_member_correct": 55,
+      "proposed_diagnoses": 187
+    },
+    "decentralized_5": {
+      "encounters": 100,
+      "team_correct": 37,
+      "member_had_correct": 39,
+      "missed_by_selection": 2,
+      "no_member_correct": 61,
+      "proposed_diagnoses": 257
+    },
+    "centralized_3": {
+      "encounters": 100,
+      "team_correct": 40,
+      "member_had_correct": 42,
+      "missed_by_selection": 2,
+      "no_member_correct": 58,
+      "proposed_diagnoses": 212
+    },
+    "centralized_5": {
+      "encounters": 100,
+      "team_correct": 38,
+      "member_had_correct": 40,
+      "missed_by_selection": 2,
+      "no_member_correct": 60,
+      "proposed_diagnoses": 272
+    }
+  },
+  "budget_4000": {
+    "independent_3": {
+      "encounters": 100,
+      "team_correct": 47,
+      "member_had_correct": 51,
+      "missed_by_selection": 4,
+      "no_member_correct": 49,
+      "proposed_diagnoses": 201
+    },
+    "independent_5": {
+      "encounters": 100,
+      "team_correct": 45,
+      "member_had_correct": 53,
+      "missed_by_selection": 8,
+      "no_member_correct": 47,
+      "proposed_diagnoses": 277
+    },
+    "decentralized_3": {
+      "encounters": 100,
+      "team_correct": 44,
+      "member_had_correct": 46,
+      "missed_by_selection": 2,
+      "no_member_correct": 54,
+      "proposed_diagnoses": 197
+    },
+    "decentralized_5": {
+      "encounters": 100,
+      "team_correct": 44,
+      "member_had_correct": 47,
+      "missed_by_selection": 3,
+      "no_member_correct": 53,
+      "proposed_diagnoses": 271
+    },
+    "centralized_3": {
+      "encounters": 100,
+      "team_correct": 44,
+      "member_had_correct": 46,
+      "missed_by_selection": 2,
+      "no_member_correct": 54,
+      "proposed_diagnoses": 195
+    },
+    "centralized_5": {
+      "encounters": 100,
+      "team_correct": 48,
+      "member_had_correct": 55,
+      "missed_by_selection": 7,
+      "no_member_correct": 45,
+      "proposed_diagnoses": 268
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "evidence-memory-test",
+  "purpose": "Final held-out test of the frozen design chosen on validation: the evidence-first single agent with final reconciliation, playbook and retrieved development lessons (agent evidence_memory). The baseline reuses the three panel-test runs of single GPT-6 Luna.",
+  "policy": "reviewed-cpt-bedside-v4",
+  "splits": {
+    "same_source_test": 50,
+    "external_test": 50
+  },
+  "modes": [
+    "budget_1000",
+    "budget_4000"
+  ],
+  "arms": {
+    "baseline": null,
+    "evidence_memory": {
+      "agent": "evidence_memory"
+    }
+  },
+  "runs": 3,
+  "held_out": true
+}

@@ -1,0 +1,18 @@
+name: tests
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  offline:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+      - name: Offline tests (network blocked)
+        run: uv run --locked tests/run_offline.py
+      - name: Benchmark audit
+        run: uv run --locked tests/run_offline.py --audit-local
+      - name: Recompute every reported number from cases.csv
+        run: python3 experiments/recompute_report.py

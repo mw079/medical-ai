@@ -1,0 +1,1505 @@
+{
+  "name": "multi-agent-test",
+  "policy": "reviewed-cpt-bedside-v4",
+  "runs": 1,
+  "arms": {
+    "baseline": {
+      "model": "gpt-6-luna",
+      "agent": "single",
+      "agents": 1,
+      "harness": null
+    },
+    "panel": {
+      "model": "gpt-6-luna",
+      "agent": "single",
+      "agents": 1,
+      "harness": {
+        "path": "evaluation/harnesses/panel.py",
+        "sha256": "a862aba237f1b54e483e91c87186c9e7fc47a16b61da795a4a4986881aa103e3"
+      }
+    },
+    "independent_3": {
+      "model": "gpt-6-luna",
+      "agent": "independent",
+      "agents": 3,
+      "harness": null
+    },
+    "independent_5": {
+      "model": "gpt-6-luna",
+      "agent": "independent",
+      "agents": 5,
+      "harness": null
+    },
+    "decentralized_3": {
+      "model": "gpt-6-luna",
+      "agent": "decentralized",
+      "agents": 3,
+      "harness": null
+    },
+    "decentralized_5": {
+      "model": "gpt-6-luna",
+      "agent": "decentralized",
+      "agents": 5,
+      "harness": null
+    },
+    "centralized_3": {
+      "model": "gpt-6-luna",
+      "agent": "centralized",
+      "agents": 3,
+      "harness": null
+    },
+    "centralized_5": {
+      "model": "gpt-6-luna",
+      "agent": "centralized",
+      "agents": 5,
+      "harness": null
+    }
+  },
+  "results": {
+    "budget_1000": {
+      "same_source_test": {
+        "baseline": {
+          "runs": 3,
+          "correct_per_run": [
+            14,
+            14,
+            17
+          ],
+          "mean_accuracy": 0.3,
+          "min_accuracy": 0.28,
+          "max_accuracy": 0.34,
+          "avg_medical_cost_usd": 667.4,
+          "avg_agent_calls": 4.4,
+          "avg_agent_input_tokens": 3888.8,
+          "avg_agent_output_tokens": 1729.2,
+          "avg_agent_reasoning_tokens": 1461.0,
+          "avg_agent_cost_usd": 0.0013
+        },
+        "panel": {
+          "runs": 3,
+          "correct_per_run": [
+            15,
+            12,
+            13
+          ],
+          "mean_accuracy": 0.2667,
+          "min_accuracy": 0.24,
+          "max_accuracy": 0.3,
+          "avg_medical_cost_usd": 631.19,
+          "avg_agent_calls": 4.5,
+          "avg_agent_input_tokens": 6891.6,
+          "avg_agent_output_tokens": 2657,
+          "avg_agent_reasoning_tokens": 2147.8,
+          "avg_agent_cost_usd": 0.00217,
+          "delta_points": -3.33,
+          "p_value": 0.5386,
+          "ci95_points": [
+            -12.0,
+            4.67
+          ],
+          "cases_better": [
+            "PMC10039813",
+            "PMC3583747",
+            "PMC5820794",
+            "PMC8544292",
+            "PMC8544693",
+            "PMC9056206"
+          ],
+          "cases_worse": [
+            "PMC10618618",
+            "PMC11658845",
+            "PMC4434215",
+            "PMC6519503",
+            "PMC7253884",
+            "PMC8265096",
+            "PMC9166963",
+            "PMC9405725"
+          ]
+        },
+        "independent_3": {
+          "runs": 1,
+          "correct_per_run": [
+            15
+          ],
+          "mean_accuracy": 0.3,
+          "min_accuracy": 0.3,
+          "max_accuracy": 0.3,
+          "avg_medical_cost_usd": 636.53,
+          "avg_agent_calls": 16.2,
+          "avg_agent_input_tokens": 14754.2,
+          "avg_agent_output_tokens": 5306.0,
+          "avg_agent_reasoning_tokens": 4512.6,
+          "avg_agent_cost_usd": 0.00412,
+          "delta_points": 0.0,
+          "p_value": 1.0,
+          "ci95_points": [
+            -8.67,
+            8.67
+          ],
+          "cases_better": [
+            "PMC10039813",
+            "PMC3583747",
+            "PMC4664794",
+            "PMC5820794",
+            "PMC8544693",
+            "PMC9056206",
+            "PMC9405725"
+          ],
+          "cases_worse": [
+            "PMC10618618",
+            "PMC3350282",
+            "PMC4434215",
+            "PMC5105269",
+            "PMC6158818",
+            "PMC7253884"
+          ]
+        },
+        "independent_5": {
+          "runs": 1,
+          "correct_per_run": [
+            15
+          ],
+          "mean_accuracy": 0.3,
+          "min_accuracy": 0.3,
+          "max_accuracy": 0.3,
+          "avg_medical_cost_usd": 651.05,
+          "avg_agent_calls": 24.7,
+          "avg_agent_input_tokens": 23204.9,
+          "avg_agent_output_tokens": 9263.2,
+          "avg_agent_reasoning_tokens": 7941.6,
+          "avg_agent_cost_usd": 0.00676,
+          "delta_points": 0.0,
+          "p_value": 1.0,
+          "ci95_points": [
+            -8.0,
+            8.0
+          ],
+          "cases_better": [
+            "PMC10039813",
+            "PMC3583747",
+            "PMC4664794",
+            "PMC5820794",
+            "PMC8544693",
+            "PMC9056206"
+          ],
+          "cases_worse": [
+            "PMC10618618",
+            "PMC3350282",
+            "PMC5105269",
+            "PMC6158818",
+            "PMC7253884",
+            "PMC9405725"
+          ]
+        },
+        "decentralized_3": {
+          "runs": 1,
+          "correct_per_run": [
+            15
+          ],
+          "mean_accuracy": 0.3,
+          "min_accuracy": 0.3,
+          "max_accuracy": 0.3,
+          "avg_medical_cost_usd": 623.54,
+          "avg_agent_calls": 23.8,
+          "avg_agent_input_tokens": 23510.1,
+          "avg_agent_output_tokens": 6575.4,
+          "avg_agent_reasoning_tokens": 5431.6,
+          "avg_agent_cost_usd": 0.00543,
+          "delta_points": 0.0,
+          "p_value": 1.0,
+          "ci95_points": [
+            -8.0,
+            7.33
+          ],
+          "cases_better": [
+            "PMC10039813",
+            "PMC10618618",
+            "PMC3583747",
+            "PMC6158818",
+            "PMC8544693",
+            "PMC9056206",
+            "PMC9405725"
+          ],
+          "cases_worse": [
+            "PMC3350282",
+            "PMC4664794",
+            "PMC5105269",
+            "PMC7253884",
+            "PMC8731213"
+          ]
+        },
+        "decentralized_5": {
+          "runs": 1,
+          "correct_per_run": [
+            13
+          ],
+          "mean_accuracy": 0.26,
+          "min_accuracy": 0.26,
+          "max_accuracy": 0.26,
+          "avg_medical_cost_usd": 611.28,
+          "avg_agent_calls": 39.6,
+          "avg_agent_input_tokens": 43168.2,
+          "avg_agent_output_tokens": 11864.0,
+          "avg_agent_reasoning_tokens": 9975.6,
+          "avg_agent_cost_usd": 0.00937,
+          "delta_points": -4.0,
+          "p_value": 0.5159,
+          "ci95_points": [
+            -14.0,
+            5.33
+          ],
+          "cases_better": [
+            "PMC10039813",
+            "PMC4664794",
+            "PMC5105269",
+            "PMC5820794",
+            "PMC7253884",
+            "PMC8544693",
+            "PMC9405725"
+          ],
+          "cases_worse": [
+            "PMC10618618",
+            "PMC3350282",
+            "PMC3583747",
+            "PMC6158818",
+            "PMC8265096",
+            "PMC8731213",
+            "PMC9056206",
+            "PMC9166963"
+          ]
+        },
+        "centralized_3": {
+          "runs": 1,
+          "correct_per_run": [
+            15
+          ],
+          "mean_accuracy": 0.3,
+          "min_accuracy": 0.3,
+          "max_accuracy": 0.3,
+          "avg_medical_cost_usd": 699.02,
+          "avg_agent_calls": 20.5,
+          "avg_agent_input_tokens": 22023.4,
+          "avg_agent_output_tokens": 11453.3,
+          "avg_agent_reasoning_tokens": 9506.7,
+          "avg_agent_cost_usd": 0.00829,
+          "delta_points": 0.0,
+          "p_value": 1.0,
+          "ci95_points": [
+            -9.33,
+            10.0
+          ],
+          "cases_better": [
+            "PMC10039813",
+            "PMC3350282",
+            "PMC4664794",
+            "PMC5820794",
+            "PMC6158818",
+            "PMC8785026"
+          ],
+          "cases_worse": [
+            "PMC10618618",
+            "PMC3583747",
+            "PMC5105269",
+            "PMC7253884",
+            "PMC8544693",
+            "PMC9056206",
+            "PMC9405725"
+          ]
+        },
+        "centralized_5": {
+          "runs": 1,
+          "correct_per_run": [
+            16
+          ],
+          "mean_accuracy": 0.32,
+          "min_accuracy": 0.32,
+          "max_accuracy": 0.32,
+          "avg_medical_cost_usd": 691.11,
+          "avg_agent_calls": 31.9,
+          "avg_agent_input_tokens": 36597.2,
+          "avg_agent_output_tokens": 17789.6,
+          "avg_agent_reasoning_tokens": 14719.4,
+          "avg_agent_cost_usd": 0.01322,
+          "delta_points": 2.0,
+          "p_value": 0.7621,
+          "ci95_points": [
+            -6.0,
+            10.67
+          ],
+          "cases_better": [
+            "PMC10039813",
+            "PMC5105269",
+            "PMC5820794",
+            "PMC6158818",
+            "PMC8785026",
+            "PMC9056206",
+            "PMC9405725"
+          ],
+          "cases_worse": [
+            "PMC10618618",
+            "PMC3350282",
+            "PMC3583747",
+            "PMC4664794",
+            "PMC7253884",
+            "PMC8544693"
+          ]
+        }
+      },
+      "external_test": {
+        "baseline": {
+          "runs": 3,
+          "correct_per_run": [
+            22,
+            21,
+            23
+          ],
+          "mean_accuracy": 0.44,
+          "min_accuracy": 0.42,
+          "max_accuracy": 0.46,
+          "avg_medical_cost_usd": 601.51,
+          "avg_agent_calls": 4.1,
+          "avg_agent_input_tokens": 3621.0,
+          "avg_agent_output_tokens": 1538.8,
+          "avg_agent_reasoning_tokens": 1282.3,
+          "avg_agent_cost_usd": 0.00117
+        },
+        "panel": {
+          "runs": 3,
+          "correct_per_run": [
+            22,
+            24,
+            23
+          ],
+          "mean_accuracy": 0.46,
+          "min_accuracy": 0.44,
+          "max_accuracy": 0.48,
+          "avg_medical_cost_usd": 583.06,
+          "avg_agent_calls": 4.2,
+          "avg_agent_input_tokens": 6210.3,
+          "avg_agent_output_tokens": 2239.2,
+          "avg_agent_reasoning_tokens": 1741.3,
+          "avg_agent_cost_usd": 0.00188,
+          "delta_points": 2.0,
+          "p_value": 0.7455,
+          "ci95_points": [
+            -5.33,
+            10.0
+          ],
+          "cases_better": [
+            "PMC11368706",
+            "PMC11426307",
+            "PMC11456304",
+            "PMC11477508",
+            "PMC11530288",
+            "PMC11551029",
+            "PMC11570442",
+            "PMC11581448",
+            "PMC11601975"
+          ],
+          "cases_worse": [
+            "PMC11415134",
+            "PMC11416202",
+            "PMC11445712",
+            "PMC11480928",
+            "PMC11512739",
+            "PMC11596470",
+            "PMC11628383",
+            "PMC11640520",
+            "PMC11647062"
+          ]
+        },
+        "independent_3": {
+          "runs": 1,
+          "correct_per_run": [
+            24
+          ],
+          "mean_accuracy": 0.48,
+          "min_accuracy": 0.48,
+          "max_accuracy": 0.48,
+          "avg_medical_cost_usd": 580.06,
+          "avg_agent_calls": 16.0,
+          "avg_agent_input_tokens": 14645.3,
+          "avg_agent_output_tokens": 4968.4,
+          "avg_agent_reasoning_tokens": 4168.1,
+          "avg_agent_cost_usd": 0.00389,
+          "delta_points": 4.0,
+          "p_value": 0.4423,
+          "ci95_points": [
+            -4.0,
+            12.67
+          ],
+          "cases_better": [
+            "PMC11368706",
+            "PMC11426307",
+            "PMC11445712",
+            "PMC11455270",
+            "PMC11471037",
+            "PMC11530288",
+            "PMC11550582",
+            "PMC11551029",
+            "PMC11593470",
+            "PMC11601975"
+          ],
+          "cases_worse": [
+            "PMC11456304",
+            "PMC11477508",
+            "PMC11512739",
+            "PMC11570442",
+            "PMC11593787",
+            "PMC11596470",
+            "PMC11640520"
+          ]
+        },
+        "independent_5": {
+          "runs": 1,
+          "correct_per_run": [
+            19
+          ],
+          "mean_accuracy": 0.38,
+          "min_accuracy": 0.38,
+          "max_accuracy": 0.38,
+          "avg_medical_cost_usd": 636.96,
+          "avg_agent_calls": 25.0,
+          "avg_agent_input_tokens": 22704.2,
+          "avg_agent_output_tokens": 8404.8,
+          "avg_agent_reasoning_tokens": 7052.7,
+          "avg_agent_cost_usd": 0.00631,
+          "delta_points": -6.0,
+          "p_value": 0.3906,
+          "ci95_points": [
+            -18.0,
+            6.0
+          ],
+          "cases_better": [
+            "PMC11426307",
+            "PMC11445712",
+            "PMC11455270",
+            "PMC11471037",
+            "PMC11530288",
+            "PMC11550582",
+            "PMC11570442",
+            "PMC11581448",
+            "PMC11593470",
+            "PMC11601975"
+          ],
+          "cases_worse": [
+            "PMC11415134",
+            "PMC11416202",
+            "PMC11456304",
+            "PMC11477508",
+            "PMC11512739",
+            "PMC11551029",
+            "PMC11593787",
+            "PMC11595676",
+            "PMC11596470",
+            "PMC11628383",
+            "PMC11640520",
+            "PMC11647062"
+          ]
+        },
+        "decentralized_3": {
+          "runs": 1,
+          "correct_per_run": [
+            25
+          ],
+          "mean_accuracy": 0.5,
+          "min_accuracy": 0.5,
+          "max_accuracy": 0.5,
+          "avg_medical_cost_usd": 569.93,
+          "avg_agent_calls": 23.4,
+          "avg_agent_input_tokens": 23846.6,
+          "avg_agent_output_tokens": 5920.1,
+          "avg_agent_reasoning_tokens": 4767.1,
+          "avg_agent_cost_usd": 0.0051,
+          "delta_points": 6.0,
+          "p_value": 0.3799,
+          "ci95_points": [
+            -6.0,
+            17.33
+          ],
+          "cases_better": [
+            "PMC11368706",
+            "PMC11426307",
+            "PMC11445712",
+            "PMC11455270",
+            "PMC11471037",
+            "PMC11512739",
+            "PMC11530288",
+            "PMC11550582",
+            "PMC11551029",
+            "PMC11570442",
+            "PMC11581448",
+            "PMC11593470",
+            "PMC11593787",
+            "PMC11601975"
+          ],
+          "cases_worse": [
+            "PMC11416202",
+            "PMC11456304",
+            "PMC11477508",
+            "PMC11595676",
+            "PMC11596470",
+            "PMC11640520",
+            "PMC11645299"
+          ]
+        },
+        "decentralized_5": {
+          "runs": 1,
+          "correct_per_run": [
+            24
+          ],
+          "mean_accuracy": 0.48,
+          "min_accuracy": 0.48,
+          "max_accuracy": 0.48,
+          "avg_medical_cost_usd": 625.94,
+          "avg_agent_calls": 38.9,
+          "avg_agent_input_tokens": 41949.9,
+          "avg_agent_output_tokens": 10304.2,
+          "avg_agent_reasoning_tokens": 8415.7,
+          "avg_agent_cost_usd": 0.00858,
+          "delta_points": 4.0,
+          "p_value": 0.4961,
+          "ci95_points": [
+            -5.33,
+            13.33
+          ],
+          "cases_better": [
+            "PMC11368706",
+            "PMC11426307",
+            "PMC11445712",
+            "PMC11477508",
+            "PMC11512739",
+            "PMC11550582",
+            "PMC11570442",
+            "PMC11593470",
+            "PMC11593787",
+            "PMC11601975"
+          ],
+          "cases_worse": [
+            "PMC11455270",
+            "PMC11456304",
+            "PMC11471037",
+            "PMC11530288",
+            "PMC11551029",
+            "PMC11596470",
+            "PMC11640520"
+          ]
+        },
+        "centralized_3": {
+          "runs": 1,
+          "correct_per_run": [
+            25
+          ],
+          "mean_accuracy": 0.5,
+          "min_accuracy": 0.5,
+          "max_accuracy": 0.5,
+          "avg_medical_cost_usd": 644.46,
+          "avg_agent_calls": 18.2,
+          "avg_agent_input_tokens": 19111.4,
+          "avg_agent_output_tokens": 9464.5,
+          "avg_agent_reasoning_tokens": 7685.3,
+          "avg_agent_cost_usd": 0.00695,
+          "delta_points": 6.0,
+          "p_value": 0.3887,
+          "ci95_points": [
+            -6.0,
+            18.0
+          ],
+          "cases_better": [
+            "PMC11368706",
+            "PMC11426307",
+            "PMC11445712",
+            "PMC11455270",
+            "PMC11471037",
+            "PMC11477508",
+            "PMC11530288",
+            "PMC11534593",
+            "PMC11550582",
+            "PMC11570442",
+            "PMC11581448",
+            "PMC11593470",
+            "PMC11596470",
+            "PMC11601975"
+          ],
+          "cases_worse": [
+            "PMC11415134",
+            "PMC11446622",
+            "PMC11456304",
+            "PMC11512739",
+            "PMC11551029",
+            "PMC11593787",
+            "PMC11628383",
+            "PMC11640520"
+          ]
+        },
+        "centralized_5": {
+          "runs": 1,
+          "correct_per_run": [
+            22
+          ],
+          "mean_accuracy": 0.44,
+          "min_accuracy": 0.44,
+          "max_accuracy": 0.44,
+          "avg_medical_cost_usd": 629.75,
+          "avg_agent_calls": 26.2,
+          "avg_agent_input_tokens": 28112.5,
+          "avg_agent_output_tokens": 13305,
+          "avg_agent_reasoning_tokens": 10699.9,
+          "avg_agent_cost_usd": 0.00992,
+          "delta_points": 0.0,
+          "p_value": 1.0,
+          "ci95_points": [
+            -10.0,
+            10.0
+          ],
+          "cases_better": [
+            "PMC11426307",
+            "PMC11471037",
+            "PMC11512739",
+            "PMC11539359",
+            "PMC11550582",
+            "PMC11570442",
+            "PMC11593470",
+            "PMC11593787",
+            "PMC11601975"
+          ],
+          "cases_worse": [
+            "PMC11445712",
+            "PMC11455270",
+            "PMC11456304",
+            "PMC11465958",
+            "PMC11477508",
+            "PMC11530288",
+            "PMC11551029",
+            "PMC11596470",
+            "PMC11640520"
+          ]
+        }
+      },
+      "pooled": {
+        "panel": {
+          "delta_points": -0.67,
+          "p_value": 0.909,
+          "ci95_points": [
+            -6.33,
+            4.67
+          ]
+        },
+        "independent_3": {
+          "delta_points": 2.0,
+          "p_value": 0.5966,
+          "ci95_points": [
+            -4.0,
+            8.0
+          ]
+        },
+        "independent_5": {
+          "delta_points": -3.0,
+          "p_value": 0.476,
+          "ci95_points": [
+            -10.33,
+            4.33
+          ]
+        },
+        "decentralized_3": {
+          "delta_points": 3.0,
+          "p_value": 0.4534,
+          "ci95_points": [
+            -4.0,
+            9.67
+          ]
+        },
+        "decentralized_5": {
+          "delta_points": 0.0,
+          "p_value": 1.0,
+          "ci95_points": [
+            -6.67,
+            6.67
+          ]
+        },
+        "centralized_3": {
+          "delta_points": 3.0,
+          "p_value": 0.5035,
+          "ci95_points": [
+            -4.67,
+            11.0
+          ]
+        },
+        "centralized_5": {
+          "delta_points": 1.0,
+          "p_value": 0.848,
+          "ci95_points": [
+            -5.33,
+            7.67
+          ]
+        }
+      }
+    },
+    "budget_4000": {
+      "same_source_test": {
+        "baseline": {
+          "runs": 3,
+          "correct_per_run": [
+            20,
+            23,
+            16
+          ],
+          "mean_accuracy": 0.3933,
+          "min_accuracy": 0.32,
+          "max_accuracy": 0.46,
+          "avg_medical_cost_usd": 1634.33,
+          "avg_agent_calls": 4.6,
+          "avg_agent_input_tokens": 4409.4,
+          "avg_agent_output_tokens": 2006.5,
+          "avg_agent_reasoning_tokens": 1709.6,
+          "avg_agent_cost_usd": 0.00151
+        },
+        "panel": {
+          "runs": 3,
+          "correct_per_run": [
+            26,
+            21,
+            18
+          ],
+          "mean_accuracy": 0.4333,
+          "min_accuracy": 0.36,
+          "max_accuracy": 0.52,
+          "avg_medical_cost_usd": 1632.49,
+          "avg_agent_calls": 5.0,
+          "avg_agent_input_tokens": 8451.0,
+          "avg_agent_output_tokens": 2964.2,
+          "avg_agent_reasoning_tokens": 2417.3,
+          "avg_agent_cost_usd": 0.00251,
+          "delta_points": 4.0,
+          "p_value": 0.4206,
+          "ci95_points": [
+            -4.0,
+            12.0
+          ],
+          "cases_better": [
+            "PMC10039813",
+            "PMC11202767",
+            "PMC3350282",
+            "PMC4470191",
+            "PMC5134285",
+            "PMC5735624",
+            "PMC5820794",
+            "PMC5925152",
+            "PMC6726168",
+            "PMC7253884",
+            "PMC8544292",
+            "PMC8544693",
+            "PMC9405725",
+            "PMC9566503"
+          ],
+          "cases_worse": [
+            "PMC10618618",
+            "PMC2958974",
+            "PMC3574658",
+            "PMC3583747",
+            "PMC4434215",
+            "PMC8437670",
+            "PMC8752925",
+            "PMC8785026",
+            "PMC9056206"
+          ]
+        },
+        "independent_3": {
+          "runs": 1,
+          "correct_per_run": [
+            17
+          ],
+          "mean_accuracy": 0.34,
+          "min_accuracy": 0.34,
+          "max_accuracy": 0.34,
+          "avg_medical_cost_usd": 1613.73,
+          "avg_agent_calls": 16.3,
+          "avg_agent_input_tokens": 15929.9,
+          "avg_agent_output_tokens": 5859.7,
+          "avg_agent_reasoning_tokens": 4990.2,
+          "avg_agent_cost_usd": 0.00449,
+          "delta_points": -5.33,
+          "p_value": 0.4327,
+          "ci95_points": [
+            -16.67,
+            6.0
+          ],
+          "cases_better": [
+            "PMC10039813",
+            "PMC5735624",
+            "PMC5820794",
+            "PMC7253884",
+            "PMC8544292",
+            "PMC8544693",
+            "PMC9405725"
+          ],
+          "cases_worse": [
+            "PMC10618618",
+            "PMC11202767",
+            "PMC2958974",
+            "PMC3574658",
+            "PMC3583747",
+            "PMC4010020",
+            "PMC5134285",
+            "PMC6158818",
+            "PMC6519503",
+            "PMC8338201",
+            "PMC8437670",
+            "PMC8752925",
+            "PMC8785026",
+            "PMC9566503"
+          ]
+        },
+        "independent_5": {
+          "runs": 1,
+          "correct_per_run": [
+            19
+          ],
+          "mean_accuracy": 0.38,
+          "min_accuracy": 0.38,
+          "max_accuracy": 0.38,
+          "avg_medical_cost_usd": 1555.21,
+          "avg_agent_calls": 25.1,
+          "avg_agent_input_tokens": 24839.3,
+          "avg_agent_output_tokens": 9455,
+          "avg_agent_reasoning_tokens": 8034.3,
+          "avg_agent_cost_usd": 0.00699,
+          "delta_points": -1.33,
+          "p_value": 0.9077,
+          "ci95_points": [
+            -12.0,
+            10.0
+          ],
+          "cases_better": [
+            "PMC2958974",
+            "PMC3583747",
+            "PMC5925152",
+            "PMC8437670",
+            "PMC8544292",
+            "PMC8544693",
+            "PMC9405725",
+            "PMC9566503"
+          ],
+          "cases_worse": [
+            "PMC10039813",
+            "PMC10618618",
+            "PMC11202767",
+            "PMC3574658",
+            "PMC4010020",
+            "PMC5134285",
+            "PMC5820794",
+            "PMC6158818",
+            "PMC6519503",
+            "PMC7253884",
+            "PMC8752925",
+            "PMC9056206"
+          ]
+        },
+        "decentralized_3": {
+          "runs": 1,
+          "correct_per_run": [
+            18
+          ],
+          "mean_accuracy": 0.36,
+          "min_accuracy": 0.36,
+          "max_accuracy": 0.36,
+          "avg_medical_cost_usd": 1765.63,
+          "avg_agent_calls": 26,
+          "avg_agent_input_tokens": 28413.0,
+          "avg_agent_output_tokens": 7580.5,
+          "avg_agent_reasoning_tokens": 6255.8,
+          "avg_agent_cost_usd": 0.00635,
+          "delta_points": -3.33,
+          "p_value": 0.6507,
+          "ci95_points": [
+            -14.0,
+            8.0
+          ],
+          "cases_better": [
+            "PMC10618618",
+            "PMC5105269",
+            "PMC5735624",
+            "PMC8544292",
+            "PMC9405725",
+            "PMC9566503"
+          ],
+          "cases_worse": [
+            "PMC10039813",
+            "PMC11202767",
+            "PMC2958974",
+            "PMC3574658",
+            "PMC3583747",
+            "PMC4010020",
+            "PMC5134285",
+            "PMC5820794",
+            "PMC6519503",
+            "PMC7253884",
+            "PMC8437670",
+            "PMC8544693",
+            "PMC8752925",
+            "PMC8785026"
+          ]
+        },
+        "decentralized_5": {
+          "runs": 1,
+          "correct_per_run": [
+            17
+          ],
+          "mean_accuracy": 0.34,
+          "min_accuracy": 0.34,
+          "max_accuracy": 0.34,
+          "avg_medical_cost_usd": 1532.15,
+          "avg_agent_calls": 42.6,
+          "avg_agent_input_tokens": 51759.1,
+          "avg_agent_output_tokens": 12940.4,
+          "avg_agent_reasoning_tokens": 10757.4,
+          "avg_agent_cost_usd": 0.0105,
+          "delta_points": -5.33,
+          "p_value": 0.3181,
+          "ci95_points": [
+            -14.0,
+            3.33
+          ],
+          "cases_better": [
+            "PMC10039813",
+            "PMC3574658",
+            "PMC5134285",
+            "PMC5925152",
+            "PMC8437670",
+            "PMC8544693"
+          ],
+          "cases_worse": [
+            "PMC10618618",
+            "PMC11202767",
+            "PMC2958974",
+            "PMC3583747",
+            "PMC4010020",
+            "PMC5820794",
+            "PMC6519503",
+            "PMC7253884",
+            "PMC8731213",
+            "PMC8752925",
+            "PMC9056206",
+            "PMC9405725",
+            "PMC9566503"
+          ]
+        },
+        "centralized_3": {
+          "runs": 1,
+          "correct_per_run": [
+            19
+          ],
+          "mean_accuracy": 0.38,
+          "min_accuracy": 0.38,
+          "max_accuracy": 0.38,
+          "avg_medical_cost_usd": 1801.13,
+          "avg_agent_calls": 21.8,
+          "avg_agent_input_tokens": 24692.2,
+          "avg_agent_output_tokens": 12261,
+          "avg_agent_reasoning_tokens": 10163.5,
+          "avg_agent_cost_usd": 0.00903,
+          "delta_points": -1.33,
+          "p_value": 0.9017,
+          "ci95_points": [
+            -10.67,
+            8.67
+          ],
+          "cases_better": [
+            "PMC10039813",
+            "PMC3350282",
+            "PMC6519503",
+            "PMC7253884",
+            "PMC8544292",
+            "PMC8544693",
+            "PMC9405725"
+          ],
+          "cases_worse": [
+            "PMC10618618",
+            "PMC11202767",
+            "PMC2958974",
+            "PMC3574658",
+            "PMC3583747",
+            "PMC4010020",
+            "PMC5134285",
+            "PMC5820794",
+            "PMC8437670",
+            "PMC8752925",
+            "PMC8785026",
+            "PMC9566503"
+          ]
+        },
+        "centralized_5": {
+          "runs": 1,
+          "correct_per_run": [
+            22
+          ],
+          "mean_accuracy": 0.44,
+          "min_accuracy": 0.44,
+          "max_accuracy": 0.44,
+          "avg_medical_cost_usd": 1882.81,
+          "avg_agent_calls": 34.9,
+          "avg_agent_input_tokens": 41404.1,
+          "avg_agent_output_tokens": 20206.9,
+          "avg_agent_reasoning_tokens": 16816.1,
+          "avg_agent_cost_usd": 0.01502,
+          "delta_points": 4.67,
+          "p_value": 0.4739,
+          "ci95_points": [
+            -6.0,
+            15.33
+          ],
+          "cases_better": [
+            "PMC10039813",
+            "PMC10233214",
+            "PMC3350282",
+            "PMC3574658",
+            "PMC6519503",
+            "PMC7253884",
+            "PMC8544292",
+            "PMC8544693",
+            "PMC9405725",
+            "PMC9566503"
+          ],
+          "cases_worse": [
+            "PMC10618618",
+            "PMC11202767",
+            "PMC2958974",
+            "PMC3583747",
+            "PMC4010020",
+            "PMC5134285",
+            "PMC5820794",
+            "PMC6158818",
+            "PMC8437670",
+            "PMC8752925"
+          ]
+        }
+      },
+      "external_test": {
+        "baseline": {
+          "runs": 3,
+          "correct_per_run": [
+            27,
+            27,
+            26
+          ],
+          "mean_accuracy": 0.5333,
+          "min_accuracy": 0.52,
+          "max_accuracy": 0.54,
+          "avg_medical_cost_usd": 1327.6,
+          "avg_agent_calls": 3.9,
+          "avg_agent_input_tokens": 3537.2,
+          "avg_agent_output_tokens": 1460.3,
+          "avg_agent_reasoning_tokens": 1188.1,
+          "avg_agent_cost_usd": 0.00113
+        },
+        "panel": {
+          "runs": 3,
+          "correct_per_run": [
+            31,
+            30,
+            32
+          ],
+          "mean_accuracy": 0.62,
+          "min_accuracy": 0.6,
+          "max_accuracy": 0.64,
+          "avg_medical_cost_usd": 1337.65,
+          "avg_agent_calls": 4.2,
+          "avg_agent_input_tokens": 6586.6,
+          "avg_agent_output_tokens": 2213.7,
+          "avg_agent_reasoning_tokens": 1694.9,
+          "avg_agent_cost_usd": 0.00191,
+          "delta_points": 8.67,
+          "p_value": 0.0582,
+          "ci95_points": [
+            0.67,
+            16.67
+          ],
+          "cases_better": [
+            "PMC11366406",
+            "PMC11385072",
+            "PMC11401631",
+            "PMC11415134",
+            "PMC11415135",
+            "PMC11456304",
+            "PMC11470198",
+            "PMC11527655",
+            "PMC11530288",
+            "PMC11532894",
+            "PMC11539359",
+            "PMC11550582",
+            "PMC11551029",
+            "PMC11581448",
+            "PMC11587022",
+            "PMC11593470",
+            "PMC11595676"
+          ],
+          "cases_worse": [
+            "PMC11416202",
+            "PMC11446498",
+            "PMC11446622",
+            "PMC11570442",
+            "PMC11596470",
+            "PMC11606399",
+            "PMC11628383"
+          ]
+        },
+        "independent_3": {
+          "runs": 1,
+          "correct_per_run": [
+            30
+          ],
+          "mean_accuracy": 0.6,
+          "min_accuracy": 0.6,
+          "max_accuracy": 0.6,
+          "avg_medical_cost_usd": 1413.23,
+          "avg_agent_calls": 14.9,
+          "avg_agent_input_tokens": 14116.8,
+          "avg_agent_output_tokens": 4713.6,
+          "avg_agent_reasoning_tokens": 3903.4,
+          "avg_agent_cost_usd": 0.00373,
+          "delta_points": 6.67,
+          "p_value": 0.3288,
+          "ci95_points": [
+            -5.33,
+            18.67
+          ],
+          "cases_better": [
+            "PMC11366406",
+            "PMC11368706",
+            "PMC11401631",
+            "PMC11415134",
+            "PMC11445712",
+            "PMC11456304",
+            "PMC11470198",
+            "PMC11477508",
+            "PMC11527655",
+            "PMC11530288",
+            "PMC11539359",
+            "PMC11587022",
+            "PMC11595676",
+            "PMC11596470",
+            "PMC11628383"
+          ],
+          "cases_worse": [
+            "PMC11385072",
+            "PMC11471037",
+            "PMC11532894",
+            "PMC11550582",
+            "PMC11551029",
+            "PMC11581448",
+            "PMC11593470",
+            "PMC11593787",
+            "PMC11606399"
+          ]
+        },
+        "independent_5": {
+          "runs": 1,
+          "correct_per_run": [
+            26
+          ],
+          "mean_accuracy": 0.52,
+          "min_accuracy": 0.52,
+          "max_accuracy": 0.52,
+          "avg_medical_cost_usd": 1405.32,
+          "avg_agent_calls": 23.3,
+          "avg_agent_input_tokens": 22599.9,
+          "avg_agent_output_tokens": 7909.6,
+          "avg_agent_reasoning_tokens": 6508.2,
+          "avg_agent_cost_usd": 0.00603,
+          "delta_points": -1.33,
+          "p_value": 0.9132,
+          "ci95_points": [
+            -13.33,
+            10.0
+          ],
+          "cases_better": [
+            "PMC11366406",
+            "PMC11385072",
+            "PMC11415134",
+            "PMC11445712",
+            "PMC11477508",
+            "PMC11527655",
+            "PMC11530288",
+            "PMC11532894",
+            "PMC11550582",
+            "PMC11587022",
+            "PMC11593470",
+            "PMC11596470"
+          ],
+          "cases_worse": [
+            "PMC11368706",
+            "PMC11401631",
+            "PMC11446498",
+            "PMC11456304",
+            "PMC11471037",
+            "PMC11551029",
+            "PMC11581448",
+            "PMC11593787",
+            "PMC11595676",
+            "PMC11606399",
+            "PMC11628383"
+          ]
+        },
+        "decentralized_3": {
+          "runs": 1,
+          "correct_per_run": [
+            26
+          ],
+          "mean_accuracy": 0.52,
+          "min_accuracy": 0.52,
+          "max_accuracy": 0.52,
+          "avg_medical_cost_usd": 1327.25,
+          "avg_agent_calls": 22.0,
+          "avg_agent_input_tokens": 23212.8,
+          "avg_agent_output_tokens": 5748.2,
+          "avg_agent_reasoning_tokens": 4591.5,
+          "avg_agent_cost_usd": 0.00498,
+          "delta_points": -1.33,
+          "p_value": 0.9133,
+          "ci95_points": [
+            -12.67,
+            10.0
+          ],
+          "cases_better": [
+            "PMC11366406",
+            "PMC11385072",
+            "PMC11401631",
+            "PMC11402539",
+            "PMC11415134",
+            "PMC11456304",
+            "PMC11471037",
+            "PMC11477508",
+            "PMC11530288",
+            "PMC11551029",
+            "PMC11593470",
+            "PMC11595676",
+            "PMC11596470",
+            "PMC11628383"
+          ],
+          "cases_worse": [
+            "PMC11368706",
+            "PMC11416202",
+            "PMC11445712",
+            "PMC11446622",
+            "PMC11527655",
+            "PMC11532894",
+            "PMC11550582",
+            "PMC11570442",
+            "PMC11581448",
+            "PMC11593787",
+            "PMC11606399"
+          ]
+        },
+        "decentralized_5": {
+          "runs": 1,
+          "correct_per_run": [
+            27
+          ],
+          "mean_accuracy": 0.54,
+          "min_accuracy": 0.54,
+          "max_accuracy": 0.54,
+          "avg_medical_cost_usd": 1304.42,
+          "avg_agent_calls": 34.6,
+          "avg_agent_input_tokens": 38435.9,
+          "avg_agent_output_tokens": 8863.1,
+          "avg_agent_reasoning_tokens": 7046.1,
+          "avg_agent_cost_usd": 0.00745,
+          "delta_points": 0.67,
+          "p_value": 1.0,
+          "ci95_points": [
+            -11.33,
+            12.0
+          ],
+          "cases_better": [
+            "PMC11366406",
+            "PMC11385072",
+            "PMC11401631",
+            "PMC11415134",
+            "PMC11445712",
+            "PMC11447945",
+            "PMC11470198",
+            "PMC11527655",
+            "PMC11530288",
+            "PMC11532894",
+            "PMC11606399",
+            "PMC11628383",
+            "PMC11633083"
+          ],
+          "cases_worse": [
+            "PMC11368706",
+            "PMC11456304",
+            "PMC11471037",
+            "PMC11477508",
+            "PMC11550582",
+            "PMC11551029",
+            "PMC11570442",
+            "PMC11581448",
+            "PMC11593470",
+            "PMC11593787",
+            "PMC11595676",
+            "PMC11596470"
+          ]
+        },
+        "centralized_3": {
+          "runs": 1,
+          "correct_per_run": [
+            25
+          ],
+          "mean_accuracy": 0.5,
+          "min_accuracy": 0.5,
+          "max_accuracy": 0.5,
+          "avg_medical_cost_usd": 1600.03,
+          "avg_agent_calls": 19.6,
+          "avg_agent_input_tokens": 21294.9,
+          "avg_agent_output_tokens": 9994.7,
+          "avg_agent_reasoning_tokens": 8061.4,
+          "avg_agent_cost_usd": 0.0075,
+          "delta_points": -3.33,
+          "p_value": 0.6804,
+          "ci95_points": [
+            -16.0,
+            9.33
+          ],
+          "cases_better": [
+            "PMC11366406",
+            "PMC11385072",
+            "PMC11402539",
+            "PMC11415134",
+            "PMC11445712",
+            "PMC11477508",
+            "PMC11527655",
+            "PMC11530288",
+            "PMC11587022",
+            "PMC11595676",
+            "PMC11596470",
+            "PMC11628383"
+          ],
+          "cases_worse": [
+            "PMC11368706",
+            "PMC11401631",
+            "PMC11416202",
+            "PMC11446622",
+            "PMC11456304",
+            "PMC11471037",
+            "PMC11532894",
+            "PMC11550582",
+            "PMC11551029",
+            "PMC11581448",
+            "PMC11593470",
+            "PMC11593787",
+            "PMC11606399"
+          ]
+        },
+        "centralized_5": {
+          "runs": 1,
+          "correct_per_run": [
+            26
+          ],
+          "mean_accuracy": 0.52,
+          "min_accuracy": 0.52,
+          "max_accuracy": 0.52,
+          "avg_medical_cost_usd": 1423.08,
+          "avg_agent_calls": 26.8,
+          "avg_agent_input_tokens": 30211.0,
+          "avg_agent_output_tokens": 13930.9,
+          "avg_agent_reasoning_tokens": 11214.8,
+          "avg_agent_cost_usd": 0.01052,
+          "delta_points": -1.33,
+          "p_value": 0.9112,
+          "ci95_points": [
+            -12.67,
+            10.67
+          ],
+          "cases_better": [
+            "PMC11385072",
+            "PMC11402539",
+            "PMC11415134",
+            "PMC11456304",
+            "PMC11527655",
+            "PMC11530288",
+            "PMC11532894",
+            "PMC11539359",
+            "PMC11551029",
+            "PMC11587022",
+            "PMC11595676",
+            "PMC11606399",
+            "PMC11628383"
+          ],
+          "cases_worse": [
+            "PMC11366406",
+            "PMC11368706",
+            "PMC11401631",
+            "PMC11445712",
+            "PMC11446622",
+            "PMC11471037",
+            "PMC11477508",
+            "PMC11550582",
+            "PMC11581448",
+            "PMC11593470",
+            "PMC11593787",
+            "PMC11596470",
+            "PMC11645299"
+          ]
+        }
+      },
+      "pooled": {
+        "panel": {
+          "delta_points": 6.33,
+          "p_value": 0.0416,
+          "ci95_points": [
+            0.67,
+            12.0
+          ]
+        },
+        "independent_3": {
+          "delta_points": 0.67,
+          "p_value": 0.9346,
+          "ci95_points": [
+            -7.33,
+            8.67
+          ]
+        },
+        "independent_5": {
+          "delta_points": -1.33,
+          "p_value": 0.803,
+          "ci95_points": [
+            -9.0,
+            6.33
+          ]
+        },
+        "decentralized_3": {
+          "delta_points": -2.33,
+          "p_value": 0.6367,
+          "ci95_points": [
+            -10.33,
+            5.67
+          ]
+        },
+        "decentralized_5": {
+          "delta_points": -2.33,
+          "p_value": 0.6,
+          "ci95_points": [
+            -9.33,
+            5.0
+          ]
+        },
+        "centralized_3": {
+          "delta_points": -2.33,
+          "p_value": 0.6311,
+          "ci95_points": [
+            -10.33,
+            5.67
+          ]
+        },
+        "centralized_5": {
+          "delta_points": 1.67,
+          "p_value": 0.7504,
+          "ci95_points": [
+            -6.0,
+            9.67
+          ]
+        }
+      }
+    }
+  }
+}

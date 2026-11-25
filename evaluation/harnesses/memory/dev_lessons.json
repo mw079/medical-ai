@@ -1,0 +1,1140 @@
+{
+  "built": "2026-11-24",
+  "split": "development",
+  "model": "gpt-6-luna",
+  "reasoning": "medium",
+  "reflector_prompt": "You review how a diagnostic agent handled one training case, to write a lesson card\nthat helps the agent on future, different patients. The agent saw only the opening and the replies\nto its own questions and tests; the documented findings below are everything the case contains.\nUse only the supplied data. Return one JSON object:\n{\"presentation\": \"...\", \"decisive_evidence\": [\"...\"], \"missteps\": [\"...\"], \"strategy\": \"...\"}\n\n- presentation: the opening pattern in general clinical terms (age group, key symptoms, timing),\n  at most 300 characters, without naming the diagnosis.\n- decisive_evidence: up to 5 findings or tests that established the diagnosis, each naming the\n  question or test to request and what it showed.\n- missteps: up to 4 concrete mistakes in the failing trajectories, such as diagnosing before a\n  decisive test, ordering tests the case did not contain, or answering too broadly. Use [] if\n  every trajectory was correct.\n- strategy: one general lesson for patients with a similar presentation, at most 400 characters.\nEach list item is at most 200 characters.",
+  "source": "experiments/specs/memory_dev_traces.json",
+  "cards": [
+    {
+      "case_id": "PMC9169291",
+      "presentation": "Newborn referred in the first week of life with axial hypotonia, poor head control and sucking, and an aged-appearing face.",
+      "decisive_evidence": [
+        "Ask about connective-tissue and limb findings / examine the newborn: joint hypermobility, arachnodactyly, finger contractures, lax translucent skin, and characteristic facial features were documented.",
+        "Request echocardiography: aortic root measured 13 mm at the sinus (Z score +3), indicating aortic root dilation.",
+        "Request trio whole-exome sequencing: a novel heterozygous de novo missense variant, c.1378C>G (p.Arg460Gly), was found in TGFBR2."
+      ],
+      "missteps": [
+        "Several trajectories diagnosed De Barsy syndrome from aged appearance and lax skin before obtaining decisive cardiac or genetic evidence.",
+        "Repeated questions about sparse hair, loss of fat, prominent veins, and corneal clouding/cataracts did not establish those findings; some were not documented.",
+        "The Marfan trajectory made a final diagnosis despite FBN1/FBN2 testing being undocumented and the eye exam showing no other ocular abnormalities."
+      ],
+      "strategy": "In a hypotonic newborn with connective-tissue, craniofacial, and limb findings, avoid anchoring on an aged appearance or nonspecific lax skin. Assess the aortic root and pursue genetic testing; use the molecular result and full phenotype to distinguish overlapping syndromes before diagnosing.",
+      "diagnosis": "Loeys–Dietz syndrome",
+      "trajectories": 4,
+      "trajectories_correct": 0
+    },
+    {
+      "case_id": "PMC8066406",
+      "presentation": "A 35-year-old man had gradually progressive lower-limb numbness and heaviness over one month, progressing to inability to walk, with urinary difficulty and fecal incontinence.",
+      "decisive_evidence": [
+        "Lower-limb motor examination: paraplegia with power 2/5.",
+        "Limb neurological examination: upper limbs normal; absent lower-limb reflexes, positive Babinski responses, inability to walk, and no sensory disorder.",
+        "Spinal MRI with contrast: dorsal extradural lesion from T7 to T10, about 8.0 × 1.2 cm, compressing the cord and maximally enhancing.",
+        "MRI signal: lesion hyperintense on T1- and T2-weighted images and heterogeneous on STIR.",
+        "Histopathology: lesion composed of fatty tissue and angioma-like tissue."
+      ],
+      "missteps": [
+        "Both failing trajectories stopped at a general compressive myelopathy diagnosis without ordering MRI to identify the cause.",
+        "They spent turns on broad history questions that were not documented, rather than promptly imaging progressive paraplegia with bowel/bladder dysfunction."
+      ],
+      "strategy": "Progressive bilateral leg symptoms with gait loss or sphincter dysfunction require urgent spinal MRI with and without contrast to localize and characterize a compressive lesion. Use tissue histopathology when needed to establish its specific identity; do not stop at the syndrome diagnosis.",
+      "diagnosis": "Spinal angiolipoma",
+      "trajectories": 4,
+      "trajectories_correct": 2
+    },
+    {
+      "case_id": "PMC3350224",
+      "presentation": "A middle-aged man with two months of jaundice, weight loss, and intermittent low fever.",
+      "decisive_evidence": [
+        "Percutaneous liver biopsy: spindle-shaped cells mixed with inflammatory myofibrohistiocytes in hepatic tissue.",
+        "Liver CT: 9.0 cm mass in segments VI and VII with arterial enhancement and equilibrium-phase washout.",
+        "Abdominal examination: tender right upper quadrant mass.",
+        "CBC and CRP: leukocytes 12,800/mm3 and CRP 5.2 mg/dL, indicating an inflammatory pattern.",
+        "Hepatitis B/C serology and serum AFP: negative serologies and AFP 2.3 ng/dL."
+      ],
+      "missteps": [
+        "Diagnosed pancreatic head adenocarcinoma without documented evidence localizing a mass to the pancreas.",
+        "Diagnosed gallbladder carcinoma despite the documented mass being in the liver, without confirmatory evidence.",
+        "Called the liver mass hepatocellular carcinoma based on CT enhancement and washout alone, without obtaining the decisive liver biopsy."
+      ],
+      "strategy": "When jaundice, fever, and weight loss accompany a liver mass, do not treat imaging features alone as definitive for malignancy. Consider inflammatory causes, weigh inflammatory markers and tumor-marker/viral results, and obtain tissue diagnosis when needed before finalizing the diagnosis.",
+      "diagnosis": "Inflammatory pseudotumor of the liver",
+      "trajectories": 4,
+      "trajectories_correct": 0
+    },
+    {
+      "case_id": "PMC7535779",
+      "presentation": "A 55-year-old man with 6 months of recurrent right upper abdominal pain, followed by progressive jaundice, pale stools, itching, weight loss, and anorexia.",
+      "decisive_evidence": [
+        "Contrast-enhanced CT of the gallbladder and bile duct: neck thickening with spread along the cystic and proximal common bile ducts, causing obstruction and upstream biliary dilatation.",
+        "Histopathology of the gallbladder, lymph nodes, and bile-duct margin: caseous necrosis and epithelioid granulomas with Langhans giant cells.",
+        "Ziehl-Neelsen stain of the gallbladder: acid-fast bacilli were present."
+      ],
+      "missteps": [
+        "Diagnosed pancreatic head adenocarcinoma after liver tests alone, without obtaining the documented CT that localized the abnormality to the gallbladder and bile duct.",
+        "Diagnosed gallbladder carcinoma from CT findings without obtaining tissue; histopathology showed granulomatous inflammation instead.",
+        "Ordered ultrasound and CA 19-9 in trajectories where neither test had a documented result."
+      ],
+      "strategy": "In progressive obstructive jaundice, use imaging to localize the obstruction, but do not treat gallbladder thickening and ductal spread as proof of cancer. Obtain histopathology when available; caseating granulomas and acid-fast bacilli establish an infectious cause.",
+      "diagnosis": "Gallbladder tuberculosis",
+      "trajectories": 4,
+      "trajectories_correct": 0
+    },
+    {
+      "case_id": "PMC8633852",
+      "presentation": "A middle-aged woman with years of severe generalized pruritus and skin lesions, followed by a month of progressive bilateral visual loss, recurrent fever, and weight loss.",
+      "decisive_evidence": [
+        "HIV ELISA: positive, establishing HIV infection.",
+        "CD4 count: 237 cells/mm, supporting immune compromise but not by itself establishing AIDS."
+      ],
+      "missteps": [
+        "Labeled the infection AIDS/advanced HIV without a documented AIDS-defining condition; the CD4 count was 237 cells/mm.",
+        "Attributed the skin eruption to HIV without lesion-specific diagnostic evidence.",
+        "Diagnosed CMV retinitis from fundoscopy alone; ocular-fluid PCR was not documented.",
+        "Diagnosed lepromatous leprosy despite slit-skin smear and skin-biopsy results being unavailable."
+      ],
+      "strategy": "With chronic pruritic lesions, oral or genital lesions, weight loss, fever, or visual symptoms, test early for HIV. Use the positive HIV ELISA to identify infection, but do not infer AIDS or a specific skin or eye diagnosis without supporting criteria or tests.",
+      "diagnosis": "HIV infection",
+      "trajectories": 4,
+      "trajectories_correct": 0
+    },
+    {
+      "case_id": "PMC9442997",
+      "presentation": "An older adult with intermittent hoarseness and episodes of choking while swallowing.",
+      "decisive_evidence": [
+        "Panendoscopy: smooth, cystic mass arising from the right posterior aryepiglottic fold.",
+        "Mucosal biopsy: only mild dysplasia, not an explanation for the deeper mass.",
+        "Ultrasound-guided biopsy: spindle cells.",
+        "Contrast CT of the neck: a non-enhancing mass at C5/6 clearly separated from the enhancing right thyroid lobe.",
+        "FISH: signal pattern consistent with SS-18 gene rearrangement."
+      ],
+      "missteps": [
+        "Diagnosed an aryepiglottic fold cyst from its smooth, cystic appearance before obtaining diagnostic tissue.",
+        "Stopped without pursuing tissue characterization and molecular testing needed to identify the mass.",
+        "In one trajectory, obtained CT evidence of a separate mass but still concluded it was a laryngeal cyst."
+      ],
+      "strategy": "A cystic-appearing laryngeal mass can be a submucosal tumor. Do not let endoscopic appearance or a superficial biopsy settle the diagnosis; pursue image-guided sampling and appropriate molecular testing when findings remain unexplained.",
+      "diagnosis": "Synovial sarcoma",
+      "trajectories": 4,
+      "trajectories_correct": 0
+    },
+    {
+      "case_id": "PMC5360031",
+      "presentation": "A 63-year-old man with 3 months of dyspnoea and hacking cough, with facial/periorbital edema, distended neck veins, and a hard chest-wall mass on examination.",
+      "decisive_evidence": [
+        "Contrast-enhanced total-body CT: a 9.7 cm anterior-superior mediastinal mass compressed the right jugular vein and superior vena cava; a chest-wall lesion had similar imaging features.",
+        "Mediastinal aspirate and chest-wall biopsy: monomorphic proliferation of large lymphoid cells with evident nucleoli.",
+        "Biopsy immunophenotyping: LCA, CD79a, MUM1, CD38, and CD138 positive; CD20, CD3, CD30, ALK1, and TdT negative; kappa restricted; Ki-67 85%.",
+        "Additional biopsy stains: pan-cytokeratin, CK20, chromogranin, and NSE negative."
+      ],
+      "missteps": [
+        "Diagnosed superior vena cava syndrome from presumed lung cancer before obtaining imaging or tissue diagnosis.",
+        "Called the mediastinal mass primary mediastinal large B-cell lymphoma without using the biopsy immunophenotype to distinguish the lymphoma subtype.",
+        "Prioritized cardiac tests and repeated low-yield history questions despite facial edema, distended neck veins, and a hard chest-wall mass; proceed to chest imaging and biopsy."
+      ],
+      "strategy": "With facial or neck venous congestion and a chest-wall mass, promptly image the chest to identify obstruction and sample an accessible lesion. Do not stop at the syndrome or assume a common thoracic cancer: use morphology and a full immunophenotypic panel to classify the tumor before naming it.",
+      "diagnosis": "Plasmablastic lymphoma",
+      "trajectories": 4,
+      "trajectories_correct": 1
+    },
+    {
+      "case_id": "PMC7700045",
+      "presentation": "A 48-year-old woman with 2 months of progressive, painless unilateral visual loss, severe in the affected eye.",
+      "decisive_evidence": [
+        "Dilated fundus examination with fluorescein angiography: retinal detachment and a large superior brownish mass.",
+        "B-scan ultrasonography: large dome-shaped choroidal mass with subretinal fluid, without acoustic hollowing or calcification.",
+        "Orbital MRI: 12 × 11 × 11 mm intraocular tumor, T1-bright and T2-dark with collar-button extension and enhancement; no extraocular tumor extension.",
+        "Histopathology of the enucleated eye: pigmented choroidal tumor of fusiform cells, without necrosis or malignant features.",
+        "Immunohistochemistry: tumor cells positive for S-100 and HMB-45."
+      ],
+      "missteps": [
+        "All trajectories settled on melanoma or metastasis before obtaining the decisive histopathology; imaging alone did not establish malignancy.",
+        "The metastasis diagnosis was unsupported by the documented findings, which showed a solitary choroidal mass but no evidence of a primary cancer.",
+        "Some trajectories repeated broad history or examination questions that produced no new documented findings, or ordered tests such as visual fields and macular OCT that were not documented."
+      ],
+      "strategy": "For painless unilateral vision loss with a pigmented intraocular mass, prioritize dilated fundus examination and ocular ultrasound, then use orbital imaging to characterize extent. Treat imaging-based tumor labels as provisional; distinguish benign from malignant melanocytic lesions with pathology when available.",
+      "diagnosis": "Choroidal melanocytoma",
+      "trajectories": 4,
+      "trajectories_correct": 0
+    },
+    {
+      "case_id": "PMC10900723",
+      "presentation": "A 70-year-old man with 3 months of burning in the distal upper and lower extremities and scalp.",
+      "decisive_evidence": [
+        "Ask about associated respiratory and limb symptoms: shortness of breath for 4 years and bilateral lower-limb swelling for 6 months.",
+        "Chest CT: reticulonodular lung opacities and mediastinal/hilar lymphadenopathy, without masses or cavitation.",
+        "Contrast-enhanced kidney CT: diffuse bilateral ill-defined hypodense renal lesions without arterial-phase enhancement.",
+        "Renal biopsy: dense lymphoplasmacytic infiltration, storiform fibrosis, and tubulointerstitial nephritis; no granulomata.",
+        "IgG4 immunostaining of renal biopsy: more than 25 cells per high-power field."
+      ],
+      "missteps": [
+        "Attributing symptoms to systemic amyloidosis with suspected cardiac involvement without supporting amyloid or cardiac evidence.",
+        "Attributing diffuse burning to prior stroke despite no documented link in timing or distribution; the exam described a residual right-sided deficit.",
+        "Treating mononeuritis multiplex as proof of vasculitic neuropathy; nerve conduction findings identify a pattern, not its cause.",
+        "Stopping without investigating systemic disease: bilateral renal lesions and biopsy with IgG4 staining were decisive."
+      ],
+      "strategy": "For neuropathic symptoms accompanied by dyspnea, edema, or other systemic clues, look beyond common neuropathy and prior stroke. Use nerve studies to characterize the pattern, then investigate organ involvement; biopsy suspicious lesions and request disease-directed immunostaining before assigning an etiology.",
+      "diagnosis": "IgG4-related disease",
+      "trajectories": 4,
+      "trajectories_correct": 0
+    },
+    {
+      "case_id": "PMC2887780",
+      "presentation": "A 37-year-old woman with 4 months of unilateral facial pain and 3 months of progressive painful swelling beneath the ear.",
+      "decisive_evidence": [
+        "Contrast-enhanced CT: well-defined 40 × 25 mm soft-tissue mass in the right deep parotid lobe.",
+        "Microscopic examination of the excised mass: myxoid/fibromyxoid areas, curvilinear capillaries with perivascular cell condensation, and pleomorphic spindle cells with infrequent mitoses.",
+        "Histologic architecture: myxoid areas with spindle cells in a pleomorphic storiform pattern.",
+        "Immunohistochemistry: strong vimentin and alpha1-antichymotrypsin staining; desmin, alpha-smooth muscle actin, beta2-microglobulin, and CD34 negative; Ki-67 index 35%."
+      ],
+      "missteps": [
+        "Diagnosed pleomorphic adenoma from the clinical presentation without decisive tissue diagnosis.",
+        "Ordered ultrasound, fine-needle aspiration, and MRI, none of which had documented results in this case.",
+        "Repeated broad history questions despite no documented answers, rather than pursuing the available imaging and pathology evidence."
+      ],
+      "strategy": "For a persistent or progressive parotid mass, use imaging to localize and characterize it, but do not infer benignity from mobility, a smooth feel, normal facial function, or absent nodes. Establish the diagnosis with tissue examination and appropriate immunohistochemistry before naming a specific tumor.",
+      "diagnosis": "parotid myxofibrosarcoma of low histological grade",
+      "trajectories": 4,
+      "trajectories_correct": 0
+    },
+    {
+      "case_id": "PMC5401722",
+      "presentation": "A woman near 60 with painless facial swelling developing over a year, followed by neck stiffness and left-eye visual disturbance with bilateral redness.",
+      "decisive_evidence": [
+        "Orbital and facial contrast MRI: bilateral enlargement of all extraocular muscle bellies without orbital-fat extension, with enlarged lacrimal and parotid glands and facial subcutaneous hyperplasia.",
+        "Ophthalmic examination: left ptosis and hypertropia with restricted eye movements; bilateral chemosis and hyperemia, but no eye pain and normal fundi.",
+        "Biopsy of the left inferior rectus and right parotid: atypical infiltrating cells positive for CD3, CD5, CD8, and Granzyme B; negative for CD20, CD56, and CD79a."
+      ],
+      "missteps": [
+        "Anchored on a moon-shaped face and repeatedly pursued Cushing syndrome despite no documented supporting systemic findings.",
+        "Requested cortisol, dexamethasone, ACTH, and pituitary evaluations without documented results, then diagnosed Cushing syndrome before obtaining decisive evidence.",
+        "Did not pursue the conspicuous multisite gland and extraocular-muscle enlargement to tissue biopsy in the failing trajectories."
+      ],
+      "strategy": "When painless facial swelling accompanies eye redness, visual change, or restricted eye movements, assess ocular motility and image the orbit and adjacent glands. Multisite enlargement should prompt tissue diagnosis; do not infer an endocrine cause from facial appearance alone or diagnose before confirmatory evidence.",
+      "diagnosis": "Peripheral T-cell lymphoma",
+      "trajectories": 4,
+      "trajectories_correct": 0
+    },
+    {
+      "case_id": "PMC11915168",
+      "presentation": "Adolescent girl with a progressively enlarging frontoparietal scalp swelling over 6 months and headache localized to the swelling.",
+      "decisive_evidence": [
+        "Request head CT: extensive defects of both skull tables with epidural and subgaleal lesion and adjacent brain hypodensity.",
+        "Request brain MRI: enhancing epidural and subgaleal lesion with non-enhancing areas, adjacent brain signal change, and mass effect with midline shift.",
+        "Ask for operative inspection of the collection: thin whitish material in subgaleal and epidural spaces and a soft, cheesy epidural collection adherent to the dura.",
+        "Request bone histopathology: extensive well-formed epithelioid granulomas with central necrosis."
+      ],
+      "missteps": [
+        "Diagnosed a growing skull fracture from prior trauma and CT findings alone, before obtaining decisive tissue evidence.",
+        "Called the lesion a chronic expanding hematoma based on imaging without proceeding to operative assessment and bone histopathology."
+      ],
+      "strategy": "A prior injury and skull defect can mislead when a swelling enlarges long after trauma. Use CT and MRI to define the lesion, but do not settle on a traumatic explanation from imaging alone; seek operative assessment and tissue histopathology when the lesion remains uncertain.",
+      "diagnosis": "Calvarial tuberculosis",
+      "trajectories": 4,
+      "trajectories_correct": 0
+    },
+    {
+      "case_id": "PMC6482549",
+      "presentation": "Middle-aged woman with recurrent unconsciousness over 10 days, markedly increased ileostomy output (1.5–2 L/day), and reduced urine output since the preceding month.",
+      "decisive_evidence": [
+        "Review prior surgery and resection pathology: subtotal colectomy with ileostomy; specimen showed diffuse UC-type pancolitis without evidence of Crohn’s disease.",
+        "Request ileostomy stool studies: many leukocytes, but repeated cultures and C. difficile toxin tests were negative.",
+        "Request CMV and EBV testing: CMV-DNA, CMV-pp65, and EBV-DNA were negative.",
+        "Request endoscopy through the stoma with duodenal and pre-stomal ileal biopsies: despite normal gross appearance, biopsies showed villous atrophy and severe active inflammation with neutrophils.",
+        "Request pouchoscopy: diverted pouch mucosa was oedematous and inflamed with patchy superficial ulcers."
+      ],
+      "missteps": [
+        "Settled on volume depletion or dehydration as the final diagnosis without establishing why ileostomy output had risen; acute kidney injury was not documented.",
+        "Speculated about McKittrick-Wheelock syndrome or VIPoma without supporting findings, despite the known post-colectomy ileostomy.",
+        "Ordered or relied on tests not documented in the case, including metabolic panels, ECG, stool osmotic gap, VIP level, CT, and colonoscopy."
+      ],
+      "strategy": "In a patient with a prior colectomy and new high ileostomy output, address possible volume loss but do not mistake it for the underlying diagnosis. Use the surgical history, infection studies, and endoscopy with biopsies—including through the stoma—to investigate enteritis before proposing rare secretory causes.",
+      "diagnosis": "post-colectomy enteritis",
+      "trajectories": 4,
+      "trajectories_correct": 0
+    },
+    {
+      "case_id": "PMC8795921",
+      "presentation": "A 46-year-old man with persistent neck pain for 8 months.",
+      "decisive_evidence": [
+        "Serum calcium and phosphate: calcium was elevated at 12.5 mg/dL and phosphate was low at 1.5 mg/dL.",
+        "Serum parathyroid hormone and alkaline phosphatase: PTH was markedly elevated at 1285 pg/mL and alkaline phosphatase at 875 U/L.",
+        "Neck ultrasound: showed a lesion favoring parathyroid adenoma at the lower pole of the left parathyroid lobe.",
+        "Cervical CT: showed a lytic C5 lesion eroding the vertebral body, left pedicle, and lamina.",
+        "Lesion biopsy: showed scattered giant cells, peritrabecular fibrosis, and hemosiderin deposits."
+      ],
+      "missteps": [
+        "Diagnosed solitary plasmacytoma from the C5 imaging without obtaining decisive biochemical testing or lesion biopsy.",
+        "Repeated cervical MRI after an MRI result was already available.",
+        "Ordered serum protein electrophoresis, which was not documented as yielding a result, instead of pursuing the documented calcium, phosphate, PTH, and alkaline phosphatase findings."
+      ],
+      "strategy": "For persistent neck pain with a lytic vertebral lesion, keep the differential open and establish the lesion's cause before diagnosing from imaging alone. Check calcium, phosphate, PTH, and alkaline phosphatase; correlate with parathyroid imaging and lesion histology when available.",
+      "diagnosis": "Brown tumor",
+      "trajectories": 4,
+      "trajectories_correct": 3
+    },
+    {
+      "case_id": "PMC9201463",
+      "presentation": "A 43-year-old woman with 3 months of flank pain, intermittent gross hematuria, weakness, and weight loss.",
+      "decisive_evidence": [
+        "Ask about bone pain or neurologic symptoms; neither was present. Blood biochemistry, including alkaline phosphatase, was normal.",
+        "Abdominal CT: a 15 cm mass originating from the left kidney, with irregular foci of calcification.",
+        "Chest X-ray: no pathologic lesion.",
+        "Tumor microscopy: malignant spindle-cell proliferation with interspersed unmineralized neoplastic osteoid and a malignant cartilage component.",
+        "Immunohistochemistry: vimentin and CD10 positive; Pan CK negative."
+      ],
+      "missteps": [
+        "All trajectories diagnosed renal cell carcinoma without obtaining decisive tissue diagnosis, despite the unusually large calcified renal mass.",
+        "The trajectories did not pursue tumor histology and immunohistochemistry, which showed neoplastic osteoid and a non-epithelial profile.",
+        "One trajectory repeated renal ultrasound despite no documented result, rather than advancing the evaluation."
+      ],
+      "strategy": "For a large calcified renal mass, do not assume the common renal malignancy from imaging alone. Consider unusual primary tumors, assess for evidence of disease elsewhere, and seek tissue diagnosis; malignant osteoid on histology is decisive.",
+      "diagnosis": "Primary renal osteosarcoma",
+      "trajectories": 4,
+      "trajectories_correct": 0
+    },
+    {
+      "case_id": "PMC5134282",
+      "presentation": "A 10-year-old boy with persistent jaundice, intermittent pruritus, and pale stools beginning in the neonatal period.",
+      "decisive_evidence": [
+        "Ask about growth and measure height and weight: both were severely below expected (z-scores < −3), with BMI 10.23 kg/m².",
+        "Examine facial features: triangular face, broad forehead, deeply set eyes, hypertelorism, prominent ears, pointed chin, and saddle nose with bulbous tip.",
+        "Request an eye examination: posterior embryotoxon, iris strands, and increased intraocular pressure.",
+        "Request echocardiography: pulmonary hypertension and tricuspid regurgitation.",
+        "Request liver biopsy: conspicuous absence of interlobular bile ducts in 10 portal tracts, with fibrosis and occasional nodules."
+      ],
+      "missteps": [
+        "The failing trajectory favored PFIC type 2 without establishing that diagnosis and overlooked the documented eye, cardiac, facial, and biopsy findings that support a multisystem disorder.",
+        "It ordered abdominal ultrasound, PT/INR, bile-acid profiling, and a PFIC genetic panel, none of which had documented results in this case."
+      ],
+      "strategy": "For neonatal-onset cholestatic jaundice with pale stools, do not anchor on liver-only causes. Assess growth and examine the face, eyes, heart, and skeleton; use liver biochemistry and biopsy to look for bile-duct paucity, integrating extrahepatic findings before diagnosing.",
+      "diagnosis": "Alagille syndrome",
+      "trajectories": 4,
+      "trajectories_correct": 3
+    },
+    {
+      "case_id": "PMC4623560",
+      "presentation": "Older adult with several years of thumb-predominant numbness and tingling, a newer tender mass on the thumb’s flexor surface, and weakened grip during bowling.",
+      "decisive_evidence": [
+        "Ask about bowling and grip: He was an avid bowler and reported weakened grip while bowling since symptoms began.",
+        "Static two-point discrimination: Greater than 15 mm at the ulnar digital nerve of the left thumb, versus at least 5 mm at all other digits.",
+        "Tinel sign: Positive over the left thumb mass, consistent with local nerve irritation.",
+        "Electrodiagnostic testing: No compressive neuropathy or cervical radiculopathy.",
+        "MRI of the left hand: No definite abnormal signal or lesion corresponding to the palpable mass."
+      ],
+      "missteps": [
+        "Diagnosed a digital nerve schwannoma without supporting imaging; MRI showed no definite lesion.",
+        "Attributed symptoms to carpal tunnel syndrome despite electrodiagnostic testing showing no compressive neuropathy and sensory loss being greatest at the ulnar thumb.",
+        "Diagnosed a ganglion cyst without documented evidence establishing the mass’s nature.",
+        "Ordered ultrasound, but no ultrasound result was documented; do not treat the mass as characterized by that test."
+      ],
+      "strategy": "For thumb numbness with a local mass, establish the sensory distribution and ask about repetitive gripping activities such as bowling. Use focal sensory findings and local Tinel response to localize nerve involvement; do not let positive wrist provocative tests alone establish carpal tunnel syndrome or assume the mass is a tumor or cyst.",
+      "diagnosis": "Bowler’s thumb",
+      "trajectories": 4,
+      "trajectories_correct": 0
+    },
+    {
+      "case_id": "PMC8522066",
+      "presentation": "An asymptomatic adult woman has a well-defined mass near the cardiac apex on chest radiography, with documented enlargement over one year.",
+      "decisive_evidence": [
+        "Chest radiography: comparison of 2018 and 2019 films showed growth from 34 mm to 64 mm.",
+        "Chest CT: an 80-mm, homogeneous-appearing mass lay between pericardium and left lung, grew expansively, and showed no apparent invasion.",
+        "Chest MRI: low T1 and low, heterogeneous T2 fat-saturation signal; no intratumoral fat was detected.",
+        "Histologic examination: a paucicellular tumor of wavy collagen bundles, without apparent atypia, had a fibrous pedicle connected to the pericardium.",
+        "Immunohistochemistry: SMA, desmin, and CD34 positive; beta-catenin, S100, STAT6, MDM2, and ALK studies negative; Ki-67 under 5%."
+      ],
+      "missteps": [
+        "Diagnosed pericardial cyst after history-taking alone, without assessing the enlarging mass on imaging.",
+        "Diagnosed cardiac lipoma without obtaining imaging evidence of intratumoral fat.",
+        "Ordered echocardiography, which was not documented in this encounter, rather than relying on the available cross-sectional imaging and tissue findings.",
+        "Called the lesion pericardial fibroma without resolving the tumor subtype using the histology and immunohistochemical findings."
+      ],
+      "strategy": "For an enlarging, well-defined cardiac-adjacent mass, characterize its location, growth, invasion, and tissue signals with CT/MRI; do not infer cyst or lipoma from presentation alone. Low T2 signal and absent fat suggest a collagen-rich lesion, but tissue histology and immunophenotype are needed to establish the specific diagnosis.",
+      "diagnosis": "desmoplastic fibroblastoma",
+      "trajectories": 4,
+      "trajectories_correct": 0
+    },
+    {
+      "case_id": "PMC10659096",
+      "presentation": "A 50-year-old woman with an 8-month history of a gradually enlarging, painful thigh mass.",
+      "decisive_evidence": [
+        "MRI of the left thigh: tumor with high T2 signal, confirming a mass but not its histologic subtype.",
+        "Gross examination of the excised mass: a well-defined 15 × 12 × 10 cm mass in subcutaneous fatty tissue.",
+        "Histological examination: pleomorphic round-to-spindle cells, adipoblast-like cells, multinucleated cells, prominent fission patterns, and coagulative necrosis.",
+        "Immunohistochemical staining: only a few tumor cells were S-100 positive; most cells were negative for the listed other markers."
+      ],
+      "missteps": [
+        "Several trajectories named myxoid liposarcoma based on MRI signal alone, before obtaining histological confirmation.",
+        "One trajectory ordered thigh ultrasound, but ultrasound was not documented; the returned finding was from MRI.",
+        "The trajectories did not pursue or incorporate excision histology and immunohistochemistry before assigning a specific subtype."
+      ],
+      "strategy": "For a persistent, enlarging painful thigh mass, use imaging to characterize the lesion, but do not infer a sarcoma subtype from T2 signal alone. Obtain tissue diagnosis and base subtype assignment on histology with immunohistochemistry; use staging imaging to assess for spread.",
+      "diagnosis": "pleomorphic liposarcoma",
+      "trajectories": 4,
+      "trajectories_correct": 1
+    },
+    {
+      "case_id": "PMC3420526",
+      "presentation": "A 36-year-old man with two months of generalized seizure activity and altered perception, with bilateral extensor plantar responses on examination.",
+      "decisive_evidence": [
+        "Cranial MRI with contrast: multiple enhancing dural-based lesions with cerebral edema; T1 iso-/hypointense and T2 hyperintense.",
+        "Dural appearance at craniotomy: thickened, firm, avascular pink tissue forming fibrous masses and involving the inner layer.",
+        "Histological examination of dura: confluent necrotizing and nonnecrotizing granulomas with multinucleated and Langhans-type giant cells."
+      ],
+      "missteps": [
+        "Diagnosed intracranial neoplasm or multiple meningiomas from dural-based MRI lesions without obtaining tissue confirmation.",
+        "Ordered CT head, EEG, or CMP despite no documented results for those tests; the decisive MRI and histology findings were not pursued in the failing trajectories."
+      ],
+      "strategy": "Dural-based enhancing masses can resemble meningiomas. Keep infectious and inflammatory pachymeningitis in the differential, and seek dural tissue diagnosis when imaging alone is not definitive; a normal chest radiograph does not exclude the diagnosis.",
+      "diagnosis": "Pachymeningeal tuberculosis",
+      "trajectories": 4,
+      "trajectories_correct": 0
+    },
+    {
+      "case_id": "PMC4397027",
+      "presentation": "Patient with 11 weeks of sudden-onset painful, focal upper-arm swelling and a hard mass in the distal biceps; history of prostate cancer and recent hormonal injections.",
+      "decisive_evidence": [
+        "Medication history: LHRH injections began 3 months before presentation; current treatment was leuprorelin acetate every 3 months.",
+        "MRI of the right upper arm: 5.4 cm ill-defined heterogeneous intramuscular mass in the distal biceps with peripheral enhancement.",
+        "Needle core biopsy: extensive destructive granulomatous inflammation with epithelioid histiocytes and giant cells; no atypia, caseation, or necrosis.",
+        "Histologic examination for foreign material: none identified; prominent rounded clear fatty vacuoles were present within histiocytes.",
+        "Immunohistochemistry and microorganism stains: no neoplasm or microorganisms identified."
+      ],
+      "missteps": [
+        "Diagnosed prostate metastasis from the cancer history and mass without obtaining the decisive core biopsy.",
+        "Diagnosed myositis ossificans without documented supporting imaging or tissue findings; the proposed X-ray and CT results were not available.",
+        "Concluded the MRI-defined mass was metastatic without biopsy confirmation."
+      ],
+      "strategy": "For a deep painful mass, obtain a focused medication and injection history, then correlate it with the mass while confirming the injection site rather than assuming it. Image the lesion and biopsy when needed; do not equate a cancer history or nonspecific mass imaging with metastasis, and use pathology to assess granuloma, malignancy, and infection.",
+      "diagnosis": "leuprorelin acetate injection site granuloma",
+      "trajectories": 4,
+      "trajectories_correct": 1
+    },
+    {
+      "case_id": "PMC3277469",
+      "presentation": "Middle-aged woman with 14 years of palpitations that have worsened over two months, accompanied by exertional dyspnea and gradual weight loss.",
+      "decisive_evidence": [
+        "Transthoracic echocardiography: mobile right atrial mass attached to the atrial septum, with right atrial enlargement, right ventricular volume overload, and a dilated inferior vena cava.",
+        "Contrast-enhanced chest CT: approximately 6.1 × 5.6 cm intra-atrial hypodensity; the right atrium did not fill with contrast.",
+        "Excised mass appearance: mobile, pedunculated, lobulated, clear, gelatinous mass implanted at the atrial–superior vena cava junction.",
+        "Microscopy of the excised mass: abundant myxoid stroma with stellate cells and no necrosis, mitotic activity, atypia, or pleomorphism."
+      ],
+      "missteps": [
+        "Trajectory 1 diagnosed chronic Chagas cardiomyopathy without documented exposure history or confirmatory testing, and before evaluating cardiac structure.",
+        "Trajectory 2 diagnosed a partial atrioventricular septal defect from nonspecific findings; the repeat examination it requested was not documented.",
+        "Both failing trajectories stopped without ordering echocardiography, the test that revealed the decisive right atrial mass."
+      ],
+      "strategy": "For worsening palpitations with exertional dyspnea or weight loss, do not anchor on an ECG conduction abnormality or speculate about exposure or congenital disease. Obtain echocardiography early to assess for structural causes; use imaging and, when available, pathology to characterize a detected mass.",
+      "diagnosis": "myxoma",
+      "trajectories": 4,
+      "trajectories_correct": 2
+    },
+    {
+      "case_id": "PMC3437677",
+      "presentation": "A woman in her early 50s with a painful, enlarging lateral neck mass present for three months, without fever or weight loss.",
+      "decisive_evidence": [
+        "Neck examination: a large, hard, painful, fluctuant supraclavicular mass with inflamed overlying skin and no regional lymphadenopathy.",
+        "Neck CT: a 14 × 10 cm cystic mass containing numerous thin-outlined cystic formations.",
+        "Operative inspection: cyst wall and daughter cysts were visualized.",
+        "Histopathology of the excised specimen: parasite-like cyst with scoleces."
+      ],
+      "missteps": [
+        "Diagnosed an infected branchial cleft cyst from symptoms and examination without obtaining decisive imaging or tissue evidence.",
+        "Concluded lymphangioma from cystic imaging alone, without pursuing operative or histopathologic confirmation.",
+        "Requested neck ultrasound in failing trajectories, but ultrasound findings were not documented in this case."
+      ],
+      "strategy": "For a large cystic neck mass, do not settle on a common congenital or lymphatic lesion from symptoms or imaging alone. Treat multiple internal cystic formations as a clue to broaden the differential, and use operative findings and histopathology to establish the cause.",
+      "diagnosis": "Echinococcosis",
+      "trajectories": 4,
+      "trajectories_correct": 1
+    },
+    {
+      "case_id": "PMC6894918",
+      "presentation": "A 13-year-old boy with 2 years of slowly enlarging unilateral mandibular swelling, mild pain and induration, and delayed eruption of a posterior molar.",
+      "decisive_evidence": [
+        "Ask about sensory changes: paresthesia was present from the onset.",
+        "Panoramic radiograph: extensive radiolucent mandibular lesion with thick radiopaque septa, displacing tooth 38 into the coronoid area.",
+        "Facial CT: lesion involved the left hemimandible, including the condylar neck, ramus, angle, and body, with cortical thinning.",
+        "Incisional biopsy with histopathology: epithelial proliferation with clear and eosinophilic cytoplasm and squamous appearance, without odontogenic differentiation.",
+        "Periodic acid-Schiff stain: positive for mucin."
+      ],
+      "missteps": [
+        "Diagnosed odontogenic myxoma from the panoramic appearance alone, without tissue diagnosis.",
+        "Diagnosed clear cell odontogenic carcinoma from the biopsy before requesting the mucin stain that distinguished the lesion."
+      ],
+      "strategy": "For an extensive mandibular lesion—especially with paresthesia—use imaging to define its extent, but do not settle on a radiographic diagnosis. Obtain tissue and, when clear or squamoid epithelial cells are seen, request mucin staining before finalizing the diagnosis.",
+      "diagnosis": "Central mucoepidermoid carcinoma",
+      "trajectories": 4,
+      "trajectories_correct": 0
+    },
+    {
+      "case_id": "PMC8476282",
+      "presentation": "A 36-year-old woman at 13 weeks’ gestation, in her third pregnancy, referred for first-trimester screening.",
+      "decisive_evidence": [
+        "Detailed first-trimester fetal ultrasound: anatomy was regular except for an umbilical cord cyst.",
+        "Ultrasound characterization: cyst measured up to 18 mm, had regular margins, and lay adjacent to the abdominal wall.",
+        "Ultrasound assessment of the cyst: it was avascular and had no internal septa or vegetations.",
+        "Ultrasound assessment of cord and bladder: cyst was within the cord, embraced by both umbilical arteries, and communicated with the bladder.",
+        "Prolonged ultrasound examination: cyst size varied over several hours."
+      ],
+      "missteps": [
+        "Diagnosed increased aneuploidy risk from maternal age instead of investigating the fetal ultrasound finding.",
+        "Suspected trisomy 18 without supporting findings; serum screening, cell-free DNA, and chorionic villus sampling results were not documented."
+      ],
+      "strategy": "For a first-trimester cord cyst, characterize its location, vascularity, internal structure, relation to the umbilical arteries and bladder, and whether its size changes. Bladder communication and changing size are key clues; do not infer aneuploidy from maternal age alone.",
+      "diagnosis": "allantoic cyst",
+      "trajectories": 4,
+      "trajectories_correct": 2
+    },
+    {
+      "case_id": "PMC8425102",
+      "presentation": "Young adult with rapid-onset lip/facial swelling and hives, followed by weakness, after eating and exercising; timing of food and activity is key.",
+      "decisive_evidence": [
+        "Ask about the January episode: symptoms followed gym exercise and eating two kiwis, with lip swelling within 5 minutes and later generalized hives and weakness.",
+        "Ask about prior kiwi ingestion: he had eaten kiwi before without symptoms.",
+        "Fresh-kiwi prick-by-prick test: positive.",
+        "Exercise provocation while fasting: no symptoms; kiwi ingestion without exercise: no symptoms during 24-hour observation.",
+        "Kiwi-then-exercise challenge: abdominal pain, facial hives, dry cough, and wheezing developed after exercise."
+      ],
+      "missteps": [],
+      "strategy": "For reactions involving food and exertion, establish their timing and ask whether either exposure is tolerated alone. When appropriate, use supervised separate and combined challenges: symptoms only with the combination can identify the relevant cofactor-dependent pattern.",
+      "diagnosis": "Food-dependent exercise-induced anaphylaxis",
+      "trajectories": 4,
+      "trajectories_correct": 4
+    },
+    {
+      "case_id": "PMC10653977",
+      "presentation": "An asymptomatic five-year-old with known congenital valve disease and aortic enlargement was seen for routine cardiology follow-up; imaging raised concern for an ascending aortic abnormality.",
+      "decisive_evidence": [
+        "Request cardiovascular magnetic resonance: the right atrial appendage was unusually displaced, coursing leftward and anterior to the aorta."
+      ],
+      "missteps": [
+        "Two trajectories stopped at the known valve disease and aortic enlargement without investigating the new imaging concern.",
+        "Two trajectories diagnosed an acute aortic dissection from findings described as concerning for a flap, without obtaining the decisive cardiovascular magnetic resonance."
+      ],
+      "strategy": "In an asymptomatic child, do not let known valve disease or a suggestive imaging abnormality dictate the final diagnosis. Follow up unexpected anatomy with definitive cross-sectional imaging, and consider congenital anatomic variants before concluding that a flap represents dissection.",
+      "diagnosis": "left juxtaposition of the right atrial appendage",
+      "trajectories": 4,
+      "trajectories_correct": 0
+    },
+    {
+      "case_id": "PMC9693515",
+      "presentation": "A 69-year-old man developed fever and chills one week after discharge following treatment for bacteremia; he was tachycardic and profoundly hypotensive, with chest pain and a systolic murmur.",
+      "decisive_evidence": [
+        "Ask about the recent hospitalization and treatment: he had H. influenzae bacteremia and completed two weeks of cefuroxime before discharge one week earlier.",
+        "Order admission blood cultures: positive for beta-lactamase-negative H. influenzae serotype F.",
+        "Ask about cardiac findings or auscultate: a grade 3 systolic ejection murmur was heard at the right upper sternal border.",
+        "Review the prior transthoracic echocardiogram: moderate aortic insufficiency was present.",
+        "Request echocardiography, including transesophageal imaging: severe aortic insufficiency, valvular destruction, and an aortic valve mass were found."
+      ],
+      "missteps": [
+        "One trajectory labeled the illness recurrent bacteremia with septic shock after positive cultures, without evaluating the valve or obtaining echocardiography to identify the underlying source."
+      ],
+      "strategy": "In a patient with recurrent fever after treatment for bacteremia, especially with known valve disease or a murmur, obtain blood cultures and assess for endocardial involvement. Compare valve function with prior imaging and use transesophageal echocardiography when needed; do not stop at a bacteremia or sepsis label.",
+      "diagnosis": "infective endocarditis",
+      "trajectories": 4,
+      "trajectories_correct": 3
+    },
+    {
+      "case_id": "PMC4663328",
+      "presentation": "An adolescent girl referred for orthodontic care with inefficient chewing and no visible upper teeth when smiling, giving an older-appearing smile.",
+      "decisive_evidence": [
+        "Ask about fracture history: multiple recurrent fractures, especially of the left midshaft tibia.",
+        "Measure height and weight: height 138 cm and weight 58 kg.",
+        "Examine hands and nails: broad hands, short spoon-shaped phalanges, and dystrophic nails.",
+        "Obtain skull radiographs: frontal bossing, suture diastasis, patent anterior fontanelle, and wormian bodies.",
+        "Obtain a panoramic mandibular radiograph: thin, narrow mandibular body, obtuse gonial angle, and elongated condylar neck."
+      ],
+      "missteps": [
+        "The failing trajectories diagnosed hypohidrotic ectodermal dysplasia despite no documented sparse hair, reduced sweating, or other confirming ectodermal findings.",
+        "They inferred severe oligodontia without a documented tooth count or confirmation of congenitally missing teeth.",
+        "They focused on the dental presentation and panoramic film while missing the recurrent fractures, short stature, hand findings, and skull abnormalities."
+      ],
+      "strategy": "For adolescent dental or eruption concerns, broaden the assessment when the smile or chewing problem accompanies short stature or recurrent fractures. Examine the hands and nails and obtain skeletal imaging; do not infer oligodontia or ectodermal dysplasia without supporting findings.",
+      "diagnosis": "pycnodysostosis",
+      "trajectories": 4,
+      "trajectories_correct": 1
+    },
+    {
+      "case_id": "PMC4765066",
+      "presentation": "A previously healthy adolescent developed sudden respiratory distress during transfer after surgery under general anesthesia, shortly after an apparently uncomplicated extubation.",
+      "decisive_evidence": [
+        "Ask about airway obstruction during emergence: a brief laryngospasm occurred, with paradoxical chest movements and inability to breathe.",
+        "Ask about oxygenation and appearance during the episode: SpO₂ fell suddenly to 40% and the patient became dusky.",
+        "Ask about secretions and auscultation: while conscious, he developed pink frothy sputum and bilateral crepitations."
+      ],
+      "missteps": [],
+      "strategy": "For abrupt post-extubation respiratory distress, establish whether laryngospasm or another acute airway obstruction occurred, then assess oxygenation and look for frothy sputum and bilateral crackles. Use the immediate sequence of obstruction followed by these findings to guide the diagnosis.",
+      "diagnosis": "Negative pressure pulmonary edema",
+      "trajectories": 4,
+      "trajectories_correct": 4
+    },
+    {
+      "case_id": "PMC5198089",
+      "presentation": "Middle-aged man with 2 years of progressive right-leg weakness and dysesthesia in both legs.",
+      "decisive_evidence": [
+        "Neurologic examination: severe loss of all sensory modalities below L1, profound right-leg monoparesis (1/5), and hyperactive reflexes in both legs.",
+        "Bladder/bowel history: constipation, inability to urinate, and slight rectal disturbance.",
+        "Spinal MRI with and without gadolinium: cord expansion and T2 hyperintensity from Th7–Th12; an isointense, poorly demarcated lesion with only a small enhancing portion.",
+        "Histopathology: clustered cells with fine processes and round-to-ovoid nuclei in a microcystic background, no ependymal rosettes or anaplasia, and MIB-I index 0.1%."
+      ],
+      "missteps": [
+        "Diagnosed a dural arteriovenous fistula from progressive myelopathy and brisk reflexes without obtaining spinal imaging or vascular evidence.",
+        "Diagnosed astrocytoma from a nonspecific intramedullary MRI appearance without tissue confirmation."
+      ],
+      "strategy": "For progressive leg weakness with a sensory level, brisk reflexes, or sphincter symptoms, localize urgently to the spinal cord and obtain contrast-enhanced spinal MRI. Treat imaging as suggestive, not definitive; use histopathology to distinguish intramedullary tumor types before naming a specific tumor.",
+      "diagnosis": "Subependymoma (WHO Grade I)",
+      "trajectories": 4,
+      "trajectories_correct": 0
+    },
+    {
+      "case_id": "PMC11170344",
+      "presentation": "A 71-year-old woman with multiple facial tumors that enlarged and multiplied over 5 months; lesions were ulcerated and crusted, with severe pruritus.",
+      "decisive_evidence": [
+        "Ask about immune-suppressing medicines and duration: methotrexate 10 mg/week for 17 years, with prior long-term prednisolone and tofacitinib added 3 years earlier.",
+        "Biopsy a facial tumor for histology: diffuse dermal and subcutaneous lymphocyte proliferation with large nuclei, including Hodgkin-like cells.",
+        "Request immunohistochemistry and EBER in situ hybridization on biopsy: CD20, CD79a, and CD30 positive; EBER positive.",
+        "Request Ki-67 immunostaining: 85% of lymphocytes stained."
+      ],
+      "missteps": [
+        "The first trajectory named EBV-positive diffuse large B-cell lymphoma before obtaining biopsy or EBV results.",
+        "The second trajectory diagnosed a cutaneous lymphoproliferative disorder before tissue confirmation.",
+        "The third trajectory added bacterial, fungal, and mycobacterial stains and cultures, which were not documented in the case findings."
+      ],
+      "strategy": "In an older patient with progressive ulcerated tumors and prolonged immunosuppressive therapy, ask specifically about medication history and obtain a lesion biopsy with histology, immunophenotyping, and EBER before assigning a lymphoma subtype. Avoid unsupported infection testing unless clinical findings point to infection.",
+      "diagnosis": "methotrexate-associated iatrogenic immunodeficiency-associated lymphoproliferative disorder",
+      "trajectories": 4,
+      "trajectories_correct": 4
+    },
+    {
+      "case_id": "PMC2020471",
+      "presentation": "An 11-year-old boy had a slowly persistent oral mass for 3 years, with difficulty chewing and swallowing solid foods.",
+      "decisive_evidence": [
+        "Oral cavity examination: 40 × 35 mm sublingual mass with normal mucosa, displacing the tongue superiorly and posteriorly.",
+        "Neck examination: firm submental swelling extending down to the thyroid notch.",
+        "MRI: 40 × 35 mm well-circumscribed, non-enhancing cystic mass with homogeneous content, extending from the sublingual area to the thyroid notch.",
+        "Histological examination: acidophilic stratum corneum and basophilic dot-like staining of the stratum granulosum."
+      ],
+      "missteps": [
+        "All trajectories labeled the lesion a dermoid cyst without obtaining or incorporating the decisive histological distinction.",
+        "Two trajectories finalized a dermoid diagnosis after history and examination alone, before imaging or histology.",
+        "One trajectory ordered ultrasound, but no result was documented; it should not be treated as diagnostic evidence."
+      ],
+      "strategy": "For a chronic floor-of-mouth cystic mass with submental extension, use examination and imaging to define its extent, but do not infer the specific cyst type from appearance or MRI alone. Seek histology before making a definitive subtype diagnosis.",
+      "diagnosis": "Epidermoid cyst",
+      "trajectories": 4,
+      "trajectories_correct": 0
+    },
+    {
+      "case_id": "PMC4060871",
+      "presentation": "A middle-aged woman developed rapidly progressive memory and wayfinding problems over a month, followed by frequent, formed visual hallucinations; abnormal jerks and rigidity emerged over the following weeks.",
+      "decisive_evidence": [
+        "Focused history of cognition: recent-event memory loss and getting lost showed a new decline in cognitive function.",
+        "Focused history of visual experiences: recurrent, detailed hallucinations of people jumping, singing, dancing, or talking, lasting minutes and occurring dozens of times daily.",
+        "Cognitive assessment (MMSE): score 19/30, with difficulty recalling words and locating.",
+        "Serial neurologic examination two weeks later: an akinetic-rigid syndrome was present."
+      ],
+      "missteps": [
+        "Several trajectories concluded Creutzfeldt-Jakob disease from myoclonus and periodic EEG discharges, without documented MRI or RT-QuIC support and despite negative CSF 14-3-3.",
+        "One trajectory diagnosed anti-LGI1 encephalitis based on speculation; the queried faciobrachial spells and low sodium were not documented, and the antibody result was unavailable.",
+        "The trajectories treated suggestive test plans as if they supported a diagnosis: MRI, RT-QuIC, and autoimmune antibody tests were not documented."
+      ],
+      "strategy": "In rapidly progressive cognitive change with complex visual hallucinations, establish the timeline and assess cognition and motor signs serially. Weigh the combination of cognitive decline, recurrent formed hallucinations, and emerging rigidity rather than anchoring on myoclonus or periodic EEG discharges; do not infer results from tests that were not documented.",
+      "diagnosis": "Dementia with Lewy bodies",
+      "trajectories": 4,
+      "trajectories_correct": 0
+    },
+    {
+      "case_id": "PMC4569790",
+      "presentation": "A 27-year-old woman with a hard posterior mandibular swelling that developed insidiously and gradually enlarged over about 2 years.",
+      "decisive_evidence": [
+        "Ask about associated symptoms: no pain, discharge, fever, paresthesia, or difficulty chewing.",
+        "Ask about prior trauma or infection: none in the region.",
+        "Examine the mass: solitary, nontender, approximately 1.5 cm and bony-hard at the right mandibular angle; fixed to bone with normal, unattached overlying skin.",
+        "Request CT with 3D reconstruction: well-circumscribed hyperdense lobulated lesion; homogeneous pedunculated bony mass attached to the buccal cortex.",
+        "Request histopathologic examination: mature compact bone with Haversian canals, osteocytes, resting lines, and lamellae."
+      ],
+      "missteps": [
+        "Diagnosed ameloblastoma before obtaining diagnostic imaging or histopathology.",
+        "Ordered panoramic radiographs and CBCT, which were not documented; the available CT and histopathology were decisive."
+      ],
+      "strategy": "For a slowly enlarging, painless, bony-hard mandibular mass, establish its site and fixation on examination, then use CT to define whether it is a discrete cortical bony outgrowth. Confirm with histopathology before finalizing the diagnosis; do not infer from unreported tests.",
+      "diagnosis": "Compact osteoma",
+      "trajectories": 4,
+      "trajectories_correct": 2
+    },
+    {
+      "case_id": "PMC11077174",
+      "presentation": "A man was readmitted with two weeks of progressive fatigue, exertional shortness of breath, weight loss, and dry cough.",
+      "decisive_evidence": [
+        "Request CBC: severe pancytopenia—hemoglobin 5.2 g/dL, white blood cells 0.3 × 10^3/μL, and platelets 26 × 10^3/μL.",
+        "Request bone marrow biopsy and aspiration: hypocellular marrow with decreased trilineage hematopoiesis, increased histiocytes, and multiple granulomas; no Burkitt lymphoma involvement.",
+        "Request AFB smear and tuberculosis PCR: positive, with rifampicin sensitivity.",
+        "Request CT pulmonary angiogram: right pleural effusion with a thick, nodular-enhancing pleural wall and lung parenchymal changes.",
+        "Request QuantiFERON assay: positive, after a prior negative result."
+      ],
+      "missteps": [
+        "Diagnosed acute leukemia from pancytopenia without first obtaining marrow findings or evidence of leukemia.",
+        "Diagnosed acute myeloid leukemia despite no documented smear or flow-cytometry results and without pursuing an explanation for the pleural and lung findings.",
+        "Interpreted marrow granulomas as histoplasmosis without confirmation; the ordered Histoplasma antigen had no documented result, and TB testing was not pursued."
+      ],
+      "strategy": "With fever, respiratory symptoms, pleural abnormalities, and pancytopenia, do not assume a hematologic malignancy from the CBC alone. Examine marrow findings and investigate granulomas for infection; use direct AFB and TB PCR testing to establish active disease, since a positive QuantiFERON is supportive but not diagnostic by itself.",
+      "diagnosis": "Disseminated tuberculosis",
+      "trajectories": 4,
+      "trajectories_correct": 0
+    },
+    {
+      "case_id": "PMC4812215",
+      "presentation": "A man in his early 60s had about one month of worsening unilateral hip pain despite analgesics, with severe pain impairing walking.",
+      "decisive_evidence": [
+        "Right hip MRI: joint effusion, gluteus medius fat and edema, and slight adjacent bone marrow edema.",
+        "CRP and white cell count: CRP was markedly elevated at 14.0 mg/dL despite a normal white cell count.",
+        "Open biopsy of the right hip: apparent purulence was found in the joint.",
+        "Culture of the purulence: Staphylococcus aureus grew."
+      ],
+      "missteps": [
+        "The failing trajectories diagnosed osteoarthritis from joint-space narrowing alone, before obtaining inflammatory markers or sampling the joint."
+      ],
+      "strategy": "Do not anchor on joint-space narrowing when hip pain is severe, worsening, or limits walking. Check inflammatory markers and assess for effusion; pursue joint sampling and culture when infection remains possible. Lack of warmth or a normal white cell count does not settle the diagnosis.",
+      "diagnosis": "Septic arthritis",
+      "trajectories": 4,
+      "trajectories_correct": 1
+    },
+    {
+      "case_id": "PMC11417188",
+      "presentation": "A 33-year-old woman with no symptoms or examination findings has a small complex adnexal mass found incidentally on routine transvaginal ultrasound.",
+      "decisive_evidence": [
+        "Laparoscopy: the mass was found on the left fallopian tube and excised, establishing its site rather than an ovarian origin.",
+        "Rapid biopsy: negative for malignancy.",
+        "Gross examination: a small cystic mass with a smooth whitish-yellow internal nodule.",
+        "Microscopic examination: slit-like and tubular spaces lined by cuboidal, cross-striated cells without atypia or nuclear abnormalities, in a fibrous substrate."
+      ],
+      "missteps": [
+        "All trajectories finalized an ovarian cyst diagnosis without establishing that the mass arose from the ovary.",
+        "Two trajectories named cystadenofibroma based on imaging despite the mass's undetermined origin and no histologic confirmation.",
+        "The trajectories stopped before laparoscopy and excision pathology, which identified the tubal origin and diagnostic microscopic features."
+      ],
+      "strategy": "For an incidental complex mass adjacent to an ovary, use ultrasound and, when needed, MRI to characterize it, but do not equate proximity with ovarian origin or infer a specific tumor from imaging alone. If uncertainty persists, definitive excision pathology can establish the site and diagnosis.",
+      "diagnosis": "adenomatoid tumor of the fallopian tube",
+      "trajectories": 4,
+      "trajectories_correct": 0
+    },
+    {
+      "case_id": "PMC9004476",
+      "presentation": "A 41-year-old woman with a slowly growing lump on the front of the upper arm, present for 3 years; examination found a small, firm, non-tender mass within the biceps.",
+      "decisive_evidence": [
+        "Ultrasound of the left upper arm: a 2.0 × 2.0 cm well-defined heteroechogenic lesion with a cystic component in the biceps muscle.",
+        "Histopathology with H&E: small spindle- to stellate-shaped cells with pale indistinct cytoplasm and small hyperchromatic nuclei; mitoses were rare.",
+        "Histopathology with PAS and Van Gieson stains: hypocellular myxoid tissue containing strands of fibrocollagenous tissue.",
+        "Histopathology: the tumour was surrounded by muscle fibres, confirming its intramuscular location."
+      ],
+      "missteps": [
+        "Some trajectories ordered X-rays, MRI, or CT that had no documented results in this case.",
+        "Two trajectories repeated MRI after it had already returned no documented result."
+      ],
+      "strategy": "For a chronic, small soft-tissue lump, establish its size and depth with examination and use ultrasound to characterize and localize it. Imaging alone may not establish the tumour type; rely on tissue histopathology for confirmation, and avoid repeated or unsupported tests.",
+      "diagnosis": "Intramuscular myxoma",
+      "trajectories": 4,
+      "trajectories_correct": 4
+    },
+    {
+      "case_id": "PMC9531226",
+      "presentation": "A 67-year-old man developed severe dyspnea, marked fatigue, myalgia, and 39°C fever two weeks after immunotherapy.",
+      "decisive_evidence": [
+        "Physical examination: fever with pallor, bruising, and painless hepatosplenomegaly.",
+        "CBC: pancytopenia, with WBC 2.58 k/cumm, hemoglobin 7.1 g/dL, and platelets 25 k/cumm.",
+        "Serum ferritin: markedly elevated at 7035 ng/dL.",
+        "Soluble CD25: elevated at 6516 U/m; IL-6 was 19.4 pg/mL.",
+        "Bone marrow biopsy: hemophagocytosis with reactive hypercellularity."
+      ],
+      "missteps": [
+        "Incorrect paths anchored on immunotherapy-associated myocarditis or myositis without documented cardiac or muscle-test evidence.",
+        "Repeatedly ordered ECG, troponin, CK, BNP, or echocardiography; results were undocumented, while systemic inflammation and cytopenias were not prioritized.",
+        "Finalized a cardiac diagnosis before obtaining decisive evidence such as CBC, ferritin, or bone marrow findings."
+      ],
+      "strategy": "After recent immunotherapy, fever and severe fatigue with dyspnea should prompt evaluation for systemic inflammatory complications, not just cardiac toxicity. Check CBC and ferritin early; pallor, bruising, or hepatosplenomegaly with cytopenias should lead to further HLH evaluation, including soluble CD25 and bone marrow assessment.",
+      "diagnosis": "hemophagocytic lymphohistiocytosis",
+      "trajectories": 4,
+      "trajectories_correct": 1
+    },
+    {
+      "case_id": "PMC5457751",
+      "presentation": "A 19-year-old girl had three sleep-associated seizure-like episodes over 3 months, with jerking and screaming followed by confusion, agitation, and abnormal speech lasting several days.",
+      "decisive_evidence": [
+        "Ask what happens after the sleep-associated movements: myoclonic jerks and screaming were followed by confusion, agitation, and irrelevant talk lasting three days.",
+        "Request a mental status examination: she was restless and disoriented, made an abnormal clicking sound, and did not obey verbal commands.",
+        "Request EEG: normal study.",
+        "Request brain MRI and CSF analysis: MRI was normal; CSF cell count, protein, and glucose were normal.",
+        "Request serum anti-TPO antibody and thyroid testing: anti-TPO was 1261.4 U/mL (normal <60) despite euthyroid status; VGKC antibodies were negative."
+      ],
+      "missteps": [
+        "Settled on nocturnal epilepsy or postictal psychosis without evidence confirming epilepsy, despite confusion lasting three days.",
+        "Did not pursue thyroid antibodies and thyroid status or CSF testing to investigate a prolonged encephalopathic state.",
+        "Repeatedly asked low-yield seizure and sleep-history questions when several answers were undocumented, rather than advancing the diagnostic workup."
+      ],
+      "strategy": "When seizure-like movements are followed by days of altered behavior, do not assume epilepsy or postictal psychosis. Assess mental status and investigate encephalopathy; use EEG, MRI, and CSF findings alongside thyroid/autoimmune testing. Interpret a markedly elevated anti-TPO in context, including thyroid status and exclusion of alternatives.",
+      "diagnosis": "Hashimoto's encephalopathy",
+      "trajectories": 4,
+      "trajectories_correct": 0
+    },
+    {
+      "case_id": "PMC11538104",
+      "presentation": "Middle-aged woman with years of progressively worsening generalized bone pain and weakness, later severe mobility impairment, alongside persistent nasal obstruction and occasional epistaxis.",
+      "decisive_evidence": [
+        "Pelvic, rib and hand radiographs: diffuse bone mineral loss with multiple fractures, including bilateral proximal femoral, pelvic, rib and hand fractures.",
+        "Serum phosphate, alkaline phosphatase and parathyroid hormone: phosphate was low (0.57 mmol/L), alkaline phosphatase high (420 U/L) and parathyroid hormone within range.",
+        "Urine phosphate excretion and related laboratory tests: fractional phosphate excretion was 56% with decreased tubular phosphate reabsorption, indicating renal phosphate wasting; serum calcium was normal.",
+        "Whole-body gallium-68 DOTANOC PET-CT and sinonasal CT: an intensely DOTANOC-avid right ethmoid/nasal cavity mass extended into the oro-nasopharynx; CT showed soft-tissue hyperdensity without mineralised matrix.",
+        "Tumour histology and immunohistochemistry: bland spindle-cell tumour with gritty calcifications and perivascular hyalinisation; tumour cells were immunoreactive for SATB2, CD56, ERG and somatostatin receptor 2A."
+      ],
+      "missteps": [
+        "Several trajectories spent early test capacity on ANCA, inflammatory markers and chest imaging, which were not documented and did not address the phosphate-wasting bone disease.",
+        "Some trajectories ordered broad panels or repeated unreported tests such as FGF23 and vitamin D before using the available low phosphate, high alkaline phosphatase and renal phosphate-wasting findings."
+      ],
+      "strategy": "In adults with chronic diffuse bone pain, weakness or fractures, check serum phosphate and alkaline phosphatase early. If phosphate is low, assess renal phosphate handling and related labs; inappropriate renal loss should prompt a search for an occult tumour, especially when there are localising symptoms such as persistent nasal obstruction or epistaxis.",
+      "diagnosis": "Phosphaturic mesenchymal tumour",
+      "trajectories": 4,
+      "trajectories_correct": 4
+    },
+    {
+      "case_id": "PMC3532909",
+      "presentation": "A young adult with years of progressive, unilateral nasal obstruction and foul-smelling discharge, unresponsive to repeated medical treatment.",
+      "decisive_evidence": [
+        "Ask about prior treatment: multiple courses of antibiotics and nasal steroids provided no benefit.",
+        "Ask about a nasal foreign body: no history of one being introduced; childhood head trauma occurred in a sandy area.",
+        "Anterior rhinoscopy: irregular hard material with crusts and thick secretions was lodged between a septal spur and inferior turbinate.",
+        "Attempted in-clinic removal: unsuccessful and caused epistaxis.",
+        "Plain X-ray and CT: dense irregular material occupied the nasal floor without extension outside the nasal cavity."
+      ],
+      "missteps": [],
+      "strategy": "For chronic unilateral foul-smelling discharge and obstruction that do not respond to routine treatment, examine the nasal cavity for a hard obstructing lesion and use imaging to characterize its extent. Ask about foreign-body exposure or remote trauma, but a denied insertion history does not exclude an occult retained object.",
+      "diagnosis": "Rhinolith",
+      "trajectories": 4,
+      "trajectories_correct": 4
+    },
+    {
+      "case_id": "PMC5027304",
+      "presentation": "A middle-aged man with progressive bilateral leg swelling and pain over a week, nausea and weakness, followed by rapid worsening of severe calf pain and hypotension.",
+      "decisive_evidence": [
+        "Review blood pressure readings: 68/40 at the community hospital before fluids, versus 150/99 in the emergency department.",
+        "Request CBC and albumin/chemistry: hemoglobin 210 g/L with albumin 26 g/L, alongside leukocytosis and elevated creatinine.",
+        "Request lower-limb CT angiography: marked distal arterial and venous narrowing, but no occlusive pathology.",
+        "Request serum immunofixation: a monoclonal IgG band was present.",
+        "Ask about symptom progression: bilateral swelling and pain progressed over a week, with rapid worsening over the final two days and significant nausea and weakness."
+      ],
+      "missteps": [
+        "Finalizing bilateral compartment syndrome from tense calves and a pressure of 110 mmHg without accounting for the systemic shock, hemoconcentration, and hypoalbuminemia.",
+        "Diagnosing acute aortic occlusion despite the documented lower-limb angiogram showing no occlusive pathology.",
+        "Ordering tests whose results were not documented, including CK, lactate, and abdominal/pelvic CTA, rather than prioritizing interpretation of the available findings."
+      ],
+      "strategy": "With bilateral edema and hypotension, look for a systemic process as well as local limb emergencies. Pair blood-pressure history with CBC and albumin: hemoconcentration plus hypoalbuminemia is a key clue. Treat high compartment pressure as a potentially secondary complication, and use vascular imaging to assess for occlusion.",
+      "diagnosis": "Systemic capillary leak syndrome",
+      "trajectories": 4,
+      "trajectories_correct": 0
+    },
+    {
+      "case_id": "PMC11666475",
+      "presentation": "A 53-year-old man with progressively worsening hemiparesis and difficulty speaking, without fever, chest pain, or dyspnea.",
+      "decisive_evidence": [
+        "Request earlier brain CT and pulmonary artery imaging: acute cerebral infarction and partial distal right pulmonary artery occlusion, without deep vein thrombosis.",
+        "Request transthoracic echocardiography: masses on aortic and mitral valves and a mobile right ventricular mass, with mild valve regurgitation.",
+        "Request blood cultures and blood PCR: three culture sets and pathogen PCR testing were negative.",
+        "Request serum tumor markers and liver-mass fine-needle aspiration: markedly elevated CA 19-9, CA 12-5, and CEA; cytology showed carcinoma."
+      ],
+      "missteps": [
+        "Several trajectories stopped at the CT-confirmed cerebral infarction and labeled it the final diagnosis, without investigating the embolic source.",
+        "One trajectory called the cardiac masses a myxoma without echocardiographic evidence supporting that diagnosis or completing the infectious and malignancy workup.",
+        "One trajectory ordered head-and-neck angiography and another MRI, but their results were not documented; neither could establish the underlying cause."
+      ],
+      "strategy": "When stroke coexists with pulmonary arterial occlusion or a murmur, investigate a cardiac embolic source with echocardiography. For valve masses, assess cultures and PCR for infection and evaluate for malignancy; do not stop at the infarct or assume a myxoma.",
+      "diagnosis": "Nonbacterial thrombotic endocarditis",
+      "trajectories": 4,
+      "trajectories_correct": 0
+    },
+    {
+      "case_id": "PMC3586446",
+      "presentation": "A 10-year-old boy with four months of progressive unilateral nasal obstruction and intermittent nosebleeds.",
+      "decisive_evidence": [
+        "Anterior rhinoscopy: fragile, lobular red-gray smooth polypoidal mass arising below the left inferior turbinate and filling the vestibule.",
+        "Posterior rhinoscopy: normal appearance, with no visible posterior mass.",
+        "CT of the nose and paranasal sinuses: mass confined to the left nasal vestibule, without sinus invasion or bony destruction.",
+        "Postcontrast CT: intense enhancement of the nasal mass.",
+        "Histopathology of the excised mass: irregular vessels of varied size in fibrous stroma, with surface epithelial metaplasia and fibrosis at sites of repeated hemorrhage."
+      ],
+      "missteps": [
+        "Diagnosed juvenile nasopharyngeal angiofibroma from the opening symptoms alone, without obtaining the documented examination or imaging findings.",
+        "Repeatedly settled on juvenile nasopharyngeal angiofibroma after asking questions that were not documented, rather than pursuing objective evaluation of the mass.",
+        "Labeled the lesion lobular capillary hemangioma based on contrast CT alone, without the decisive histopathology."
+      ],
+      "strategy": "For a child with unilateral obstruction and epistaxis, examine the lesion’s location and assess posterior involvement; use CT to define extent and enhancement. Do not infer a specific vascular tumor from age or enhancement alone—use histopathology of the excised lesion to establish the diagnosis.",
+      "diagnosis": "angiofibroma",
+      "trajectories": 4,
+      "trajectories_correct": 0
+    },
+    {
+      "case_id": "PMC2500028",
+      "presentation": "A 50-year-old man with rapid 15-pound weight gain over two weeks, abdominal and leg swelling, and dyspnea, with marked systemic and pulmonary congestion.",
+      "decisive_evidence": [
+        "Request cardiac catheterization with cardiac output and vascular resistance: output was 15.17 L/min (normal 4–8) and systemic vascular resistance 227 dynes-sec-cm-5 (normal 770–1500).",
+        "Request echocardiography: the left ventricle was hyperdynamic, with normal wall thickness and diastolic function.",
+        "Ask about examination findings of congestion and perfusion: JVD, crackles, ascites, hepatomegaly, and extensive edema coexisted with warm extremities and a flow murmur."
+      ],
+      "missteps": [
+        "Anchored on multiple myeloma and concluded cardiac AL amyloidosis without evidence establishing amyloid.",
+        "Diagnosed restrictive cardiomyopathy despite an echocardiogram showing normal wall thickness and diastolic function with a hyperdynamic ventricle.",
+        "Finalized a diagnosis before obtaining the decisive hemodynamic test: cardiac catheterization.",
+        "Spent effort ordering tests not documented in the case, including amyloid studies, urine protein testing, and paracentesis."
+      ],
+      "strategy": "In a patient with severe congestion but a hyperdynamic, structurally normal heart, do not infer restrictive disease from a myeloma history alone. Seek hemodynamic measurements: markedly elevated cardiac output with low systemic vascular resistance supports a high-output state and distinguishes it from restrictive failure.",
+      "diagnosis": "High-output heart failure",
+      "trajectories": 4,
+      "trajectories_correct": 0
+    },
+    {
+      "case_id": "PMC8035025",
+      "presentation": "A woman in her mid-20s presented with seven hours of worsening sharp abdominal pain migrating from the epigastrium to the right lower quadrant, with nausea and vomiting.",
+      "decisive_evidence": [
+        "Question about nausea and vomiting: nausea and emesis worsened in the emergency department.",
+        "CT abdomen and pelvis with IV contrast: distended small-bowel loops with wall thickening and enhancement, distal decompression, and small-bowel fecalization.",
+        "Question about abdominal and surgical history: no prior abdominal surgery or known gastrointestinal disorder."
+      ],
+      "missteps": [
+        "Both failing trajectories diagnosed appendicitis without obtaining the decisive CT imaging.",
+        "They treated migratory right-lower-quadrant pain as sufficient for appendicitis despite vomiting and no guarding or rebound."
+      ],
+      "strategy": "Do not anchor on appendicitis from migratory right-lower-quadrant pain alone. In acute abdominal pain with worsening nausea or vomiting, assess for obstruction and use appropriate imaging when the diagnosis remains uncertain; a nondistended abdomen, normal bowel sounds, or no surgical history does not exclude it.",
+      "diagnosis": "Acute small bowel obstruction",
+      "trajectories": 4,
+      "trajectories_correct": 2
+    },
+    {
+      "case_id": "PMC10709121",
+      "presentation": "Middle-aged man with a painless scrotal-wall lesion that progressively enlarged over several months, without urinary symptoms.",
+      "decisive_evidence": [
+        "Scrotal examination: firm 3 cm lesion arose from the left scrotal wall; testes and epididymis were normal.",
+        "Scrotal ultrasound: well-circumscribed mixed-echotexture scrotal-wall lesion, about 4 × 2 cm; testes and epididymis were normal.",
+        "Excisional biopsy with histopathology: bland spindle-to-stellate cells in myxoid stroma, dissecting between muscle fibers.",
+        "Histologic assessment: lesion was hypocellular and hypovascular.",
+        "Immunohistochemistry: smooth muscle actin and calponin positive, with focal estrogen receptor and desmin; several differential markers negative and Ki-67 about 5%."
+      ],
+      "missteps": [
+        "Diagnosed a fibroepithelial polyp from the narrow-necked exam finding without obtaining imaging or tissue diagnosis.",
+        "Called the lesion deep/aggressive angiomyxoma despite biopsy findings of a bland, hypocellular, hypovascular myxoid lesion and the reported immunohistochemistry."
+      ],
+      "strategy": "For an enlarging extratesticular scrotal-wall mass, first establish its location and whether the testes are normal, then use ultrasound to characterize it. Do not infer a benign polyp from appearance or overcall an aggressive tumor; rely on excision histopathology and appropriate immunohistochemistry.",
+      "diagnosis": "scrotal wall myxoma",
+      "trajectories": 4,
+      "trajectories_correct": 0
+    },
+    {
+      "case_id": "PMC3965919",
+      "presentation": "A 55-year-old man had a painless, gradually enlarging palatal mass over five years, with snoring, obstructive sleep apnea, dysphagia, and hypernasal speech.",
+      "decisive_evidence": [
+        "Fine-needle aspiration cytology: round-to-oval myoepithelial cells with eccentric nuclei and abundant eosinophilic cytoplasm.",
+        "Histopathology of the excised mass: an encapsulated tumor with plasmacytoid cells and homogeneous eosinophilic cytoplasm.",
+        "Immunohistochemistry: tumor cells were strongly and diffusely positive for S-100 protein, calponin, and smooth muscle actin."
+      ],
+      "missteps": [
+        "Each trajectory diagnosed pleomorphic adenoma without obtaining or incorporating the decisive cytology and immunohistochemistry.",
+        "Two trajectories ordered MRI and incisional biopsy, whereas the documented workup contained CT and histopathology of the excised mass."
+      ],
+      "strategy": "A slow-growing, well-circumscribed palatal mass may suggest a benign salivary tumor, but clinical appearance and imaging do not establish its subtype. Use tissue evaluation and immunohistochemistry to distinguish entities with overlapping morphology before finalizing the diagnosis.",
+      "diagnosis": "Myoepithelioma",
+      "trajectories": 4,
+      "trajectories_correct": 0
+    },
+    {
+      "case_id": "PMC4150410",
+      "presentation": "A 41-year-old man with a 10-year history of episodic arthritis, now with polyarthritis and low-grade fever; attacks began in one great-toe joint and later involved multiple large and small joints.",
+      "decisive_evidence": [
+        "Ask how attacks began and spread: arthritis started in the right first metatarsophalangeal joint and progressively involved other joints.",
+        "Examine for subcutaneous nodules: painless, firm nodules were present on extensor surfaces of the forearms and legs.",
+        "Request biopsy of a subcutaneous nodule: it showed uric acid crystals, confirming crystal deposition."
+      ],
+      "missteps": [
+        "The failing trajectory diagnosed palindromic rheumatism based on episodic symptoms and anti-CCP positivity, without accounting for the gout-pattern onset and nodules.",
+        "It over-weighted positive anti-CCP despite negative rheumatoid factor and nonerosive hand radiographs, and did not pursue the decisive nodule biopsy.",
+        "It repeatedly ordered synovial-fluid studies and blood cultures that were not documented in the case."
+      ],
+      "strategy": "For episodic inflammatory polyarthritis, ask about the first joints affected and examine any nodules. A normal-range serum urate does not rule out gout; seek crystal confirmation from an accessible nodule or joint. Interpret anti-CCP in the full clinical context rather than treating it as diagnostic by itself.",
+      "diagnosis": "gout",
+      "trajectories": 4,
+      "trajectories_correct": 3
+    },
+    {
+      "case_id": "PMC3977941",
+      "presentation": "A man in his 60s presented with right-sided chest pain after a traffic accident; examination showed marked chest-wall tenderness and decreased breath sounds, without abdominal tenderness.",
+      "decisive_evidence": [
+        "Chest radiography: right fifth through eighth rib fractures and apparent free air under both hemidiaphragms.",
+        "CT of the abdomen: bowel loops were interposed between the liver and diaphragm, explaining the apparent subdiaphragmatic air."
+      ],
+      "missteps": [
+        "Diagnosed traumatic hollow-viscus perforation from the X-ray appearance before obtaining the decisive abdominal CT finding.",
+        "Continued to label the finding traumatic pneumoperitoneum despite a soft, non-tender abdomen and without CT evidence of perforation.",
+        "Ordered bedside thoracic ultrasound, which was not documented and did not address the key question raised by the X-ray."
+      ],
+      "strategy": "In a stable patient with apparent subdiaphragmatic free air but a benign abdominal examination, confirm the finding with abdominal CT before diagnosing perforation. Check whether interposed bowel explains the radiographic appearance.",
+      "diagnosis": "Chilaiditi sign",
+      "trajectories": 4,
+      "trajectories_correct": 0
+    },
+    {
+      "case_id": "PMC11593096",
+      "presentation": "A 94-year-old man with a bruise-like forehead rash that progressively enlarged over 4 months.",
+      "decisive_evidence": [
+        "Skin examination: firm, dome-shaped dark-purple 8 × 4 cm forehead mass with additional infiltrated eruptions on the crown.",
+        "Skin biopsy histology: diffuse atypical-cell proliferation extending from the dermis into subcutaneous tissue.",
+        "Immunohistochemistry: atypical cells strongly positive for CD4, CD56, and CD123; negative for CD3, CD34, and lysozyme.",
+        "CT scan: additional thickening of the occipital skin, without significant distant lesions or lymphadenopathy."
+      ],
+      "missteps": [
+        "Diagnosed cutaneous angiosarcoma from the bruise-like appearance and clinical exam without obtaining a biopsy.",
+        "Did not request histology and immunohistochemistry, which distinguished the neoplasm from other causes of purple skin lesions."
+      ],
+      "strategy": "For progressive, unexplained bruise-like or infiltrated skin lesions, do not infer the tumor type from appearance alone. Biopsy the lesion and request histology plus immunohistochemistry; then assess extent with imaging and blood tests.",
+      "diagnosis": "Blastic plasmacytoid dendritic cell neoplasm",
+      "trajectories": 4,
+      "trajectories_correct": 2
+    },
+    {
+      "case_id": "PMC5723077",
+      "presentation": "A 50-year-old man evaluated after tripping and falling onto his left side, with isolated clavicular pain.",
+      "decisive_evidence": [
+        "Request left clavicle radiographs: lytic lesion in the clavicle and an asymptomatic lytic lesion in the left humeral head.",
+        "Request CT of the skeleton: multiple osteolytic lesions throughout the skeleton.",
+        "Request whole-body bone scintigraphy: diffuse axial and appendicular uptake with prominent calvarial and periarticular uptake and focal left clavicular accumulation.",
+        "Request serum calcium: 3.8 mmol/L, markedly above the corrected reference range of 2.15–2.60.",
+        "Request parathyroid hormone: 1905 pg/mL, markedly above the normal range of 14–72."
+      ],
+      "missteps": [
+        "Diagnosed multiple myeloma from lytic lesions before obtaining the decisive calcium and parathyroid hormone results.",
+        "Anchored on hip fracture despite no documented hip pain or hip imaging findings; ordered hip/pelvis X-rays, CT, and MRI that were not documented in the case.",
+        "Repeated broad trauma questions that returned no documented information instead of advancing the targeted evaluation of the clavicular pain and lytic lesions."
+      ],
+      "strategy": "After a low-energy fall, localize the pain rather than assuming the injured site. If imaging reveals multiple lytic lesions, do not infer malignancy from appearance alone: assess calcium and parathyroid hormone, and integrate these with skeletal imaging before diagnosing.",
+      "diagnosis": "Primary hyperparathyroidism",
+      "trajectories": 4,
+      "trajectories_correct": 0
+    },
+    {
+      "case_id": "PMC11347030",
+      "presentation": "A woman in her late 30s with a decade-long neurologic course, initially involving vertigo, ataxia, and weakness, followed by progressive executive, behavioral, and cognitive changes.",
+      "decisive_evidence": [
+        "Ask about behavioral and cognitive changes: by age 35 she had executive dysfunction, increased energy, emotional lability, grandiosity, impulsiveness, and reckless spending.",
+        "Neuropsychological evaluation and cognitive testing: deficits spanned multiple domains; five reported domain scores were below passing thresholds.",
+        "Neurologic examination: impaired alternating hand movements and motor sequencing, worse on the left, with short tentative steps and apparent balance weakness.",
+        "Review serial MRI and FDG-PET: progressive frontotemporal and cerebellar atrophy with hypometabolism in both regions; cerebellar activity was much lower than frontal activity."
+      ],
+      "missteps": [
+        "Both CADASIL trajectories made a definitive diagnosis without supporting family history, characteristic migraine history, or documented genetic confirmation.",
+        "Both ALSP trajectories inferred a specific genetic disorder from white-matter changes and atrophy; CSF1R testing was not documented.",
+        "The trajectories anchored on possible causes of white-matter lesions rather than integrating the cognitive, affective, and cerebellar findings as a syndrome."
+      ],
+      "strategy": "When progressive behavioral or executive changes coexist with cerebellar signs, assess cognition and motor sequencing and review serial imaging for cerebellar atrophy or hypometabolism. Integrate these findings before settling on an underlying cause; do not treat nonspecific white-matter lesions as proof of a genetic disorder.",
+      "diagnosis": "Cerebellar cognitive affective syndrome",
+      "trajectories": 4,
+      "trajectories_correct": 0
+    },
+    {
+      "case_id": "PMC3512482",
+      "presentation": "A woman in her 60s with over a year of intermittent postprandial abdominal discomfort, bloating, and constipation developed a week of colicky pain and partial constipation, followed by bloody mucoid stools and inability to pass flatus.",
+      "decisive_evidence": [
+        "Laparotomy: colocolonic intussusception from the middle transverse colon into the descending colon, with a large polypoid intraluminal lead-point mass in the distal transverse colon.",
+        "Gross examination of the resected polyp: a soft, nodular, fatty mass measuring about 9 cm, with mucosal hyperemia, edema, and hemorrhage.",
+        "Pathologic examination: nonspecific acute inflammation within lobules of fat in the macroscopically fatty polyp.",
+        "Microscopy: mature adipocytes in the submucosa with hemorrhage and necrotic, inflamed mucosa."
+      ],
+      "missteps": [
+        "Diagnosed sigmoid volvulus despite no documented test establishing volvulus and operative findings identifying a different cause of obstruction.",
+        "Diagnosed obstructing colorectal cancer without confirmatory evidence, despite the available operative and pathology findings showing a fatty polyp.",
+        "Repeatedly ordered abdominal X-rays and CT; some trajectories also ordered CBC or colonoscopy, none of which were documented in this case."
+      ],
+      "strategy": "For an older adult with acute large-bowel obstruction and bloody mucus, especially after chronic intermittent symptoms, consider intussusception with a lead-point mass. Avoid assigning a specific cause from symptoms or distension alone; use operative findings and pathology to establish the lesion and its nature.",
+      "diagnosis": "Infected submucosal lipoma",
+      "trajectories": 4,
+      "trajectories_correct": 0
+    },
+    {
+      "case_id": "PMC9635188",
+      "presentation": "Adolescent boy with 4 days of severe epigastric and pleuritic chest pain, repeated vomiting, dysphagia, and odynophagia.",
+      "decisive_evidence": [
+        "Ask specifically about swallowed objects or packets: he disclosed swallowing a bag before arrest but would not reveal its contents.",
+        "CT abdomen/pelvis with IV contrast: distal esophageal edema and dilation, with questionable esophageal-wall air.",
+        "Water-soluble contrast esophagram: filling defect in the distal esophagus.",
+        "Esophagogastroduodenoscopy: a plastic bag was found in the distal esophagus and removed; its contents were confirmed as marijuana."
+      ],
+      "missteps": [
+        "Diagnosed acute esophagitis from an undisclosed substance without confirming the cause or location of the problem.",
+        "Diagnosed Boerhaave syndrome without evidence establishing perforation.",
+        "Ordered chest X-ray and/or chest CT, which were not documented in the case, while missing the available decisive esophagram and endoscopy findings."
+      ],
+      "strategy": "With persistent vomiting plus dysphagia or odynophagia, ask directly and nonjudgmentally about swallowed packets or objects, even if initially denied. Use imaging to localize suspected esophageal obstruction and pursue endoscopic confirmation/removal; do not settle on esophagitis or perforation without supporting evidence.",
+      "diagnosis": "Esophageal foreign body",
+      "trajectories": 4,
+      "trajectories_correct": 2
+    },
+    {
+      "case_id": "PMC10014146",
+      "presentation": "A 68-year-old woman with 3 days of severe epigastric pain radiating to the back and right shoulder, with nausea but no vomiting.",
+      "decisive_evidence": [
+        "Ask about preceding trauma: none was reported.",
+        "Review medications: she was taking aspirin.",
+        "Check CBC and compare prior hemoglobin: 103 g/L, down from 144 g/L five months earlier.",
+        "Order CT of the abdomen and pelvis: extensive changes around the duodenum with complex hyperdense fluid extending to the paracolic gutters and pelvis.",
+        "Order abdominal MRI: T2-hypointense, T1 iso- to hyperintense material around D2/D3 without enhancement."
+      ],
+      "missteps": [
+        "Diagnosed acute cholecystitis without documented ultrasound evidence.",
+        "Diagnosed pancreatitis despite the documented normal serum lipase.",
+        "Overcalled perforated duodenal ulcer from CT findings that did not document perforation.",
+        "Settled on peptic ulcer disease with bleeding without documented evidence of an ulcer or luminal GI bleeding."
+      ],
+      "strategy": "With acute epigastric pain and a substantial hemoglobin drop, assess for bleeding and review antiplatelet use and trauma history. If CT shows hyperdense fluid around the duodenum, avoid assuming biliary, pancreatic, or ulcer disease; use MRI characterization to clarify the finding.",
+      "diagnosis": "Periduodenal hematoma",
+      "trajectories": 4,
+      "trajectories_correct": 0
+    },
+    {
+      "case_id": "PMC4668245",
+      "presentation": "An 18-year-old man with acute, painless obstructive jaundice, nausea, fatigue, and reduced appetite; afebrile and without prior similar episodes.",
+      "decisive_evidence": [
+        "Request serum liver biochemical tests: marked cholestasis with alkaline phosphatase 2367 IU/L and direct bilirubin 6.0 mg/dL.",
+        "Request contrast-enhanced CT of the gallbladder and bile ducts: an infiltrative mass involved the gallbladder neck and hilar bile duct, with intrahepatic duct dilation.",
+        "Request bile duct exfoliative cytology: inflammatory cells without atypia.",
+        "Request gallbladder histopathology: no malignancy; storiform fibrosis, lymphoplasmacytic infiltration, and obliterative phlebitis were present.",
+        "Request IgG4 immunohistochemical staining: many IgG4-positive plasma cells, ratio 10–40%, maximum density 50 per high-power field; serum IgG4 was normal at 40 mg/dL."
+      ],
+      "missteps": [
+        "Anchored on the infiltrative mass as carcinoma despite inflammatory cytology and the patient’s young age.",
+        "Declared carcinoma before obtaining or considering definitive tissue histology and IgG4 immunostaining.",
+        "Did not pursue tissue diagnosis after cytology showed inflammation without atypia.",
+        "Spent effort on broad or repeated workup, including tests with no documented results, rather than focusing on pathology."
+      ],
+      "strategy": "In painless obstructive jaundice with a biliary mass, do not equate imaging with cancer. Use cytology and tissue histology to distinguish malignancy from inflammatory disease, and request IgG4 immunostaining when pathology suggests it. A normal serum IgG4 does not rule out tissue-level disease.",
+      "diagnosis": "IgG4-related cholecystitis",
+      "trajectories": 4,
+      "trajectories_correct": 0
+    },
+    {
+      "case_id": "PMC6749719",
+      "presentation": "Adolescent with mild unilateral facial numbness and pain, referred for dental evaluation.",
+      "decisive_evidence": [
+        "Panoramic dental radiograph (orthopantomography): extensive unilocular radiolucency in the right mandible, from the first premolar roots to the second molar and ramus.",
+        "Cone beam CT: slight buccal cortical expansion and thinning; lesion extended beyond the roots without root resorption or displacement.",
+        "Pulp vitality test: involved teeth were vital.",
+        "Aspiration: yielded bloody fluid.",
+        "Surgical exploration: blood-containing cavity without an epithelial lining."
+      ],
+      "missteps": [
+        "Diagnosed an odontogenic keratocyst from the panoramic radiograph alone, before confirming the cavity’s contents or lining.",
+        "Attributed symptoms to trigeminal sensory neuropathy without evaluating the mandibular lesion.",
+        "Ordered brain MRI, which was not documented, while the dental lesion remained unexplained."
+      ],
+      "strategy": "For adolescents with facial symptoms and a mandibular radiolucency, investigate the dental lesion rather than concluding the symptoms are neuropathic. Use panoramic imaging and CBCT to characterize it, check tooth vitality, and use aspiration and surgical exploration to establish its nature; do not name a specific lesion from imaging alone.",
+      "diagnosis": "Traumatic bone cyst",
+      "trajectories": 4,
+      "trajectories_correct": 0
+    }
+  ]
+}

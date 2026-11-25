@@ -1,0 +1,36 @@
+{
+  "providers": {
+    "openai": {
+      "base_url": "https://api.openai.com/v1",
+      "key_env": "OPENAI_API_KEY",
+      "options": {
+        "service_tier": "default"
+      },
+      "timeout_seconds": 90
+    }
+  },
+  "models": {
+    "gpt-6-luna": {
+      "provider": "openai",
+      "reasoning": "medium",
+      "usd_per_million_tokens": {
+        "input": 0.1,
+        "cached_input": 0.01,
+        "cache_write": 0.125,
+        "output": 0.5
+      },
+      "price_source": "https://developers.openai.com/api/docs/models/gpt-6-luna, standard tier under 272K input tokens, 30-minute cache writes, checked 2026-11-24"
+    },
+    "gpt-6.1-terra": {
+      "provider": "openai",
+      "reasoning": "medium",
+      "usd_per_million_tokens": {
+        "input": 1.0,
+        "cached_input": 0.05,
+        "cache_write": 1.25,
+        "output": 5.0
+      },
+      "price_source": "https://developers.openai.com/api/docs/models/gpt-6.1-terra, standard tier under 272K input tokens, 30-minute cache writes, checked 2026-11-24"
+    }
+  }
+}

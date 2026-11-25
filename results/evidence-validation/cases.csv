@@ -1,0 +1,641 @@
+mode,split,arm,run,case_id,correct,judge_score,diagnosis,medical_cost_usd,agent_calls,agent_input_tokens,agent_output_tokens,agent_cost_usd
+budget_1000,validation,baseline,1,PMC9645345,1,5,Kawasaki disease,300,2,1267,452,0.000353
+budget_1000,validation,baseline,2,PMC9645345,1,5,Kawasaki disease,300,3,2366,1530,0.001002
+budget_1000,validation,baseline,3,PMC9645345,1,5,Kawasaki disease,300,3,2330,1523,0.001021
+budget_1000,validation,baseline,1,PMC9668263,1,5,Bilateral external auditory canal exostoses (surfer’s ear),300,6,5139,2196,0.001667
+budget_1000,validation,baseline,2,PMC9668263,1,5,Bilateral external auditory canal exostoses (surfer’s ear) causing canal narrowing and cerumen impaction,300,4,2918,1144,0.000864
+budget_1000,validation,baseline,3,PMC9668263,1,5,External auditory canal exostoses (surfer’s ear),300,2,1262,387,0.00032
+budget_1000,validation,baseline,1,PMC8110398,0,1,Pneumomediastinum,900,6,5911,1971,0.001669
+budget_1000,validation,baseline,2,PMC8110398,0,1,Pneumomediastinum,900,7,6809,2210,0.001876
+budget_1000,validation,baseline,3,PMC8110398,0,1,Pneumomediastinum,900,5,4950,1646,0.001383
+budget_1000,validation,baseline,1,PMC9991574,0,2,Acute appendicitis,900,7,6804,2544,0.002067
+budget_1000,validation,baseline,2,PMC9991574,0,2,Acute appendicitis,600,7,7280,2957,0.002358
+budget_1000,validation,baseline,3,PMC9991574,0,2,Metastatic colorectal adenocarcinoma presenting with perforated appendicitis and a periappendiceal collection,947.21,4,2805,1167,0.000864
+budget_1000,validation,baseline,1,PMC10165762,0,2,Vulvar fibroepithelial stromal polyp,300,3,2101,1002,0.000711
+budget_1000,validation,baseline,2,PMC10165762,0,2,Vulvar fibroepithelial stromal polyp (giant fibroepithelial polyp of the labium),300,3,2273,962,0.000708
+budget_1000,validation,baseline,3,PMC10165762,1,5,Accessory (ectopic) breast tissue of the vulva,720.82,3,2689,977,0.000813
+budget_1000,validation,baseline,1,PMC9192198,0,2,Vertical root fracture of the endodontically treated mandibular right first molar,900,5,4027,3725,0.002292
+budget_1000,validation,baseline,2,PMC9192198,0,2,Odontogenic keratocyst,634.4,3,1896,1347,0.000863
+budget_1000,validation,baseline,3,PMC9192198,0,2,Odontogenic keratocyst of the right posterior mandible,704.4,3,2186,1857,0.001147
+budget_1000,validation,baseline,1,PMC11736051,0,2,Cutaneous granulomatosis with polyangiitis (granulomatosis with polyangiitis involving the skin),1000.0,3,2149,1583,0.001006
+budget_1000,validation,baseline,2,PMC11736051,1,5,Cutaneous Mycobacterium marinum infection,300,5,3959,3121,0.001956
+budget_1000,validation,baseline,3,PMC11736051,1,5,Cutaneous Mycobacterium marinum infection (fish tank granuloma),950.0,4,3395,1765,0.001248
+budget_1000,validation,baseline,1,PMC7684875,0,2,Primary mediastinal lymphoma,699.88,3,2203,1316,0.000878
+budget_1000,validation,baseline,2,PMC7684875,0,2,Mediastinal lymphoma causing airway compression,699.88,5,3464,2115,0.001404
+budget_1000,validation,baseline,3,PMC7684875,0,2,"Mediastinal lymphoma, most likely Hodgkin lymphoma",699.88,3,2282,1676,0.001066
+budget_1000,validation,baseline,1,PMC9643053,0,1,"Disseminated blastomycosis with pulmonary, vertebral, and cutaneous involvement",600,6,5391,2990,0.002113
+budget_1000,validation,baseline,2,PMC9643053,0,1,"Disseminated blastomycosis with pulmonary, osseous, and cutaneous involvement",600,9,8408,5437,0.00364
+budget_1000,validation,baseline,3,PMC9643053,0,1,"Disseminated blastomycosis with pulmonary, cutaneous, and osseous involvement",600,10,10089,6327,0.004345
+budget_1000,validation,baseline,1,PMC4275761,1,5,Chilblains (pernio),300,4,4358,1586,0.001302
+budget_1000,validation,baseline,2,PMC4275761,1,5,Chilblains (pernio),300,5,5402,1704,0.001494
+budget_1000,validation,baseline,3,PMC4275761,1,5,Chilblains (pernio),600,8,9964,2994,0.002661
+budget_1000,validation,baseline,1,PMC10986904,0,2,Ulcerative colitis,927.0,5,4548,1637,0.001357
+budget_1000,validation,baseline,2,PMC10986904,0,2,Ulcerative colitis,600,5,4095,2687,0.001781
+budget_1000,validation,baseline,3,PMC10986904,0,2,Ulcerative colitis,668.62,4,3365,1828,0.001279
+budget_1000,validation,baseline,1,PMC3917423,0,2,Prostate adenocarcinoma,663.91,4,3143,1344,0.000986
+budget_1000,validation,baseline,2,PMC3917423,0,2,Benign prostatic hyperplasia,713.91,3,2225,1232,0.000839
+budget_1000,validation,baseline,3,PMC3917423,0,2,Benign prostatic hyperplasia,713.91,3,2131,1123,0.000775
+budget_1000,validation,baseline,1,PMC3492049,0,2,Localized lymphoma,900.0,5,4460,1979,0.00149
+budget_1000,validation,baseline,2,PMC3492049,1,5,Kikuchi-Fujimoto disease (histiocytic necrotizing lymphadenitis),627.0,4,3703,3630,0.002245
+budget_1000,validation,baseline,3,PMC3492049,1,5,Kikuchi-Fujimoto disease (histiocytic necrotizing lymphadenitis),640.0,5,4763,3128,0.002127
+budget_1000,validation,baseline,1,PMC4131800,0,2,Vasovagal presyncope,900,6,6820,1739,0.001689
+budget_1000,validation,baseline,2,PMC4131800,0,3,Culture-negative infective endocarditis,707.58,5,5420,1133,0.001211
+budget_1000,validation,baseline,3,PMC4131800,0,3,Culture-negative infective endocarditis,635.86,7,7434,3887,0.002812
+budget_1000,validation,baseline,1,PMC4588337,0,3,Adhesive small bowel obstruction,300,3,2086,720,0.000569
+budget_1000,validation,baseline,2,PMC4588337,0,2,Adhesive small bowel obstruction,692.61,4,2674,702,0.000618
+budget_1000,validation,baseline,3,PMC4588337,0,2,Adhesive small-bowel obstruction following prior abdominal surgery,692.61,4,2773,795,0.000675
+budget_1000,validation,baseline,1,PMC3970247,0,2,Suspected epithelial ovarian malignancy,993.34,3,2656,1380,0.000985
+budget_1000,validation,baseline,2,PMC3970247,0,2,Ovarian cancer,982.13,3,2409,695,0.000615
+budget_1000,validation,baseline,3,PMC3970247,0,2,Ovarian carcinoma,982.13,3,2425,1043,0.000791
+budget_1000,validation,baseline,1,PMC9907762,0,2,Creutzfeldt-Jakob disease,300,5,4430,1962,0.001476
+budget_1000,validation,baseline,2,PMC9907762,0,1,Probable sporadic Creutzfeldt–Jakob disease,600,10,12212,6614,0.004748
+budget_1000,validation,baseline,3,PMC9907762,0,1,Probable sporadic Creutzfeldt–Jakob disease,600,7,7739,5191,0.003477
+budget_1000,validation,baseline,1,PMC8193131,0,2,Large lumbar disc herniation causing bilateral lumbosacral radiculopathy,300,5,5334,1835,0.001573
+budget_1000,validation,baseline,2,PMC8193131,0,2,Large lumbar disc herniation causing bilateral L5 radiculopathy,300,5,4910,1368,0.001236
+budget_1000,validation,baseline,3,PMC8193131,0,2,Large lumbar disc herniation causing bilateral L5 radiculopathy with evolving cauda equina compression,300,5,5316,1684,0.001495
+budget_1000,validation,baseline,1,PMC11433866,1,4,Left ovarian torsion,300,5,3832,1488,0.001127
+budget_1000,validation,baseline,2,PMC11433866,1,4,Left ovarian torsion,300,3,2050,1322,0.000866
+budget_1000,validation,baseline,3,PMC11433866,1,4,Left ovarian torsion associated with the known adnexal cyst,950.0,4,3191,1359,0.000999
+budget_1000,validation,baseline,1,PMC10393623,0,2,Transient loss of consciousness of undetermined cause,900,7,6991,2295,0.001941
+budget_1000,validation,baseline,2,PMC10393623,0,2,Unexplained loss of consciousness,900,8,7007,2275,0.00192
+budget_1000,validation,baseline,3,PMC10393623,0,2,"Syncope, unspecified",900,6,5937,1587,0.001454
+budget_1000,validation,baseline,1,PMC9077939,0,3,"Pulmonary embolism, likely associated with an underlying colorectal malignancy",600,6,6859,2243,0.001947
+budget_1000,validation,baseline,2,PMC9077939,0,2,Pulmonary embolism,900,8,7908,3335,0.002601
+budget_1000,validation,baseline,3,PMC9077939,0,2,"Acute pulmonary embolism, likely associated with occult colorectal cancer",600,6,5776,2890,0.002138
+budget_1000,validation,baseline,1,PMC11308721,0,2,Acute pulmonary embolism,699.88,3,1984,1036,0.000716
+budget_1000,validation,baseline,2,PMC11308721,0,1,Acute pulmonary embolism,699.88,4,2784,1426,0.000991
+budget_1000,validation,baseline,3,PMC11308721,0,2,Pulmonary embolism,699.88,3,1921,1063,0.000724
+budget_1000,validation,baseline,1,PMC7368196,1,5,"Hereditary hypophosphatemic rickets with hypercalciuria (HHRH), likely due to an SLC34A3-related phosphate transport defect",862.78,3,2491,1044,0.000799
+budget_1000,validation,baseline,2,PMC7368196,1,5,Hereditary hypophosphatemic rickets with hypercalciuria (SLC34A3-related renal phosphate wasting),862.78,3,2654,1361,0.000977
+budget_1000,validation,baseline,3,PMC7368196,1,5,Hereditary hypophosphatemic rickets with hypercalciuria (HHRH),862.78,3,2433,1073,0.000807
+budget_1000,validation,baseline,1,PMC9160170,0,1,Acute cholecystitis,600,3,2172,790,0.000612
+budget_1000,validation,baseline,2,PMC9160170,0,1,Acute cholecystitis,927.0,4,2974,1611,0.001103
+budget_1000,validation,baseline,3,PMC9160170,0,2,Acute cholecystitis,627.0,3,2130,1811,0.001118
+budget_1000,validation,baseline,1,PMC3074556,0,2,Primary adrenal insufficiency (Addison disease),993.34,7,8707,3147,0.00263
+budget_1000,validation,baseline,2,PMC3074556,0,2,Primary adrenal insufficiency (Addison disease),936.69,5,5220,2196,0.001717
+budget_1000,validation,baseline,3,PMC3074556,0,3,Primary adrenal insufficiency (Addison disease),936.69,5,5540,2091,0.001702
+budget_1000,validation,baseline,1,PMC11084000,1,5,Synvisc-associated pseudoseptic arthritis (acute inflammatory reaction to hyaluronic acid injection),300,3,2321,854,0.000659
+budget_1000,validation,baseline,2,PMC11084000,1,5,Hylan G-F 20 (Synvisc)-associated pseudoseptic inflammatory arthritis,300,3,2501,1001,0.000777
+budget_1000,validation,baseline,3,PMC11084000,1,5,Acute pseudoseptic arthritis (severe inflammatory reaction) following intra-articular Synvisc injection,300,3,2319,878,0.000671
+budget_1000,validation,baseline,1,PMC5602492,1,5,Hepatopulmonary syndrome,900,6,5016,2310,0.001683
+budget_1000,validation,baseline,2,PMC5602492,1,5,Hepatopulmonary syndrome,600,7,5896,2369,0.001802
+budget_1000,validation,baseline,3,PMC5602492,1,5,Hepatopulmonary syndrome,300,3,2280,918,0.000713
+budget_1000,validation,baseline,1,PMC6854920,0,2,Acute promyelocytic leukemia (APL),731.39,3,2275,977,0.000716
+budget_1000,validation,baseline,2,PMC6854920,0,2,Acute basophilic leukemia (acute myeloid leukemia with basophilic differentiation),940.2,5,4869,3440,0.002272
+budget_1000,validation,baseline,3,PMC6854920,0,2,Acute promyelocytic leukemia (APL),731.39,3,2224,1198,0.000821
+budget_1000,validation,baseline,1,PMC7141743,1,5,"Acute motor axonal neuropathy, a motor-predominant Guillain–Barré syndrome variant",943.44,3,2481,1586,0.001067
+budget_1000,validation,baseline,2,PMC7141743,0,2,Transient ischemic attack,943.44,4,2957,1318,0.000955
+budget_1000,validation,baseline,3,PMC7141743,0,2,Acute ischemic stroke presenting with right arm weakness,943.44,3,2087,811,0.000614
+budget_1000,validation,baseline,1,PMC4600550,0,2,Sildenafil-associated rhabdomyolysis with myoglobinuric acute kidney injury,966.69,5,5138,2054,0.001635
+budget_1000,validation,baseline,2,PMC4600550,0,2,Rhabdomyolysis causing acute kidney injury,966.69,5,4691,2850,0.00198
+budget_1000,validation,baseline,3,PMC4600550,0,2,Sildenafil-associated minimal change disease causing nephrotic syndrome and acute kidney injury,666.69,3,2500,1733,0.001145
+budget_1000,validation,baseline,1,PMC5214568,0,2,Juvenile ossifying fibroma of the right maxilla,600,5,4671,2670,0.001859
+budget_1000,validation,baseline,2,PMC5214568,0,2,Juvenile ossifying fibroma of the right maxilla,600,3,2334,1117,0.000792
+budget_1000,validation,baseline,3,PMC5214568,0,3,Juvenile ossifying fibroma of the right maxilla,900,7,7337,2634,0.002185
+budget_1000,validation,baseline,1,PMC4352498,1,4,Alfuzosin-induced drug-induced liver injury (acute hepatitis with jaundice),975.6,3,2315,722,0.000592
+budget_1000,validation,baseline,2,PMC4352498,1,4,Alfuzosin-induced drug-induced liver injury (acute hepatitis with jaundice),975.6,4,3022,765,0.000685
+budget_1000,validation,baseline,3,PMC4352498,1,4,Alfuzosin-induced drug-induced liver injury with jaundice,975.6,3,2447,793,0.000668
+budget_1000,validation,baseline,1,PMC3934531,1,4,Vulvar leiomyoma,300,3,2364,889,0.000707
+budget_1000,validation,baseline,2,PMC3934531,1,4,Vulvar leiomyoma,300,3,2241,916,0.000682
+budget_1000,validation,baseline,3,PMC3934531,1,4,Vulvar leiomyoma,600,4,3399,1395,0.001064
+budget_1000,validation,baseline,1,PMC8580553,0,2,"Pulmonary embolism, likely associated with recent COVID-19",600,5,8136,2165,0.002088
+budget_1000,validation,baseline,2,PMC8580553,1,5,Granulomatosis with polyangiitis (GPA),726.88,4,3382,1392,0.001096
+budget_1000,validation,baseline,3,PMC8580553,0,2,Pulmonary coccidioidomycosis,699.88,4,5308,2380,0.001842
+budget_1000,validation,baseline,1,PMC6159250,0,2,Warfarin-associated spontaneous rectus sheath hematoma,938.36,5,5368,1749,0.00151
+budget_1000,validation,baseline,2,PMC6159250,1,4,Spontaneous retroperitoneal hemorrhage related to supratherapeutic warfarin anticoagulation,938.36,7,9348,2980,0.002647
+budget_1000,validation,baseline,3,PMC6159250,0,2,"Warfarin-associated spontaneous intra-abdominal hemorrhage, likely a hepatic subcapsular hematoma",938.36,5,4614,2699,0.001869
+budget_1000,validation,baseline,1,PMC8334329,0,2,Ventilator-associated pneumonia with septic shock,600,3,1923,1847,0.001116
+budget_1000,validation,baseline,2,PMC8334329,0,2,Acute pulmonary embolism,927.0,6,5293,3718,0.002448
+budget_1000,validation,baseline,3,PMC8334329,0,2,Ventilator-associated pneumonia causing septic shock,927.0,4,2952,2324,0.001457
+budget_1000,validation,baseline,1,PMC9413868,0,2,Sinonasal malignancy,300,5,4115,2275,0.001575
+budget_1000,validation,baseline,2,PMC9413868,0,2,"Sinonasal malignancy, most likely squamous cell carcinoma",950.0,3,2178,1052,0.000744
+budget_1000,validation,baseline,3,PMC9413868,0,3,Chronic invasive fungal rhinosinusitis,950.0,12,12372,4765,0.003827
+budget_1000,validation,baseline,1,PMC10214810,0,1,Acute myeloid leukemia with monocytic differentiation (AML M5),600,4,3217,1036,0.000865
+budget_1000,validation,baseline,2,PMC10214810,0,2,Plaque-induced gingivitis,300,3,2453,1291,0.000919
+budget_1000,validation,baseline,3,PMC10214810,0,1,Acute myeloid leukemia,600,4,3205,1903,0.001298
+budget_1000,validation,baseline,1,PMC6006004,1,4,Multiple hepatic hemangiomas,658.27,4,3155,2707,0.001669
+budget_1000,validation,baseline,2,PMC6006004,0,2,Hepatic epithelioid hemangioendothelioma,658.27,5,3761,2479,0.001642
+budget_1000,validation,baseline,3,PMC6006004,0,2,Hepatic epithelioid hemangioendothelioma,658.27,7,5587,4178,0.002674
+budget_1000,validation,baseline,1,PMC7981706,1,5,Sacrococcygeal teratoma,300,1,460,640,0.000366
+budget_1000,validation,baseline,2,PMC7981706,1,5,Fetal sacrococcygeal teratoma,300,2,961,645,0.000419
+budget_1000,validation,baseline,3,PMC7981706,1,5,Fetal sacrococcygeal teratoma,300,2,961,425,0.000309
+budget_1000,validation,evidence_reconcile,1,PMC9645345,0,2,Multisystem inflammatory syndrome in children (MIS-C) associated with SARS-CoV-2,666.02,8,9274,5876,0.004062
+budget_1000,validation,evidence_reconcile,1,PMC9668263,1,5,"Bilateral external auditory canal exostoses (surfer’s ear), causing marked canal stenosis and cerumen retention.",300,36,53151,18567,0.015537
+budget_1000,validation,evidence_reconcile,1,PMC8110398,0,2,Anterior chest wall contusion with musculoskeletal chest pain,600,18,31778,10658,0.009286
+budget_1000,validation,evidence_reconcile,1,PMC9991574,0,2,Metastatic caecal adenocarcinoma causing appendiceal obstruction and perforation,947.21,9,10260,6485,0.004487
+budget_1000,validation,evidence_reconcile,1,PMC10165762,1,5,Ectopic mammary tissue of the upper left labium,720.82,7,9156,4139,0.003199
+budget_1000,validation,evidence_reconcile,1,PMC9192198,0,2,Likely radicular cyst associated with the previously endodontically treated mandibular right first molar,850.0,6,5811,6573,0.003978
+budget_1000,validation,evidence_reconcile,1,PMC11736051,1,5,Cutaneous Mycobacterium marinum infection of the right medial knee and thigh following aquatic traumatic inoculation,666.76,18,27594,17133,0.012001
+budget_1000,validation,evidence_reconcile,1,PMC7684875,0,2,Primary mediastinal lymphoma,699.88,6,5951,3976,0.002694
+budget_1000,validation,evidence_reconcile,1,PMC9643053,0,1,"Disseminated endemic fungal infection with suspected pulmonary, skeletal, and cutaneous involvement",600,18,28705,20478,0.013788
+budget_1000,validation,evidence_reconcile,1,PMC4275761,1,5,"Chilblains (pernio) affecting the toes bilaterally, in the setting of recent cold-season exposure",300,19,30064,14649,0.011043
+budget_1000,validation,evidence_reconcile,1,PMC10986904,0,2,Inflammatory bowel disease presenting as colitis (ulcerative colitis or Crohn disease),750.0,5,4073,3037,0.001926
+budget_1000,validation,evidence_reconcile,1,PMC3917423,0,2,Benign prostatic hyperplasia,663.91,7,6470,4487,0.002917
+budget_1000,validation,evidence_reconcile,1,PMC3492049,0,2,"Localized infectious axillary lymphadenitis, etiology unspecified",900,13,17094,13046,0.008597
+budget_1000,validation,evidence_reconcile,1,PMC4131800,0,2,Culture-negative infective endocarditis,635.86,7,9037,5750,0.003964
+budget_1000,validation,evidence_reconcile,1,PMC4588337,1,5,Small-bowel obstruction caused by a retained surgical sponge (gossypiboma) following hysterectomy,692.61,9,10615,6390,0.004484
+budget_1000,validation,evidence_reconcile,1,PMC3970247,0,2,Giant left ovarian mucinous cystadenoma,921.02,5,5018,3281,0.002253
+budget_1000,validation,evidence_reconcile,1,PMC9907762,0,2,Rapidly progressive dementia syndrome,300,11,11696,8586,0.005577
+budget_1000,validation,evidence_reconcile,1,PMC8193131,0,2,Large lumbar disc herniation causing bilateral L5 radiculopathy,618.0,20,35634,16451,0.012664
+budget_1000,validation,evidence_reconcile,1,PMC11433866,0,2,Sigmoid volvulus causing bowel obstruction in late pregnancy,600,18,27208,16647,0.011684
+budget_1000,validation,evidence_reconcile,1,PMC10393623,1,4,Heatstroke,600,8,8512,5158,0.003585
+budget_1000,validation,evidence_reconcile,1,PMC9077939,0,2,"Acute pulmonary embolism, possibly associated with an occult abdominal malignancy",965.82,10,14582,8538,0.006055
+budget_1000,validation,evidence_reconcile,1,PMC11308721,0,2,Acute pulmonary embolism,699.88,6,5482,4858,0.002977
+budget_1000,validation,evidence_reconcile,1,PMC7368196,1,4,"FGF23-independent hypophosphatemic rickets/osteomalacia, with a biochemical pattern most consistent with renal phosphate wasting",737.34,6,6502,6192,0.003874
+budget_1000,validation,evidence_reconcile,1,PMC9160170,0,2,"Perforated hollow viscus causing upper-abdominal peritonitis, with site and cause unspecified",900,10,12659,7720,0.005382
+budget_1000,validation,evidence_reconcile,1,PMC3074556,0,2,"Occult malignancy, with pulmonary malignancy favored",600,12,18631,10213,0.007399
+budget_1000,validation,evidence_reconcile,1,PMC11084000,1,5,"Synvisc (hylan G-F 20)-associated pseudoseptic inflammatory arthritis of both knees, beginning 12 hours after the third bilateral injection.",618.0,7,6867,4396,0.002992
+budget_1000,validation,evidence_reconcile,1,PMC5602492,0,2,Heart failure with persistent dyspnea after resolution of pulmonary congestion,300,15,17596,9286,0.006621
+budget_1000,validation,evidence_reconcile,1,PMC6854920,0,3,Acute leukemia with marrow failure,627.0,15,22559,16326,0.010945
+budget_1000,validation,evidence_reconcile,1,PMC7141743,0,2,Acute ischemic stroke,943.44,5,4409,3279,0.00208
+budget_1000,validation,evidence_reconcile,1,PMC4600550,0,2,"Acute kidney injury with probable myoglobinuria, consistent with rhabdomyolysis temporally associated with sildenafil exposure",966.69,10,14517,8812,0.006159
+budget_1000,validation,evidence_reconcile,1,PMC5214568,0,3,Juvenile ossifying fibroma of the right maxilla,900,23,37703,19079,0.014211
+budget_1000,validation,evidence_reconcile,1,PMC4352498,0,3,Intrahepatic cholestatic liver disease,947.21,6,5183,4078,0.002557
+budget_1000,validation,evidence_reconcile,1,PMC3934531,1,4,Vulvar leiomyoma of the left labia majora,600,16,25203,15310,0.010765
+budget_1000,validation,evidence_reconcile,1,PMC8580553,0,2,Post-COVID multifocal cavitating pneumonia,999.88,10,16528,8514,0.006308
+budget_1000,validation,evidence_reconcile,1,PMC6159250,0,2,"Warfarin-associated spontaneous abdominal-wall hematoma, most consistent with a rectus sheath hematoma.",600,15,23086,13522,0.009563
+budget_1000,validation,evidence_reconcile,1,PMC8334329,0,2,Pulmonary embolism,600,14,20093,12899,0.008924
+budget_1000,validation,evidence_reconcile,1,PMC9413868,0,2,Chronic unilateral rhinosinusitis,300,14,14200,10209,0.006612
+budget_1000,validation,evidence_reconcile,1,PMC10214810,0,2,Generalized gingivitis,600,18,30082,12628,0.010037
+budget_1000,validation,evidence_reconcile,1,PMC6006004,1,4,Multiple hepatic hemangiomas,658.27,7,6123,3702,0.002463
+budget_1000,validation,evidence_reconcile,1,PMC7981706,1,5,Fetal sacrococcygeal teratoma,1000.0,5,4073,3624,0.002219
+budget_1000,validation,evidence_playbook,1,PMC9645345,0,2,Acute appendicitis,911.02,10,14361,9611,0.006555
+budget_1000,validation,evidence_playbook,1,PMC9668263,1,5,"Bilateral external auditory canal exostoses (surfer’s ear), causing significant canal stenosis and cerumen retention.",720.0,18,28587,12978,0.010042
+budget_1000,validation,evidence_playbook,1,PMC8110398,0,2,Chest wall contusion from minor blunt anterior chest trauma,600,14,23564,12638,0.009244
+budget_1000,validation,evidence_playbook,1,PMC9991574,0,2,Likely metastatic cecal colorectal adenocarcinoma presenting with perforated appendicitis.,947.21,8,10136,6975,0.004735
+budget_1000,validation,evidence_playbook,1,PMC10165762,0,2,Large pedunculated fibroepithelial stromal polyp of the upper left labium,300,12,17150,10377,0.007125
+budget_1000,validation,evidence_playbook,1,PMC9192198,0,3,"Underlying mandibular bone lesion of the right posterior mandible, with buccolingual extension; specific cause and subtype are not characterized.",1000.0,5,5894,4188,0.002811
+budget_1000,validation,evidence_playbook,1,PMC11736051,0,2,"Granulomatosis with polyangiitis, localized cutaneous form",1000.0,10,14618,7856,0.005736
+budget_1000,validation,evidence_playbook,1,PMC7684875,0,2,Mediastinal lymphoma causing airway compression,699.88,7,9009,6602,0.004407
+budget_1000,validation,evidence_playbook,1,PMC9643053,0,1,Disseminated fungal infection with pulmonary and possible bone/skin involvement,600,20,32881,23644,0.015911
+budget_1000,validation,evidence_playbook,1,PMC4275761,1,5,Pernio (chilblains) of the toes,600,16,25508,17797,0.012066
+budget_1000,validation,evidence_playbook,1,PMC10986904,0,2,"Inflammatory bowel disease (colitis, subtype not specified)",932.81,12,17065,9786,0.007006
+budget_1000,validation,evidence_playbook,1,PMC3917423,0,2,Benign prostatic hyperplasia,663.91,5,5124,3219,0.002231
+budget_1000,validation,evidence_playbook,1,PMC3492049,0,3,"Acute unilateral axillary lymphadenitis, likely infectious, with cause unspecified",900,14,21133,13670,0.009456
+budget_1000,validation,evidence_playbook,1,PMC4131800,0,3,Culture-negative infective endocarditis,635.86,7,8718,6282,0.004211
+budget_1000,validation,evidence_playbook,1,PMC4588337,1,5,Mechanical small-bowel obstruction associated with a retained surgical sponge (gossypiboma) after hysterectomy,692.61,7,8782,5758,0.003957
+budget_1000,validation,evidence_playbook,1,PMC3970247,0,2,Large complex left adnexal mass suspicious for ovarian epithelial malignancy,921.02,5,6455,3700,0.002637
+budget_1000,validation,evidence_playbook,1,PMC9907762,0,2,Suspected sporadic Creutzfeldt-Jakob disease presenting as rapidly progressive dementia,300,11,13147,9389,0.006164
+budget_1000,validation,evidence_playbook,1,PMC8193131,0,2,Large central lumbar disc herniation causing bilateral L5-predominant radiculopathy and progressive leg weakness,300,31,51416,30091,0.021014
+budget_1000,validation,evidence_playbook,1,PMC11433866,1,4,Suspected left adnexal torsion,600,24,37553,27718,0.018532
+budget_1000,validation,evidence_playbook,1,PMC10393623,1,5,"Heat stroke with severe hyperthermia, coma, and circulatory shock",900,8,11727,6312,0.004602
+budget_1000,validation,evidence_playbook,1,PMC9077939,0,3,"Pulmonary embolism, possibly associated with occult abdominal malignancy",900,13,21499,13578,0.009456
+budget_1000,validation,evidence_playbook,1,PMC11308721,0,2,Acute pulmonary embolism,699.88,7,8151,4735,0.003366
+budget_1000,validation,evidence_playbook,1,PMC7368196,1,5,"Hereditary hypophosphatemic rickets with hypercalciuria, likely SLC34A3-related, presenting with persistent hypophosphatemic rickets and genu valgum.",737.34,6,9234,7209,0.004739
+budget_1000,validation,evidence_playbook,1,PMC9160170,0,2,"Acute peritonitis (clinical, upper abdominal)",900,7,8090,7352,0.004668
+budget_1000,validation,evidence_playbook,1,PMC3074556,0,1,Intrathoracic malignancy,900,7,8747,6538,0.004342
+budget_1000,validation,evidence_playbook,1,PMC11084000,1,5,Acute Synvisc-associated pseudoseptic inflammatory arthritis of both knees following bilateral hylan G-F 20 injections.,667.38,20,32335,16464,0.012253
+budget_1000,validation,evidence_playbook,1,PMC5602492,0,2,Congestive heart failure,699.88,6,6965,4376,0.003039
+budget_1000,validation,evidence_playbook,1,PMC6854920,0,2,Acute myeloid leukemia,940.2,13,22980,18676,0.01219
+budget_1000,validation,evidence_playbook,1,PMC7141743,1,4,"Guillain–Barré syndrome, acute motor-predominant variant",900,14,22468,17070,0.011109
+budget_1000,validation,evidence_playbook,1,PMC4600550,0,2,"Probable rhabdomyolysis with pigment-associated acute kidney injury, temporally associated with sildenafil.",966.69,10,17321,12227,0.008259
+budget_1000,validation,evidence_playbook,1,PMC5214568,0,2,Juvenile ossifying fibroma of the right maxilla,900,13,21469,13764,0.009545
+budget_1000,validation,evidence_playbook,1,PMC4352498,1,5,"Alfuzosin-induced acute drug-induced liver injury with jaundice, hepatocellular-predominant biochemical pattern",975.6,6,7459,4385,0.003105
+budget_1000,validation,evidence_playbook,1,PMC3934531,1,4,"Solid soft-tissue mass of the left labium majus, clinically consistent with a vulvar soft-tissue tumor, not further subtyped.",600,20,37572,20091,0.014721
+budget_1000,validation,evidence_playbook,1,PMC8580553,1,5,"Granulomatosis with polyangiitis, with pulmonary cavitary lesions and palpable purpura",699.88,6,9741,4954,0.003675
+budget_1000,validation,evidence_playbook,1,PMC6159250,0,2,Pulmonary embolism presenting with pleuritic right upper abdominal pain,900,10,14284,9872,0.006702
+budget_1000,validation,evidence_playbook,1,PMC8334329,0,1,Suspected tension pneumothorax,900,8,9194,7414,0.004812
+budget_1000,validation,evidence_playbook,1,PMC9413868,0,3,Suspected chronic invasive fungal rhinosinusitis,950.0,7,8138,5214,0.003604
+budget_1000,validation,evidence_playbook,1,PMC10214810,0,2,Generalized gingivitis,600,12,19597,11717,0.008288
+budget_1000,validation,evidence_playbook,1,PMC6006004,1,4,"Multiple benign hepatic lesions, most likely hemangiomas",658.27,10,10938,8826,0.005735
+budget_1000,validation,evidence_playbook,1,PMC7981706,1,5,Sacrococcygeal teratoma,961.69,9,9897,8092,0.005238
+budget_1000,validation,evidence_memory,1,PMC9645345,0,2,Multisystem inflammatory syndrome in children (MIS-C) associated with SARS-CoV-2,660.0,10,25817,11278,0.008865
+budget_1000,validation,evidence_memory,1,PMC9668263,1,5,Bilateral external auditory canal exostoses associated with long-term unprotected free diving,600,27,68908,18555,0.017235
+budget_1000,validation,evidence_memory,1,PMC8110398,0,2,Anterior chest wall contusion,600,14,32636,12720,0.010438
+budget_1000,validation,evidence_memory,1,PMC9991574,0,3,"Perforated appendicitis with CT-suspected disseminated malignancy, most likely of caecal origin.",947.21,6,11760,5410,0.004175
+budget_1000,validation,evidence_memory,1,PMC10165762,1,4,Vulvar fibroadenoma arising in ectopic mammary tissue,950.0,8,19244,6076,0.005443
+budget_1000,validation,evidence_memory,1,PMC9192198,0,3,"Symptomatic inflammatory periapical lesion involving the mandibular right first molar and second premolar apices, in the setting of prior endodontic treatment of the first molar.",934.4,8,18609,8560,0.006606
+budget_1000,validation,evidence_memory,1,PMC11736051,1,5,Cutaneous Mycobacterium marinum infection of the right medial knee and thigh,696.72,8,19014,8228,0.00649
+budget_1000,validation,evidence_memory,1,PMC7684875,0,2,"Hypertensive emergency presenting with acute cardiogenic pulmonary edema, with a right paratracheal mediastinal mass of uncharacterized nature.",699.88,14,39309,14059,0.011942
+budget_1000,validation,evidence_memory,1,PMC9643053,0,1,"Clinically suspected disseminated tuberculosis; pulmonary, spinal, and hallux involvement are possible but not confirmed.",600,15,44516,18408,0.014372
+budget_1000,validation,evidence_memory,1,PMC4275761,1,5,Pernio (chilblains) affecting the toes bilaterally,600,15,42029,17505,0.014005
+budget_1000,validation,evidence_memory,1,PMC10986904,0,2,Inflammatory bowel disease presenting as active bloody colitis,968.21,11,26415,10719,0.008661
+budget_1000,validation,evidence_memory,1,PMC3917423,0,2,Benign prostatic hyperplasia,663.91,9,20823,8926,0.007065
+budget_1000,validation,evidence_memory,1,PMC3492049,0,3,"Acute left axillary lymphadenitis, clinically most consistent with bacterial lymphadenitis; no suppuration or specific organism demonstrated",900,14,36644,17946,0.013552
+budget_1000,validation,evidence_memory,1,PMC4131800,0,3,Suspected culture-negative infective endocarditis,707.58,8,20271,6443,0.005755
+budget_1000,validation,evidence_memory,1,PMC4588337,1,5,Mechanical small-bowel obstruction likely caused by a retained surgical sponge (gossypiboma),992.61,13,32595,11999,0.010073
+budget_1000,validation,evidence_memory,1,PMC3970247,0,3,Large complex left adnexal mass suspicious for ovarian epithelial malignancy,1000.0,5,10399,3353,0.002976
+budget_1000,validation,evidence_memory,1,PMC9907762,0,2,"Rapidly progressive dementia, clinically most consistent with sporadic Creutzfeldt-Jakob disease",300,16,43301,13639,0.011884
+budget_1000,validation,evidence_memory,1,PMC8193131,0,2,Large central lumbar disc herniation causing bilateral L5-predominant radiculopathy,300,25,72824,25565,0.021511
+budget_1000,validation,evidence_memory,1,PMC11433866,0,2,Acute intestinal obstruction,600,21,54852,25221,0.019465
+budget_1000,validation,evidence_memory,1,PMC10393623,1,5,Heat stroke with severe central nervous system dysfunction and circulatory instability,900,8,19652,6804,0.005858
+budget_1000,validation,evidence_memory,1,PMC9077939,0,2,"Acute dyspnoea associated with probable bowel obstruction, most consistent with diaphragmatic restriction; obstruction and the restrictive mechanism are not confirmed.",600,16,46134,18150,0.014841
+budget_1000,validation,evidence_memory,1,PMC11308721,0,2,Acute pulmonary embolism,699.88,8,17541,5585,0.004985
+budget_1000,validation,evidence_memory,1,PMC7368196,1,5,"FGF23-independent hereditary hypophosphatemic rickets, most consistent with SLC34A3-related renal phosphate wasting (hereditary hypophosphatemic rickets with hypercalciuria).",755.27,6,14894,5736,0.004729
+budget_1000,validation,evidence_memory,1,PMC9160170,0,1,Acute cholecystitis,927.0,12,28823,11595,0.009399
+budget_1000,validation,evidence_memory,1,PMC3074556,0,1,Active tuberculosis,900,14,36010,14652,0.011826
+budget_1000,validation,evidence_memory,1,PMC11084000,1,5,Acute bilateral pseudoseptic inflammatory arthritis following the third intra-articular Synvisc (hylan G-F 20) injection,750.0,21,62133,18397,0.016964
+budget_1000,validation,evidence_memory,1,PMC5602492,1,5,Hepatopulmonary syndrome associated with chronic HCV-related liver disease,600,19,53913,18001,0.015738
+budget_1000,validation,evidence_memory,1,PMC6854920,0,2,Acute promyelocytic leukemia,940.2,14,33898,14531,0.011502
+budget_1000,validation,evidence_memory,1,PMC7141743,0,2,"Acute right brachial plexopathy, motor-predominant",943.44,6,13501,5898,0.004636
+budget_1000,validation,evidence_memory,1,PMC4600550,0,2,Nephrotic syndrome with acute kidney injury,644.51,7,18356,10677,0.007632
+budget_1000,validation,evidence_memory,1,PMC5214568,0,3,Juvenile ossifying fibroma of the right maxilla,900,14,38950,14398,0.012067
+budget_1000,validation,evidence_memory,1,PMC4352498,1,5,"Alfuzosin-induced acute liver injury, presenting with jaundice and a predominantly hepatocellular enzyme pattern",889.76,7,17166,6609,0.00545
+budget_1000,validation,evidence_memory,1,PMC3934531,1,4,Vulvar leiomyoma of the left labia majora (solid benign vulvar mass),600,17,47189,17412,0.014223
+budget_1000,validation,evidence_memory,1,PMC8580553,1,5,"PR3-ANCA–associated granulomatosis with polyangiitis, with pulmonary hemoptysis and cutaneous palpable purpura",750.0,7,19961,6222,0.005606
+budget_1000,validation,evidence_memory,1,PMC6159250,1,4,Warfarin-associated spontaneous retroperitoneal hemorrhage,938.36,12,33010,11517,0.009884
+budget_1000,validation,evidence_memory,1,PMC8334329,0,2,Ventilator-associated pneumonia,600,15,38819,18039,0.013871
+budget_1000,validation,evidence_memory,1,PMC9413868,0,3,"Unilateral chronic rhinosinusitis due to an obstructing sinonasal lesion (hypertrophic, granulomatous middle-turbinate mucosa).",950.0,7,13552,5892,0.004639
+budget_1000,validation,evidence_memory,1,PMC10214810,0,2,Periodontal disease with gingival bleeding and 5-mm probing depths at the palatal aspects of both maxillary central incisors,950.0,11,24905,9436,0.00783
+budget_1000,validation,evidence_memory,1,PMC6006004,1,4,Multiple hepatic hemangiomas,658.27,9,19497,11516,0.008194
+budget_1000,validation,evidence_memory,1,PMC7981706,1,5,Fetal sacrococcygeal teratoma,300,11,21173,7194,0.005799
+budget_1000,validation,panel_team,1,PMC9645345,1,5,Classic (complete) Kawasaki disease,300,38,50563,30131,0.021023
+budget_1000,validation,panel_team,1,PMC9668263,1,5,"Bilateral external auditory canal exostoses (surfer’s ear), causing canal narrowing, greater on the right.",300,11,8873,6204,0.004045
+budget_1000,validation,panel_team,1,PMC8110398,0,1,Musculoskeletal chest pain due to minor anterior chest-wall contusion,900,66,106340,40066,0.033102
+budget_1000,validation,panel_team,1,PMC9991574,0,2,Acute appendicitis causing right-lower-quadrant peritonism,600,40,46200,22241,0.016614
+budget_1000,validation,panel_team,1,PMC10165762,1,4,Vulvar fibroadenoma arising in ectopic mammary tissue of the left labium,900.0,27,25077,18781,0.012197
+budget_1000,validation,panel_team,1,PMC9192198,0,2,"Symptomatic apical periodontitis of the mandibular right second premolar and first molar, with pulpal status undetermined",900,63,94256,46733,0.034706
+budget_1000,validation,panel_team,1,PMC11736051,0,2,Ulcerated cutaneous squamous cell carcinoma arising in a chronic traumatic scar of the right medial knee and thigh (Marjolin ulcer),600,47,79142,37079,0.028295
+budget_1000,validation,panel_team,1,PMC7684875,0,2,Mediastinal Hodgkin lymphoma causing airway compression,673.69,30,30268,21201,0.014135
+budget_1000,validation,panel_team,1,PMC9643053,0,2,Disseminated blastomycosis,600,61,73500,56305,0.037007
+budget_1000,validation,panel_team,1,PMC4275761,1,5,Pernio (chilblains) affecting the toes bilaterally after recent cold exposure,300,59,98524,44217,0.033974
+budget_1000,validation,panel_team,1,PMC10986904,0,2,Ulcerative colitis (active colitis; extent not specified),980.0,64,92894,43889,0.033297
+budget_1000,validation,panel_team,1,PMC3917423,0,2,Benign prostatic hyperplasia causing prostatism,703.91,29,30718,18221,0.012716
+budget_1000,validation,panel_team,1,PMC3492049,0,2,Probable cat-scratch disease (Bartonella henselae) causing left axillary lymphadenitis,940.0,60,100243,45308,0.034994
+budget_1000,validation,panel_team,1,PMC4131800,0,3,Culture-negative infective endocarditis with possible valvular involvement,935.86,35,49388,24678,0.018369
+budget_1000,validation,panel_team,1,PMC4588337,0,2,"Mechanical small-bowel obstruction, likely adhesive",692.61,31,26892,17031,0.011458
+budget_1000,validation,panel_team,1,PMC3970247,0,2,Subacute constipation with abdominal distention in a patient with known hypothyroidism,600,44,47416,27000,0.019093
+budget_1000,validation,panel_team,1,PMC9907762,0,1,Creutzfeldt-Jakob disease (prion disease),600,68,89189,44268,0.032965
+budget_1000,validation,panel_team,1,PMC8193131,0,2,Spinal epidural abscess with neurologic compression,618.0,31,26989,19585,0.012725
+budget_1000,validation,panel_team,1,PMC11433866,0,2,"Acute bowel obstruction, with sigmoid volvulus suspected",900,78,113678,55916,0.041753
+budget_1000,validation,panel_team,1,PMC10393623,1,5,"Heatstroke with encephalopathy, hypotension, and multiorgan dysfunction including consumptive coagulopathy",636.69,40,53534,26038,0.019485
+budget_1000,validation,panel_team,1,PMC9077939,0,2,Occult intra-abdominal malignancy with associated anemia,900,50,66186,30605,0.023318
+budget_1000,validation,panel_team,1,PMC11308721,1,5,Postinfectious obliterative bronchiolitis of the left upper lobe (Swyer-James-MacLeod pattern),699.88,29,29358,19655,0.013329
+budget_1000,validation,panel_team,1,PMC7368196,1,5,"Hereditary hypophosphatemic rickets due to FGF23-independent renal phosphate wasting, most consistent with SLC34A3-related disease (hereditary hypophosphatemic rickets with hypercalciuria).",862.78,28,43182,27837,0.01918
+budget_1000,validation,panel_team,1,PMC9160170,0,2,Perforated upper abdominal viscus causing peritonitis,600,32,30716,19950,0.013515
+budget_1000,validation,panel_team,1,PMC3074556,0,1,"Occult lymphoma, site and subtype unspecified",900,61,88797,40884,0.031282
+budget_1000,validation,panel_team,1,PMC11084000,0,3,Acute calcium pyrophosphate crystal arthritis (pseudogout) of the knees,659.5,20,13627,14665,0.008695
+budget_1000,validation,panel_team,1,PMC5602492,0,2,Heart failure with pulmonary congestion and right basal pleural effusion; cause and cardiac subtype not specified.,699.88,18,13392,10664,0.006725
+budget_1000,validation,panel_team,1,PMC6854920,0,2,Acute promyelocytic leukemia (APL),718.39,18,17583,13318,0.008671
+budget_1000,validation,panel_team,1,PMC7141743,1,4,Motor-predominant Guillain–Barré syndrome,633.34,53,85411,42735,0.031949
+budget_1000,validation,panel_team,1,PMC4600550,0,2,Acute kidney injury on chronic kidney disease causing renal sodium and water retention,966.69,34,45597,30947,0.020837
+budget_1000,validation,panel_team,1,PMC5214568,1,4,Fibrous dysplasia of the right maxilla.,720.82,20,20032,15740,0.010197
+budget_1000,validation,panel_team,1,PMC4352498,0,3,Alfuzosin-induced cholestatic liver injury,861.37,21,22198,14588,0.009875
+budget_1000,validation,panel_team,1,PMC3934531,1,4,Clinically most consistent with a vulvar leiomyoma of the left labia majora.,600,33,42376,21821,0.016073
+budget_1000,validation,panel_team,1,PMC8580553,0,2,"Necrotizing multifocal pneumonia, possibly post-viral",699.88,24,33969,18654,0.013489
+budget_1000,validation,panel_team,1,PMC6159250,1,4,Warfarin-associated spontaneous retroperitoneal hemorrhage,938.36,36,38420,24381,0.016743
+budget_1000,validation,panel_team,1,PMC8334329,0,2,Ventilator-associated pneumonia causing sepsis,900,66,92409,47251,0.034767
+budget_1000,validation,panel_team,1,PMC9413868,0,2,Chronic invasive fungal rhinosinusitis involving the left sinonasal tract,950.0,34,32873,24500,0.016015
+budget_1000,validation,panel_team,1,PMC10214810,0,2,Generalized plaque-induced gingivitis,990.0,55,72931,35758,0.026651
+budget_1000,validation,panel_team,1,PMC6006004,1,4,Multiple hepatic hemangiomas,300,24,19336,12334,0.008257
+budget_1000,validation,panel_team,1,PMC7981706,1,5,Fetal sacrococcygeal teratoma with internal and external components,300,24,19305,13076,0.008578
+budget_1000,validation,panel_team_memory,1,PMC9645345,0,2,Acute appendicitis,600,82,134825,40476,0.036595
+budget_1000,validation,panel_team_memory,1,PMC9668263,1,5,Bilateral external auditory canal exostoses causing marked canal narrowing and likely contributing to cerumen retention,300,24,29959,14268,0.010769
+budget_1000,validation,panel_team_memory,1,PMC8110398,0,2,Musculoskeletal chest pain from an anterior chest wall contusion,900,41,58326,20904,0.017571
+budget_1000,validation,panel_team_memory,1,PMC9991574,0,2,Acute appendicitis,900,80,138784,49172,0.04098
+budget_1000,validation,panel_team_memory,1,PMC10165762,1,5,Vulvar ectopic breast tissue of the left labium,900.0,18,18929,10352,0.007399
+budget_1000,validation,panel_team_memory,1,PMC9192198,0,2,Odontogenic keratocyst of the right posterior mandible,670.0,68,131696,56359,0.043138
+budget_1000,validation,panel_team_memory,1,PMC11736051,0,2,Granulomatosis with polyangiitis presenting as cutaneous necrotizing granulomatous vasculitis of the right medial knee and thigh.,720.82,26,31966,19909,0.013804
+budget_1000,validation,panel_team_memory,1,PMC7684875,0,2,Acute respiratory failure due to airway compression by a right paratracheal mediastinal mass,699.88,15,13094,9862,0.006366
+budget_1000,validation,panel_team_memory,1,PMC9643053,0,1,"Active tuberculosis, with suspected vertebral involvement and possible cutaneous involvement",900,51,62732,34648,0.024367
+budget_1000,validation,panel_team_memory,1,PMC4275761,1,5,Pernio (chilblains),600,65,137852,38948,0.035719
+budget_1000,validation,panel_team_memory,1,PMC10986904,0,3,"Probable inflammatory bowel disease presenting as colitis, favor ulcerative colitis",974.43,56,83015,39242,0.029012
+budget_1000,validation,panel_team_memory,1,PMC3917423,0,2,Benign prostatic hyperplasia (BPH),663.91,33,36911,18398,0.013135
+budget_1000,validation,panel_team_memory,1,PMC3492049,0,3,Infectious or reactive left axillary lymphadenitis,600,77,136016,44055,0.038566
+budget_1000,validation,panel_team_memory,1,PMC4131800,0,3,Suspected culture-negative infective endocarditis,971.72,42,58034,22001,0.018061
+budget_1000,validation,panel_team_memory,1,PMC4588337,0,2,"Acute mechanical small-bowel obstruction, likely due to postoperative adhesions",692.61,35,30967,15033,0.01066
+budget_1000,validation,panel_team_memory,1,PMC3970247,0,3,"Large adnexal neoplasm, ovarian origin favored, with malignancy suspected",972.32,77,89235,36486,0.027957
+budget_1000,validation,panel_team_memory,1,PMC9907762,0,1,Creutzfeldt-Jakob disease (prion disease),627.0,75,111594,49336,0.037581
+budget_1000,validation,panel_team_memory,1,PMC8193131,0,2,Spinal epidural abscess causing compressive neurologic deficits,618.0,65,78198,37906,0.027539
+budget_1000,validation,panel_team_memory,1,PMC11433866,0,1,Sigmoid volvulus causing bowel obstruction,900,61,67671,38812,0.026855
+budget_1000,validation,panel_team_memory,1,PMC10393623,0,2,Acute intracranial hemorrhage,929.4,36,47567,20387,0.015999
+budget_1000,validation,panel_team_memory,1,PMC9077939,0,2,Suspected colorectal malignancy causing bowel obstruction,900,70,117779,43744,0.036362
+budget_1000,validation,panel_team_memory,1,PMC11308721,1,5,"Postinfectious bronchiolitis obliterans (Swyer-James-MacLeod syndrome), involving the left upper lobe",699.88,41,49979,26471,0.018847
+budget_1000,validation,panel_team_memory,1,PMC7368196,1,5,"Hereditary hypophosphatemic rickets with hypercalciuria, most likely SLC34A3-related (renal phosphate-wasting osteomalacia).",916.48,42,70632,35441,0.02616
+budget_1000,validation,panel_team_memory,1,PMC9160170,0,2,Other acute intra-abdominal process presenting with peritoneal irritation,940.0,38,48119,20671,0.015939
+budget_1000,validation,panel_team_memory,1,PMC3074556,0,1,Primary lung malignancy,900,46,63987,28549,0.021932
+budget_1000,validation,panel_team_memory,1,PMC11084000,1,5,"Acute pseudoseptic inflammatory reaction to bilateral intra-articular Synvisc (hylan G-F 20) injections, with left-knee synovial-fluid inflammation documented.",858.95,32,34498,19105,0.013458
+budget_1000,validation,panel_team_memory,1,PMC5602492,0,3,Pulmonary disease causing exertional dyspnea and hypoxemia,600,132,241968,87978,0.071211
+budget_1000,validation,panel_team_memory,1,PMC6854920,0,3,Acute leukemia presenting with profound pancytopenia,927.0,34,38100,21960,0.015187
+budget_1000,validation,panel_team_memory,1,PMC7141743,1,4,"Guillain-Barré syndrome, motor-predominant variant",600,52,86160,34916,0.027235
+budget_1000,validation,panel_team_memory,1,PMC4600550,0,2,"Nephrotic syndrome from glomerular disease, with acute kidney injury on chronic kidney disease",994.99,36,51251,24493,0.018266
+budget_1000,validation,panel_team_memory,1,PMC5214568,0,3,Juvenile ossifying fibroma of the right maxilla,900.0,18,19870,11302,0.007983
+budget_1000,validation,panel_team_memory,1,PMC4352498,0,3,Alfuzosin-induced cholestatic drug-induced liver injury,861.37,25,30564,16640,0.011945
+budget_1000,validation,panel_team_memory,1,PMC3934531,1,4,Vulvar leiomyoma of the left labia majora,600,43,52071,25466,0.018624
+budget_1000,validation,panel_team_memory,1,PMC8580553,0,3,Suspected IgA vasculitis (Henoch–Schönlein purpura) with possible pulmonary involvement,900,40,57898,23358,0.01834
+budget_1000,validation,panel_team_memory,1,PMC6159250,0,2,Acute cholecystitis,900,38,43389,19920,0.01499
+budget_1000,validation,panel_team_memory,1,PMC8334329,0,2,Ventilator-associated pneumonia with sepsis,600,76,111750,50384,0.037673
+budget_1000,validation,panel_team_memory,1,PMC9413868,0,2,Chronic rhinosinusitis with obstructive inflammatory mucosal change,950.0,25,24259,16141,0.010686
+budget_1000,validation,panel_team_memory,1,PMC10214810,0,2,Generalized plaque-induced gingivitis,680.0,75,136521,44465,0.037521
+budget_1000,validation,panel_team_memory,1,PMC6006004,1,4,Multiple hepatic hemangiomas,658.27,57,62330,32464,0.022764
+budget_1000,validation,panel_team_memory,1,PMC7981706,1,5,Sacrococcygeal teratoma,900,102,141105,47965,0.038445
+budget_4000,validation,baseline,1,PMC9645345,0,2,Multisystem inflammatory syndrome in children (MIS-C),2144.49,5,6783,2182,0.001927
+budget_4000,validation,baseline,2,PMC9645345,1,5,Kawasaki disease,1648.09,6,6865,2866,0.00226
+budget_4000,validation,baseline,3,PMC9645345,1,5,Kawasaki disease,300,2,1389,496,0.000387
+budget_4000,validation,baseline,1,PMC9668263,1,5,External auditory canal exostoses (surfer’s ear),300,3,2280,696,0.000576
+budget_4000,validation,baseline,2,PMC9668263,1,5,External auditory canal exostoses (surfer’s ear),300,2,1315,363,0.000313
+budget_4000,validation,baseline,3,PMC9668263,1,5,"Bilateral external auditory canal exostoses (surfer’s ear), causing canal narrowing with cerumen impaction and recurrent otitis externa.",300,3,2031,546,0.000476
+budget_4000,validation,baseline,1,PMC8110398,1,5,Pulmonary toxocariasis (visceral larva migrans),2785.2,7,7670,2406,0.002101
+budget_4000,validation,baseline,2,PMC8110398,1,5,Visceral toxocariasis (pulmonary larva migrans),1662.27,6,6368,2291,0.001883
+budget_4000,validation,baseline,3,PMC8110398,0,2,Post-traumatic musculoskeletal chest pain (costochondritis),900,6,6668,4147,0.002847
+budget_4000,validation,baseline,1,PMC9991574,0,2,"Metastatic colorectal adenocarcinoma, likely cecal primary, presenting with perforated appendicitis",1373.29,3,2155,692,0.000562
+budget_4000,validation,baseline,2,PMC9991574,0,2,Metastatic caecal adenocarcinoma presenting with perforated appendicitis and a periappendiceal abscess,1373.29,4,3617,1131,0.000986
+budget_4000,validation,baseline,3,PMC9991574,0,2,Metastatic cecal adenocarcinoma presenting with perforated appendicitis and periappendiceal abscess,1373.29,3,2232,850,0.000648
+budget_4000,validation,baseline,1,PMC10165762,1,5,Ectopic mammary (accessory breast) tissue of the vulva,720.82,3,2173,1137,0.000786
+budget_4000,validation,baseline,2,PMC10165762,1,5,Accessory (ectopic) breast tissue of the vulva,3100.0,3,2497,923,0.000738
+budget_4000,validation,baseline,3,PMC10165762,1,5,Vulvar ectopic breast tissue (accessory mammary tissue),720.82,3,2365,677,0.000575
+budget_4000,validation,baseline,1,PMC9192198,0,3,Infected radicular (periapical inflammatory) cyst,3856.21,5,4425,2493,0.001747
+budget_4000,validation,baseline,2,PMC9192198,0,3,"Inflammatory periapical lesion, most consistent with a radicular cyst",2834.4,7,6644,3325,0.002438
+budget_4000,validation,baseline,3,PMC9192198,0,2,Infected odontogenic keratocyst of the right mandible,3375.22,5,4833,3388,0.002241
+budget_4000,validation,baseline,1,PMC11736051,1,5,Cutaneous Mycobacterium marinum infection,1350.0,3,2358,1090,0.000807
+budget_4000,validation,baseline,2,PMC11736051,1,5,Cutaneous Mycobacterium marinum infection with Pseudomonas aeruginosa coinfection,1109.94,3,2443,778,0.000661
+budget_4000,validation,baseline,3,PMC11736051,1,5,Cutaneous Mycobacterium marinum infection,1016.76,3,2625,913,0.000749
+budget_4000,validation,baseline,1,PMC7684875,0,2,Thoracopulmonary Ewing sarcoma (Askin tumor),1498.9,6,6033,2814,0.002126
+budget_4000,validation,baseline,2,PMC7684875,0,2,Thoracic Ewing sarcoma (Askin tumor),1498.9,5,4360,2009,0.001495
+budget_4000,validation,baseline,3,PMC7684875,0,2,Thoracopulmonary Ewing sarcoma (Askin tumor),1498.9,6,5599,2656,0.001972
+budget_4000,validation,baseline,1,PMC9643053,0,1,Disseminated coccidioidomycosis with vertebral osteomyelitis and cutaneous involvement,900,4,3412,2411,0.001575
+budget_4000,validation,baseline,2,PMC9643053,0,1,"Disseminated blastomycosis with pulmonary, cutaneous, and osteoarticular involvement",900,5,4424,2675,0.001808
+budget_4000,validation,baseline,3,PMC9643053,0,1,"Disseminated blastomycosis with pulmonary, cutaneous, and osseous involvement",900,4,3552,1689,0.001255
+budget_4000,validation,baseline,1,PMC4275761,1,5,Chilblains (perniosis),300,3,2473,1233,0.000892
+budget_4000,validation,baseline,2,PMC4275761,1,5,Chilblains (perniosis),909.38,4,3837,2793,0.00184
+budget_4000,validation,baseline,3,PMC4275761,1,5,Pernio (chilblains),609.38,5,6044,2815,0.002127
+budget_4000,validation,baseline,1,PMC10986904,1,5,Ischemic colitis,3146.4,4,3555,1202,0.001013
+budget_4000,validation,baseline,2,PMC10986904,1,5,Ischemic colitis,3137.59,4,3136,934,0.000806
+budget_4000,validation,baseline,3,PMC10986904,1,5,Ischemic colitis,3468.09,4,3627,1712,0.001276
+budget_4000,validation,baseline,1,PMC3917423,0,2,Benign prostatic hyperplasia,663.91,6,5787,2854,0.002117
+budget_4000,validation,baseline,2,PMC3917423,0,2,Prostate adenocarcinoma,663.91,5,5182,1698,0.00146
+budget_4000,validation,baseline,3,PMC3917423,0,2,Prostate adenocarcinoma,1013.91,6,5283,1946,0.001528
+budget_4000,validation,baseline,1,PMC3492049,0,2,Unicentric Castleman disease,940.0,6,5436,3648,0.002448
+budget_4000,validation,baseline,2,PMC3492049,0,2,Hodgkin lymphoma,940.0,10,11703,4711,0.003763
+budget_4000,validation,baseline,3,PMC3492049,0,2,Cat-scratch disease (Bartonella henselae lymphadenitis),927.0,9,10875,4985,0.003819
+budget_4000,validation,baseline,1,PMC4131800,0,2,Vasovagal (reflex) presyncope,900,5,5201,1819,0.001526
+budget_4000,validation,baseline,2,PMC4131800,0,2,Likely vasovagal presyncope,600,4,4154,1715,0.00134
+budget_4000,validation,baseline,3,PMC4131800,0,3,Infective endocarditis of the mitral valve,1254.4,5,4391,1192,0.001101
+budget_4000,validation,baseline,1,PMC4588337,1,5,Intra-abdominal retained surgical sponge (gossypiboma) causing small-bowel obstruction,1373.29,3,1960,527,0.00046
+budget_4000,validation,baseline,2,PMC4588337,1,5,Abdominal gossypiboma (retained surgical sponge) causing small-bowel obstruction,1373.29,3,2126,510,0.000468
+budget_4000,validation,baseline,3,PMC4588337,1,5,Retained surgical sponge (abdominal gossypiboma) causing small-bowel obstruction,1373.29,3,1978,630,0.000513
+budget_4000,validation,baseline,1,PMC3970247,0,2,Suspected epithelial ovarian carcinoma,1354.45,4,3493,1605,0.001208
+budget_4000,validation,baseline,2,PMC3970247,0,2,Ovarian epithelial malignancy,1354.45,4,3535,1437,0.001127
+budget_4000,validation,baseline,3,PMC3970247,0,2,Suspected epithelial ovarian cancer,1354.45,4,3966,1607,0.001264
+budget_4000,validation,baseline,1,PMC9907762,0,3,Cryptococcal meningitis due to Cryptococcus neoformans,3600.0,4,3086,1536,0.001077
+budget_4000,validation,baseline,2,PMC9907762,0,2,Brain metastases from an unknown primary malignancy,1725.41,8,8689,3615,0.002858
+budget_4000,validation,baseline,3,PMC9907762,0,2,Multiple brain metastases of unknown primary,1698.41,6,5365,3047,0.002087
+budget_4000,validation,baseline,1,PMC8193131,1,5,Kümmell disease (vertebral osteonecrosis) with L5 burst fracture and spinal canal compromise,2774.3,5,4384,4190,0.002588
+budget_4000,validation,baseline,2,PMC8193131,0,2,Lumbar disc herniation causing bilateral L5 radiculopathy and progressive leg weakness,1160.49,3,2759,1487,0.001077
+budget_4000,validation,baseline,3,PMC8193131,0,2,Large central L4–L5 disc herniation causing bilateral L5 radiculopathy,2600.0,4,3827,2925,0.00193
+budget_4000,validation,baseline,1,PMC11433866,1,4,Left ovarian torsion associated with a left adnexal cyst,1077.0,3,2308,902,0.000709
+budget_4000,validation,baseline,2,PMC11433866,1,4,Left ovarian torsion associated with an ovarian cyst,1077.0,3,2271,889,0.000698
+budget_4000,validation,baseline,3,PMC11433866,1,4,Left ovarian torsion,1595.23,4,4049,1295,0.001118
+budget_4000,validation,baseline,1,PMC10393623,0,1,Acute pulmonary embolism,963.69,4,3469,2208,0.001509
+budget_4000,validation,baseline,2,PMC10393623,0,2,Acute aortic dissection complicated by disseminated intravascular coagulation,1263.69,6,6368,3570,0.00255
+budget_4000,validation,baseline,3,PMC10393623,0,2,"Disseminated intravascular coagulation (DIC), likely secondary to occult sepsis",1318.39,5,5241,2744,0.001993
+budget_4000,validation,baseline,1,PMC9077939,1,4,Pulmonary tumor thrombotic microangiopathy due to an occult gastric adenocarcinoma,3563.4,5,4966,2935,0.002054
+budget_4000,validation,baseline,2,PMC9077939,1,4,Pulmonary tumor thrombotic microangiopathy due to occult metastatic malignancy,3263.4,5,4900,2024,0.00159
+budget_4000,validation,baseline,3,PMC9077939,1,4,Pulmonary tumor thrombotic microangiopathy secondary to occult gastric adenocarcinoma,3263.4,5,4486,2955,0.001983
+budget_4000,validation,baseline,1,PMC11308721,1,5,Swyer-James-MacLeod syndrome with superimposed bronchopneumonia,1469.89,3,2003,807,0.000604
+budget_4000,validation,baseline,2,PMC11308721,1,5,Swyer-James-MacLeod syndrome (unilateral postinfectious obliterative bronchiolitis),1569.77,3,1917,581,0.000482
+budget_4000,validation,baseline,3,PMC11308721,1,5,"Swyer–James–MacLeod syndrome (unilateral hyperlucent lung with bronchiectasis), with superimposed bronchopneumonia",1569.77,3,2057,792,0.000602
+budget_4000,validation,baseline,1,PMC7368196,1,5,Hereditary hypophosphatemic rickets with hypercalciuria (HHRH),1082.43,4,4039,1577,0.001258
+budget_4000,validation,baseline,2,PMC7368196,1,5,SLC34A3-related hereditary hypophosphatemic rickets with hypercalciuria (HHRH),1687.43,4,3496,1474,0.001142
+budget_4000,validation,baseline,3,PMC7368196,1,5,Hereditary hypophosphatemic rickets with hypercalciuria (HHRH) due to a homozygous SLC34A3 variant,1666.48,4,4207,1385,0.001207
+budget_4000,validation,baseline,1,PMC9160170,0,2,Perforated duodenal ulcer,1700.29,4,3054,1169,0.00089
+budget_4000,validation,baseline,2,PMC9160170,0,2,Acute cholecystitis,927.0,4,3046,1088,0.000849
+budget_4000,validation,baseline,3,PMC9160170,0,2,Perforated duodenal ulcer,1400.29,3,2185,671,0.000554
+budget_4000,validation,baseline,1,PMC3074556,0,3,Primary adrenal insufficiency (Addison disease) with hypoaldosteronism causing type 4 renal tubular acidosis,1504.69,5,4889,2897,0.002005
+budget_4000,validation,baseline,2,PMC3074556,1,5,Hypoaldosteronism causing type 4 renal tubular acidosis,2111.34,8,9517,6070,0.004169
+budget_4000,validation,baseline,3,PMC3074556,1,5,Hypoaldosteronism causing type 4 renal tubular acidosis,1811.34,6,7259,3674,0.002709
+budget_4000,validation,baseline,1,PMC11084000,1,5,Synvisc-associated pseudoseptic arthritis (acute inflammatory reaction to hyaluronic acid injection),1323.8,3,2321,825,0.00067
+budget_4000,validation,baseline,2,PMC11084000,1,5,Hylan G-F 20 (Synvisc)-associated pseudoseptic arthritis of both knees,600,3,2346,1019,0.000744
+budget_4000,validation,baseline,3,PMC11084000,1,5,Acute pseudoseptic inflammatory arthritis following bilateral intra-articular Synvisc (hylan G-F 20) injections,900,4,3659,1375,0.001109
+budget_4000,validation,baseline,1,PMC5602492,1,5,Hepatopulmonary syndrome,1750.0,4,3045,943,0.000776
+budget_4000,validation,baseline,2,PMC5602492,1,5,Hepatopulmonary syndrome,2199.88,4,3161,1350,0.001017
+budget_4000,validation,baseline,3,PMC5602492,1,5,Hepatopulmonary syndrome,1499.88,3,2246,815,0.000632
+budget_4000,validation,baseline,1,PMC6854920,0,2,Acute promyelocytic leukemia (APL),1031.39,6,5514,2702,0.001985
+budget_4000,validation,baseline,2,PMC6854920,0,2,Acute promyelocytic leukemia (APL),718.39,3,2289,878,0.000694
+budget_4000,validation,baseline,3,PMC6854920,0,2,Acute promyelocytic leukemia (APL),1018.39,5,4914,1890,0.001525
+budget_4000,validation,baseline,1,PMC7141743,1,4,"Guillain-Barré syndrome, motor-predominant variant",2788.98,6,6835,2436,0.002013
+budget_4000,validation,baseline,2,PMC7141743,1,5,"Guillain–Barré syndrome, likely an acute motor axonal neuropathy variant",2812.59,6,6187,2610,0.002031
+budget_4000,validation,baseline,3,PMC7141743,1,5,"Guillain–Barré syndrome, acute motor axonal neuropathy (AMAN) variant",1542.24,4,4755,2035,0.001601
+budget_4000,validation,baseline,1,PMC4600550,1,4,"Acute interstitial nephritis, likely induced by sildenafil",3683.54,4,3638,1258,0.001053
+budget_4000,validation,baseline,2,PMC4600550,0,2,Membranous nephropathy presenting with nephrotic syndrome and acute kidney injury,966.69,4,3499,3437,0.002125
+budget_4000,validation,baseline,3,PMC4600550,0,2,"Nephrotic syndrome with acute kidney injury, most consistent with minimal change disease",997.44,5,5279,1963,0.001607
+budget_4000,validation,baseline,1,PMC5214568,1,5,Monostotic fibrous dysplasia of the right maxilla,1250.0,4,3047,1514,0.001062
+budget_4000,validation,baseline,2,PMC5214568,0,2,Juvenile trabecular ossifying fibroma,720.82,3,2045,724,0.000567
+budget_4000,validation,baseline,3,PMC5214568,0,2,Juvenile trabecular ossifying fibroma of the right maxilla,1320.82,6,5039,2248,0.001688
+budget_4000,validation,baseline,1,PMC4352498,0,3,Alfuzosin-induced drug-induced liver injury with cholestatic jaundice,1791.11,5,4528,1218,0.00112
+budget_4000,validation,baseline,2,PMC4352498,0,3,Alfuzosin-induced drug-induced liver injury (cholestatic hepatitis),1141.11,3,2867,756,0.000725
+budget_4000,validation,baseline,3,PMC4352498,1,5,Alfuzosin-induced drug-induced liver injury (acute hepatitis with jaundice),1166.12,4,3738,1297,0.001083
+budget_4000,validation,baseline,1,PMC3934531,1,4,Vulvar leiomyoma,720.82,3,2477,1139,0.000844
+budget_4000,validation,baseline,2,PMC3934531,1,4,Vulvar leiomyoma,1800.0,3,2455,1521,0.001033
+budget_4000,validation,baseline,3,PMC3934531,1,4,Vulvar leiomyoma,3800.0,4,2586,1397,0.000957
+budget_4000,validation,baseline,1,PMC8580553,1,5,Granulomatosis with polyangiitis (GPA) causing pulmonary-renal syndrome,1692.74,5,7047,1829,0.001784
+budget_4000,validation,baseline,2,PMC8580553,1,5,Granulomatosis with polyangiitis (PR3-ANCA–associated vasculitis) with pulmonary and renal involvement,1426.88,6,8756,2470,0.002318
+budget_4000,validation,baseline,3,PMC8580553,1,5,Granulomatosis with polyangiitis (GPA),1393.57,4,5503,1703,0.001528
+budget_4000,validation,baseline,1,PMC6159250,0,2,Right adrenal pheochromocytoma,2273.29,7,7019,4085,0.002865
+budget_4000,validation,baseline,2,PMC6159250,1,5,Bilateral adrenal hemorrhage associated with warfarin anticoagulation,2655.15,4,3446,1087,0.000918
+budget_4000,validation,baseline,3,PMC6159250,1,4,Warfarin-associated right adrenal hemorrhage,2011.64,6,4989,1680,0.001395
+budget_4000,validation,baseline,1,PMC8334329,0,2,Ventilator-associated pneumonia with septic shock,627.0,2,1090,683,0.00045
+budget_4000,validation,baseline,2,PMC8334329,0,3,Acute pulmonary embolism causing respiratory deterioration and hypotension,927.0,4,3332,2659,0.001691
+budget_4000,validation,baseline,3,PMC8334329,0,2,Ventilator-associated pneumonia causing septic shock,1227.0,5,3608,2891,0.001806
+budget_4000,validation,baseline,1,PMC9413868,1,5,Sinonasal actinomycosis,3268.76,4,3573,920,0.000873
+budget_4000,validation,baseline,2,PMC9413868,1,5,Sinonasal actinomycosis,3768.76,4,3362,818,0.000773
+budget_4000,validation,baseline,3,PMC9413868,1,5,Sinonasal actinomycosis,2255.91,3,2197,671,0.000555
+budget_4000,validation,baseline,1,PMC10214810,0,2,Periodontitis,600,5,4640,1964,0.001504
+budget_4000,validation,baseline,2,PMC10214810,1,5,External cervical resorption (invasive cervical resorption) of the maxillary central incisors,870.0,5,6130,1891,0.001678
+budget_4000,validation,baseline,3,PMC10214810,0,2,Generalized periodontitis,600,3,2054,1138,0.000774
+budget_4000,validation,baseline,1,PMC6006004,1,4,Multiple hepatic hemangiomas,1806.52,3,2297,1367,0.00094
+budget_4000,validation,baseline,2,PMC6006004,1,4,Multiple hepatic cavernous hemangiomas,3539.99,5,5256,3299,0.002275
+budget_4000,validation,baseline,3,PMC6006004,0,3,Multiple hepatic cavernous hemangiomas,1916.34,4,3553,1442,0.001134
+budget_4000,validation,baseline,1,PMC7981706,1,5,Fetal sacrococcygeal teratoma,1050.0,2,995,607,0.000403
+budget_4000,validation,baseline,2,PMC7981706,1,5,Fetal sacrococcygeal teratoma,1948.06,2,1095,404,0.000312
+budget_4000,validation,baseline,3,PMC7981706,1,5,Fetal sacrococcygeal teratoma,1586.37,2,1026,506,0.000356
+budget_4000,validation,evidence_reconcile,1,PMC9645345,0,3,SARS-CoV-2-associated multisystem inflammatory syndrome in children (MIS-C),2067.8,14,23385,12333,0.009051
+budget_4000,validation,evidence_reconcile,1,PMC9668263,1,5,Bilateral near-occlusive external auditory canal exostoses (diving-associated surfer’s ear),1113.81,9,9977,7577,0.004976
+budget_4000,validation,evidence_reconcile,1,PMC8110398,1,5,Pulmonary toxocariasis (visceral larva migrans) with multiple pulmonary nodules and adjacent ground-glass opacities,2100.0,12,17478,8946,0.00662
+budget_4000,validation,evidence_reconcile,1,PMC9991574,0,2,Presumed metastatic cecal colorectal adenocarcinoma presenting with perforated appendicitis,2337.2,22,37775,16555,0.01296
+budget_4000,validation,evidence_reconcile,1,PMC10165762,1,5,Ectopic (accessory) breast tissue of the upper left labium,1922.4,6,7990,3754,0.002861
+budget_4000,validation,evidence_reconcile,1,PMC9192198,0,3,Chronic osteomyelitis of the mandible with acute inflammation,3400.0,14,23131,16558,0.011133
+budget_4000,validation,evidence_reconcile,1,PMC11736051,1,5,Cutaneous Mycobacterium marinum infection of the right medial knee and thigh plaque,2215.0,10,15286,8969,0.006381
+budget_4000,validation,evidence_reconcile,1,PMC7684875,0,2,Mediastinal lymphoma causing airway compression and acute respiratory failure,1599.88,12,18838,10746,0.007688
+budget_4000,validation,evidence_reconcile,1,PMC9643053,0,1,"Disseminated blastomycosis with pulmonary, cutaneous, and likely osseous involvement",1200,16,26219,11947,0.008966
+budget_4000,validation,evidence_reconcile,1,PMC4275761,1,5,"Bilateral toe pernio (chilblains), associated with recent cold exposure.",600,14,22982,12503,0.009109
+budget_4000,validation,evidence_reconcile,1,PMC10986904,1,5,Left-sided ischemic colitis involving the descending and sigmoid colon,3355.9,16,25876,13595,0.009994
+budget_4000,validation,evidence_reconcile,1,PMC3917423,0,2,Benign prostatic hyperplasia,1263.91,22,30384,13363,0.010417
+budget_4000,validation,evidence_reconcile,1,PMC3492049,0,3,"Subacute infectious left axillary lymphadenitis, etiology unspecified",1200,21,32850,17573,0.012661
+budget_4000,validation,evidence_reconcile,1,PMC4131800,0,2,Culture-negative infective endocarditis of the mitral valve,1361.98,7,8935,4227,0.003191
+budget_4000,validation,evidence_reconcile,1,PMC4588337,1,5,Retained surgical sponge (gossypiboma) causing small-bowel obstruction,2973.29,29,42859,21613,0.016099
+budget_4000,validation,evidence_reconcile,1,PMC3970247,0,2,Large complex left ovarian mass suspicious for mucinous ovarian carcinoma,3266.63,16,25231,12923,0.009575
+budget_4000,validation,evidence_reconcile,1,PMC9907762,0,2,Multifocal high-grade glioma,2098.29,19,34669,15397,0.011993
+budget_4000,validation,evidence_reconcile,1,PMC8193131,0,2,L5 vertebral osteomyelitis/discitis with possible epidural extension,2944.85,17,34721,19945,0.014297
+budget_4000,validation,evidence_reconcile,1,PMC11433866,1,4,Left ovarian torsion associated with the known left adnexal cyst,1995.0,21,39205,15030,0.012376
+budget_4000,validation,evidence_reconcile,1,PMC10393623,1,5,"Classic (non-exertional) heat stroke due to environmental heat exposure, with coma and hypotension.",900,12,17129,9633,0.006918
+budget_4000,validation,evidence_reconcile,1,PMC9077939,0,3,"Pulmonary tumor thrombotic microangiopathy associated with occult gastrointestinal malignancy, causing severe pulmonary hypertension and right-ventricular failure",3876.95,12,18438,10767,0.00765
+budget_4000,validation,evidence_reconcile,1,PMC11308721,0,3,"Left congenital pulmonary artery and lung hypoplasia with hypoplastic pulmonary veins and diffuse varicoid and cystic bronchiectasis, complicated by superimposed bronchopneumonia.",3569.77,28,44986,20957,0.015862
+budget_4000,validation,evidence_reconcile,1,PMC7368196,1,5,"SLC34A3-related hereditary hypophosphatemic rickets (HHRH) due to homozygous c.1402C>T (p.Arg468Trp), causing renal phosphate wasting.",2446.85,14,24016,13716,0.009821
+budget_4000,validation,evidence_reconcile,1,PMC9160170,1,5,Perforated duodenal diverticulum associated with ectopic pancreatic tissue,2356.89,17,19191,8319,0.006449
+budget_4000,validation,evidence_reconcile,1,PMC3074556,0,1,"Malignancy, unspecified",900,14,20572,11673,0.00837
+budget_4000,validation,evidence_reconcile,1,PMC11084000,1,5,Bilateral Synvisc (hylan G-F 20)-associated pseudoseptic inflammatory arthritis of the knees.,2332.44,24,36914,15320,0.012233
+budget_4000,validation,evidence_reconcile,1,PMC5602492,1,5,Hepatopulmonary syndrome associated with chronic HCV-related liver disease,2650.0,17,25660,9504,0.007902
+budget_4000,validation,evidence_reconcile,1,PMC6854920,0,2,"Acute myeloid leukemia with promyelocytic features, likely acute promyelocytic leukemia",1627.0,13,16974,13111,0.008618
+budget_4000,validation,evidence_reconcile,1,PMC7141743,1,4,"Guillain–Barré syndrome, acute motor-predominant variant",2445.54,16,36707,12107,0.010627
+budget_4000,validation,evidence_reconcile,1,PMC4600550,0,3,Nephrotic syndrome with acute kidney injury,1547.71,12,22710,10451,0.008026
+budget_4000,validation,evidence_reconcile,1,PMC5214568,0,2,Juvenile trabecular ossifying fibroma of the right maxilla,3700.0,13,16986,11256,0.007714
+budget_4000,validation,evidence_reconcile,1,PMC4352498,1,5,Alfuzosin-induced liver injury presenting with conjugated jaundice and a hepatocellular biochemical pattern,2769.84,16,25798,11751,0.009064
+budget_4000,validation,evidence_reconcile,1,PMC3934531,1,4,Vulvar leiomyoma of the left labia majora,600,12,27433,8709,0.007768
+budget_4000,validation,evidence_reconcile,1,PMC8580553,1,5,"PR3-ANCA–positive granulomatosis with polyangiitis, with pulmonary involvement, palpable purpura, and severe acute kidney injury.",2895.74,18,46017,13945,0.012709
+budget_4000,validation,evidence_reconcile,1,PMC6159250,1,5,Acute bilateral adrenal hemorrhage associated with supratherapeutic warfarin anticoagulation,2655.15,10,14916,8618,0.006136
+budget_4000,validation,evidence_reconcile,1,PMC8334329,0,2,Ventilator-associated pneumonia with sepsis,1200,12,16492,8592,0.006321
+budget_4000,validation,evidence_reconcile,1,PMC9413868,1,5,Left sinonasal actinomycosis involving the nasal cavity and paranasal sinuses,2168.76,7,8435,3248,0.002638
+budget_4000,validation,evidence_reconcile,1,PMC10214810,0,2,"Generalized gingivitis, cause not specified",1000.0,12,17605,9306,0.006817
+budget_4000,validation,evidence_reconcile,1,PMC6006004,0,3,Multiple hepatic cavernous hemangiomas,3239.99,18,21479,15502,0.009943
+budget_4000,validation,evidence_reconcile,1,PMC7981706,0,2,Congenital sacrococcygeal vascular malformation,3486.37,47,63825,38213,0.026122
+budget_4000,validation,evidence_playbook,1,PMC9645345,0,3,"Multisystem inflammatory syndrome in children associated with SARS-CoV-2, with Kawasaki-like features",3278.89,20,46161,19075,0.015287
+budget_4000,validation,evidence_playbook,1,PMC9668263,1,5,Bilateral external auditory canal exostoses (surfer’s ear) causing severe canal obstruction,1113.81,5,5965,2696,0.002074
+budget_4000,validation,evidence_playbook,1,PMC8110398,1,5,Pulmonary toxocariasis (visceral larva migrans),1962.27,14,24376,11402,0.008728
+budget_4000,validation,evidence_playbook,1,PMC9991574,0,2,"Likely metastatic colorectal adenocarcinoma of cecal origin, presenting with perforated appendicitis.",1373.29,10,12596,7657,0.005223
+budget_4000,validation,evidence_playbook,1,PMC10165762,1,5,Ectopic breast tissue of the left labium,1922.4,5,6095,4083,0.002784
+budget_4000,validation,evidence_playbook,1,PMC9192198,0,3,"Inflammatory periapical lesion associated with the mandibular right first molar, most consistent with a radicular cyst",3620.0,16,27677,20421,0.01365
+budget_4000,validation,evidence_playbook,1,PMC11736051,1,5,"Cutaneous Mycobacterium marinum infection of the right medial knee and thigh plaque, with Pseudomonas aeruginosa detected in the lesion",2034.24,7,9796,6663,0.004536
+budget_4000,validation,evidence_playbook,1,PMC7684875,1,4,"Aggressive primary pleural/mediastinal malignancy, favor sarcoma; histologic subtype unconfirmed",2398.9,18,37694,21103,0.014679
+budget_4000,validation,evidence_playbook,1,PMC9643053,0,1,"Disseminated endemic fungal infection, especially blastomycosis",1800,17,32682,20623,0.014106
+budget_4000,validation,evidence_playbook,1,PMC4275761,1,5,Cold-induced pernio (chilblains) of the toes,900,12,22913,10893,0.00829
+budget_4000,validation,evidence_playbook,1,PMC10986904,1,5,Ischemic colitis of the descending and sigmoid colon,3802.27,16,22767,13090,0.00937
+budget_4000,validation,evidence_playbook,1,PMC3917423,0,2,Benign prostatic hyperplasia,1563.91,21,29966,15314,0.011382
+budget_4000,validation,evidence_playbook,1,PMC3492049,1,5,Kikuchi-Fujimoto disease (histiocytic necrotizing lymphadenitis) involving the left axillary lymph node,3900.0,9,13058,7121,0.005172
+budget_4000,validation,evidence_playbook,1,PMC4131800,0,2,Blood-culture-negative infective endocarditis involving the mitral valve,2261.98,16,31946,16997,0.012471
+budget_4000,validation,evidence_playbook,1,PMC4588337,1,5,"Encapsulated intra-abdominal gossypiboma (retained laparotomy pad) among the small-bowel loops, associated with an acute small-bowel obstructive presentation.",2823.29,25,39206,20268,0.015014
+budget_4000,validation,evidence_playbook,1,PMC3970247,0,2,"Large complex left ovarian neoplasm, suspicious for an epithelial ovarian tumor",3175.47,14,21861,14138,0.009781
+budget_4000,validation,evidence_playbook,1,PMC9907762,0,2,"Multiple intracranial mass lesions with surrounding edema, most consistent with brain metastases from an occult systemic primary.",1698.41,15,24523,14452,0.010045
+budget_4000,validation,evidence_playbook,1,PMC8193131,1,5,L5 Kümmell-type vertebral osteonecrosis/nonunion with an intravertebral vacuum cleft and burst fracture causing canal compromise and progressive bilateral leg weakness.,2756.3,21,41218,27696,0.018979
+budget_4000,validation,evidence_playbook,1,PMC11433866,1,4,Left adnexal torsion associated with the known ovarian cyst,2400.0,28,44497,29198,0.02014
+budget_4000,validation,evidence_playbook,1,PMC10393623,1,5,"Classic (nonexertional) environmental heat stroke with coma, shock, multiorgan dysfunction, and coagulopathy.",1563.69,11,18134,10039,0.007266
+budget_4000,validation,evidence_playbook,1,PMC9077939,0,3,Probable lymphoma-associated pulmonary tumor thrombotic microangiopathy causing severe pulmonary hypertension,3497.58,15,24844,18197,0.012184
+budget_4000,validation,evidence_playbook,1,PMC11308721,0,3,Congenital hypoplasia of the left pulmonary artery and veins with associated unilateral bronchiectasis and superimposed bronchopneumonia,3474.03,18,29914,19563,0.0135
+budget_4000,validation,evidence_playbook,1,PMC7368196,1,5,"Hereditary hypophosphatemic rickets with hypercalciuria (HHRH) due to homozygous SLC34A3 c.1402C>T (p.Arg468Trp), with hypercalciuria not demonstrated in the available urine studies.",3356.51,14,30850,17239,0.012455
+budget_4000,validation,evidence_playbook,1,PMC9160170,0,2,Perforated duodenal peptic ulcer with peritonitis,2300.29,30,50136,21814,0.016976
+budget_4000,validation,evidence_playbook,1,PMC3074556,0,2,"Malignancy, primary site and histology unspecified",1500,12,18649,12498,0.00856
+budget_4000,validation,evidence_playbook,1,PMC11084000,1,5,Bilateral Synvisc (hylan G-F 20)-associated pseudoseptic inflammatory arthritis of the knees,2378.15,20,38411,17493,0.013527
+budget_4000,validation,evidence_playbook,1,PMC5602492,1,5,Hepatopulmonary syndrome associated with chronic HCV-related liver disease,3354.4,16,26405,13973,0.010267
+budget_4000,validation,evidence_playbook,1,PMC6854920,0,2,Acute basophilic leukemia (AML with basophilic differentiation),3602.0,13,18696,13508,0.00907
+budget_4000,validation,evidence_playbook,1,PMC7141743,1,5,"Guillain–Barré syndrome, motor-predominant and most consistent with the acute motor axonal neuropathy (AMAN) variant",3000.0,14,27952,15223,0.011085
+budget_4000,validation,evidence_playbook,1,PMC4600550,0,2,Nephrotic syndrome with rapidly progressive acute kidney injury,2205.35,16,31420,18035,0.012924
+budget_4000,validation,evidence_playbook,1,PMC5214568,1,4,Fibrous dysplasia of the right maxilla,3350.0,8,11561,6944,0.004897
+budget_4000,validation,evidence_playbook,1,PMC4352498,1,5,Probable alfuzosin-induced hepatocellular drug-induced liver injury with jaundice,2041.11,14,22150,14604,0.01005
+budget_4000,validation,evidence_playbook,1,PMC3934531,1,4,Benign leiomyoma of the left labia majora,3300.0,12,22073,13423,0.00945
+budget_4000,validation,evidence_playbook,1,PMC8580553,0,2,"Multifocal bilateral peripheral cavitary pneumonia, likely infectious.",1599.88,12,27937,10853,0.008898
+budget_4000,validation,evidence_playbook,1,PMC6159250,1,5,Warfarin-associated bilateral adrenal hemorrhage with supratherapeutic INR (3.8),2655.15,8,11736,8074,0.005484
+budget_4000,validation,evidence_playbook,1,PMC8334329,0,2,Ventilator-associated pneumonia with sepsis,1500,14,22210,11703,0.008608
+budget_4000,validation,evidence_playbook,1,PMC9413868,1,5,Left sinonasal actinomycosis involving the middle turbinate,3355.91,6,7111,3265,0.002501
+budget_4000,validation,evidence_playbook,1,PMC10214810,1,5,"External cervical resorption of the palatal aspects of both maxillary central incisors, with pulpal perforation",1450.0,11,16667,9588,0.006857
+budget_4000,validation,evidence_playbook,1,PMC6006004,0,2,Multifocal hepatic epithelioid hemangioendothelioma,3900.0,8,9554,7339,0.004844
+budget_4000,validation,evidence_playbook,1,PMC7981706,1,5,Immature sacrococcygeal teratoma,2668.88,11,11816,8172,0.005472
+budget_4000,validation,evidence_memory,1,PMC9645345,0,2,Multisystem inflammatory syndrome in children (MIS-C) associated with SARS-CoV-2,3392.87,22,68975,23721,0.020481
+budget_4000,validation,evidence_memory,1,PMC9668263,1,5,"Bilateral external auditory canal exostoses (surfer’s ear), causing severe osseous canal stenosis.",1113.81,6,15437,3581,0.00372
+budget_4000,validation,evidence_memory,1,PMC8110398,1,5,Pulmonary toxocariasis (visceral larva migrans),1277.07,12,30466,10529,0.009072
+budget_4000,validation,evidence_memory,1,PMC9991574,0,2,"Likely metastatic colorectal adenocarcinoma, probably cecal primary, presenting with CT-confirmed perforated appendicitis and a periappendiceal abscess.",1373.29,14,30974,10547,0.008868
+budget_4000,validation,evidence_memory,1,PMC10165762,1,5,Ectopic breast tissue of the left labium,3700.0,9,22496,6475,0.006049
+budget_4000,validation,evidence_memory,1,PMC9192198,1,5,Actinomycosis of the right mandible involving the premolar–molar apical region,2434.4,7,15877,7374,0.005671
+budget_4000,validation,evidence_memory,1,PMC11736051,1,5,Cutaneous Mycobacterium marinum infection of the right medial knee and thigh,1350.0,5,10771,3746,0.003219
+budget_4000,validation,evidence_memory,1,PMC7684875,0,2,Severe pneumonia causing acute respiratory failure,1200,13,37970,18162,0.013422
+budget_4000,validation,evidence_memory,1,PMC9643053,0,1,"Probable disseminated tuberculosis, with pulmonary symptoms and possible vertebral and cutaneous (right hallux) involvement",1500,14,38967,16224,0.012982
+budget_4000,validation,evidence_memory,1,PMC4275761,1,5,"Pernio (chilblains) of the bilateral toes, likely idiopathic",2242.0,14,42525,13717,0.012173
+budget_4000,validation,evidence_memory,1,PMC10986904,1,5,Segmental ischemic colitis involving the descending and sigmoid colon,3650.0,16,41163,14289,0.012289
+budget_4000,validation,evidence_memory,1,PMC3917423,0,2,Benign prostatic hyperplasia with a focal soft nodule in the left lobe,1263.91,17,41757,14104,0.01227
+budget_4000,validation,evidence_memory,1,PMC3492049,0,3,"Acute infectious lymphadenitis of the left axilla, cause unspecified",3900.0,11,26656,9076,0.007869
+budget_4000,validation,evidence_memory,1,PMC4131800,0,2,Culture-negative infective endocarditis of the mitral valve,2261.98,16,53726,14510,0.01397
+budget_4000,validation,evidence_memory,1,PMC4588337,1,5,"Intra-abdominal retained surgical sponge (gossypiboma) forming a mass among the small-bowel loops, with associated mechanical small-bowel obstruction.",2834.66,32,89811,26163,0.024305
+budget_4000,validation,evidence_memory,1,PMC3970247,0,2,"Large complex left ovarian neoplasm, suspicious for epithelial ovarian malignancy",2748.76,15,34365,12599,0.010307
+budget_4000,validation,evidence_memory,1,PMC9907762,0,2,Multiple brain metastases from an occult primary,3937.77,8,18932,7004,0.005868
+budget_4000,validation,evidence_memory,1,PMC8193131,1,5,"L5 vertebral osteonecrosis (Kümmell disease) with intravertebral vacuum cleft, burst fracture, and canal compromise",2756.3,20,56872,25895,0.020055
+budget_4000,validation,evidence_memory,1,PMC11433866,1,4,Left ovarian torsion associated with the known left ovarian cyst,1927.0,18,48685,18714,0.015441
+budget_4000,validation,evidence_memory,1,PMC10393623,1,5,"Classic environmental heatstroke with encephalopathy, coagulopathy, and multiorgan injury",1560.0,14,39269,12615,0.011016
+budget_4000,validation,evidence_memory,1,PMC9077939,1,4,Probable pulmonary tumor thrombotic microangiopathy associated with suspected occult gastrointestinal malignancy,3797.58,12,30763,14258,0.010787
+budget_4000,validation,evidence_memory,1,PMC11308721,0,3,"Congenital left pulmonary hypoplasia with hypoplastic left pulmonary artery and veins, diffuse bronchiectasis, and superimposed bronchopneumonia",3646.96,20,53484,21019,0.017194
+budget_4000,validation,evidence_memory,1,PMC7368196,1,5,"SLC34A3-related hereditary hypophosphatemic rickets with hypercalciuria due to the homozygous c.1402C>T (p.Arg468Trp) variant, with bilateral medullary nephrocalcinosis.",2127.34,9,24796,9940,0.008069
+budget_4000,validation,evidence_memory,1,PMC9160170,0,2,Duodenal perforation with peritonitis,1373.29,8,16222,5920,0.004987
+budget_4000,validation,evidence_memory,1,PMC3074556,0,1,"Severe anemia, presumed, etiology unspecified",1800,16,43503,18364,0.014619
+budget_4000,validation,evidence_memory,1,PMC11084000,1,5,Bilateral Synvisc (hylan G-F 20)-associated pseudoseptic inflammatory arthritis of the knees,3052.44,22,55684,15943,0.01493
+budget_4000,validation,evidence_memory,1,PMC5602492,1,5,Hepatopulmonary syndrome associated with chronic HCV-related liver disease,3354.4,17,47139,14753,0.013268
+budget_4000,validation,evidence_memory,1,PMC6854920,0,2,Acute basophilic leukemia,3618.39,9,25031,7545,0.006901
+budget_4000,validation,evidence_memory,1,PMC7141743,1,4,"Guillain–Barré syndrome, acute motor-predominant variant",2745.54,13,40302,12687,0.01138
+budget_4000,validation,evidence_memory,1,PMC4600550,1,5,Acute eosinophilic tubulointerstitial nephritis (acute interstitial nephritis) with acute kidney injury and nephrotic-range proteinuria.,3683.54,8,19996,10417,0.007707
+budget_4000,validation,evidence_memory,1,PMC5214568,1,5,Monostotic fibrous dysplasia of the right maxilla,3155.91,8,19336,5581,0.005207
+budget_4000,validation,evidence_memory,1,PMC4352498,1,5,Probable alfuzosin-induced hepatocellular drug-induced liver injury with jaundice,2475.6,17,51594,14451,0.013673
+budget_4000,validation,evidence_memory,1,PMC3934531,1,4,Vulvar leiomyoma of the left labia majora,900,12,33011,11953,0.010102
+budget_4000,validation,evidence_memory,1,PMC8580553,1,5,"PR3-ANCA–associated granulomatosis with polyangiitis (GPA), presenting with cavitating pulmonary disease, palpable purpura, and severe acute kidney injury.",2554.56,13,48635,13844,0.013
+budget_4000,validation,evidence_memory,1,PMC6159250,1,5,Warfarin-associated spontaneous bilateral adrenal hemorrhage,2955.15,12,34108,10639,0.009582
+budget_4000,validation,evidence_memory,1,PMC8334329,0,2,Pneumothorax in a mechanically ventilated patient,1200,12,28270,10904,0.008985
+budget_4000,validation,evidence_memory,1,PMC9413868,1,5,Left middle turbinate actinomycosis,2184.98,6,12398,3537,0.003318
+budget_4000,validation,evidence_memory,1,PMC10214810,1,5,"External cervical root resorption (invasive cervical resorption) of both maxillary central incisors, with palatal lesions perforating the pulp spaces",1150.0,8,19586,7123,0.006009
+budget_4000,validation,evidence_memory,1,PMC6006004,0,3,Multiple hepatic hemangiomas,3854.5,8,18327,8646,0.006613
+budget_4000,validation,evidence_memory,1,PMC7981706,1,5,"Imaging findings most consistent with a sacrococcygeal teratoma, mixed and predominantly solid with a large cyst.",3086.37,12,26040,8757,0.007112
+budget_4000,validation,panel_team,1,PMC9645345,1,5,Classic Kawasaki disease,1565.42,30,35490,18986,0.013749
+budget_4000,validation,panel_team,1,PMC9668263,1,5,Bilateral external auditory canal exostoses (surfer’s ear) causing severe canal stenosis,1983.81,27,27341,14802,0.010591
+budget_4000,validation,panel_team,1,PMC8110398,0,2,Acute bronchospasm causing dyspnea and chest discomfort,1500,64,94413,33745,0.028338
+budget_4000,validation,panel_team,1,PMC9991574,0,2,"Metastatic colorectal carcinoma, with a possible caecal primary.",1373.29,18,17667,10326,0.007206
+budget_4000,validation,panel_team,1,PMC10165762,1,5,Vulvar ectopic breast tissue (accessory mammary tissue) presenting as a pedunculated mass,3913.15,32,37789,21152,0.015156
+budget_4000,validation,panel_team,1,PMC9192198,0,3,Apical periodontitis (periapical inflammatory lesion) involving the mandibular right second premolar and endodontically treated first molar,2510.82,65,105851,37374,0.031685
+budget_4000,validation,panel_team,1,PMC11736051,1,5,"Cutaneous Mycobacterium marinum infection of the right medial knee and thigh, with necrotizing granulomatous vasculitis.",3687.53,56,89854,38954,0.030615
+budget_4000,validation,panel_team,1,PMC7684875,0,2,Right paratracheal mediastinal lymphoma,2550.0,74,99723,48835,0.036499
+budget_4000,validation,panel_team,1,PMC9643053,0,2,Suspected disseminated coccidioidomycosis with possible vertebral involvement,2400,67,114401,50005,0.039155
+budget_4000,validation,panel_team,1,PMC4275761,1,5,Perniosis (chilblains) of the bilateral toes,600,46,75922,31185,0.024913
+budget_4000,validation,panel_team,1,PMC10986904,1,5,Ischemic colitis involving the descending and sigmoid colon,3823.09,59,92719,41548,0.032155
+budget_4000,validation,panel_team,1,PMC3917423,0,2,Benign prostatic hyperplasia,1263.91,105,157633,55708,0.046797
+budget_4000,validation,panel_team,1,PMC3492049,0,2,Acute bacterial left axillary lymphadenitis,1200,68,122808,46181,0.038269
+budget_4000,validation,panel_team,1,PMC4131800,0,2,Culture-negative infective endocarditis of the mitral valve,2276.19,50,86647,31285,0.026306
+budget_4000,validation,panel_team,1,PMC4588337,1,5,Postoperative retained surgical sponge (gossypiboma) causing small-bowel obstruction,1973.29,35,40010,24962,0.017244
+budget_4000,validation,panel_team,1,PMC3970247,0,2,"Large complex cystic neoplasm of the left ovary, favored to be a benign mucinous cystadenoma.",3075.47,63,128387,47340,0.039622
+budget_4000,validation,panel_team,1,PMC9907762,0,2,"Multifocal high-grade primary brain tumor involving the left occipital lobe, most consistent with glioma.",3964.77,29,33598,21965,0.015047
+budget_4000,validation,panel_team,1,PMC8193131,0,2,"Lumbar disc herniation causing bilateral, L5-predominant nerve-root compression",3771.7,35,40539,27951,0.018883
+budget_4000,validation,panel_team,1,PMC11433866,1,4,Left adnexal (ovarian) torsion associated with the documented left ovarian cyst,2803.37,63,103601,45518,0.035545
+budget_4000,validation,panel_team,1,PMC10393623,0,2,Acute pulmonary embolism presenting with unconsciousness,2775.05,70,91350,38473,0.030288
+budget_4000,validation,panel_team,1,PMC9077939,0,2,"Suspected retroperitoneal lymphoma, with ascites and bilateral pleural effusions and possible peritoneal and pleural involvement.",3509.0,65,106533,48600,0.037448
+budget_4000,validation,panel_team,1,PMC11308721,1,4,"Congenital left unilateral pulmonary hypoplasia with diffuse varicoid and cystic bronchiectasis, complicated by superimposed bronchopneumonia",2546.84,36,42319,32161,0.021109
+budget_4000,validation,panel_team,1,PMC7368196,1,4,Inherited FGF23-independent renal phosphate-transporter defect causing hypophosphatemic rickets/osteomalacia.,2436.6,66,121256,64023,0.046761
+budget_4000,validation,panel_team,1,PMC9160170,0,3,Acute duodenal perforation with peritonitis,1713.29,32,32736,17551,0.012413
+budget_4000,validation,panel_team,1,PMC3074556,0,2,"Malignancy, site and subtype unspecified, presenting with marked weight loss, generalized weakness, and progressive dyspnea",1800,67,114624,50605,0.039421
+budget_4000,validation,panel_team,1,PMC11084000,1,5,"Bilateral Synvisc-associated pseudoseptic arthritis (acute inflammatory reaction to hylan G-F 20), most pronounced in the left knee.",1848.95,37,43656,22409,0.016416
+budget_4000,validation,panel_team,1,PMC5602492,1,5,Hepatopulmonary syndrome associated with chronic HCV-related liver disease,3208.68,68,109698,46334,0.036649
+budget_4000,validation,panel_team,1,PMC6854920,0,2,"Acute promyelocytic leukemia (APL), morphologically suspected; PML::RARA status is not documented.",1918.39,46,63204,29060,0.02225
+budget_4000,validation,panel_team,1,PMC7141743,1,4,"Guillain–Barré syndrome, motor-predominant variant",3439.0,46,66710,34278,0.0253
+budget_4000,validation,panel_team,1,PMC4600550,0,2,"Intrinsic glomerular disease causing nephrotic-range proteinuria, generalized edema, and acute kidney injury",2867.91,66,110461,48268,0.037759
+budget_4000,validation,panel_team,1,PMC5214568,0,2,Juvenile trabecular ossifying fibroma of the right posterior maxilla,3550.0,36,45620,22935,0.017
+budget_4000,validation,panel_team,1,PMC4352498,1,5,Alfuzosin-associated acute hepatocellular drug-induced liver injury with jaundice,2420.14,62,115889,44658,0.036243
+budget_4000,validation,panel_team,1,PMC3934531,0,3,"Vulvar benign spindle-cell neoplasm, favor myofibroblastic tumor",3650.0,24,21559,18149,0.011459
+budget_4000,validation,panel_team,1,PMC8580553,1,4,"Pulmonary-renal syndrome with hemoptysis and severe renal dysfunction, cause unspecified",2140.0,67,128733,37215,0.034608
+budget_4000,validation,panel_team,1,PMC6159250,0,2,Biliary colic due to cholelithiasis,1500,64,82471,34184,0.027036
+budget_4000,validation,panel_team,1,PMC8334329,0,2,Ventilator-associated pneumonia with sepsis,1800,69,100758,47960,0.03633
+budget_4000,validation,panel_team,1,PMC9413868,1,5,"Sinonasal actinomycosis involving the left middle turbinate and the left maxillary, ethmoid, and frontal sinuses",2643.76,50,67521,33185,0.024777
+budget_4000,validation,panel_team,1,PMC10214810,0,2,Localized periodontitis involving the maxillary central incisors,2370.0,66,106358,39601,0.032844
+budget_4000,validation,panel_team,1,PMC6006004,1,4,Multiple hepatic hemangiomas,3496.23,28,26568,19959,0.012942
+budget_4000,validation,panel_team,1,PMC7981706,1,5,Immature sacrococcygeal teratoma,2200.0,23,19066,13061,0.008577
+budget_4000,validation,panel_team_memory,1,PMC9645345,1,5,"Classic (complete) Kawasaki disease, without documented coronary artery abnormality",1608.78,40,60695,28854,0.021727
+budget_4000,validation,panel_team_memory,1,PMC9668263,1,5,"Bilateral external auditory canal exostoses causing severe canal stenosis, with impaired cerumen clearance.",1533.81,27,30656,14728,0.010971
+budget_4000,validation,panel_team_memory,1,PMC8110398,0,2,"Moderate circumferential pericardial effusion with right atrial collapse, accompanied by multiple pulmonary nodules with adjacent ground-glass opacities; the available findings do not establish a specific cause.",3953.42,88,152282,65788,0.050858
+budget_4000,validation,panel_team_memory,1,PMC9991574,0,2,"Imaging-suspected metastatic colorectal carcinoma, cecal primary favored, presenting with acute appendiceal perforation and periappendiceal abscess.",1673.29,62,95415,37714,0.029269
+budget_4000,validation,panel_team_memory,1,PMC10165762,1,5,Vulvar ectopic breast tissue (accessory mammary tissue) in the upper left labium,720.82,19,19369,11679,0.007951
+budget_4000,validation,panel_team_memory,1,PMC9192198,1,4,Intraosseous actinomycosis of the mandible (actinomycotic osteomyelitis),3695.22,61,106249,46825,0.036567
+budget_4000,validation,panel_team_memory,1,PMC11736051,1,5,Cutaneous Mycobacterium marinum infection with Pseudomonas aeruginosa coinfection and associated necrotizing granulomatous vasculitis,1800.0,43,68881,28938,0.022825
+budget_4000,validation,panel_team_memory,1,PMC7684875,1,4,"Aggressive right apical pleural-based thoracic malignancy with T1–T2 involvement and mass effect, complicated by pneumomediastinum and left pneumothorax; histologic subtype is unspecified.",2843.66,124,184607,91123,0.066279
+budget_4000,validation,panel_team_memory,1,PMC9643053,0,1,"Disseminated blastomycosis, with suspected pulmonary and cutaneous involvement and possible vertebral involvement.",2400,82,170884,62544,0.051455
+budget_4000,validation,panel_team_memory,1,PMC4275761,1,5,"Perniosis (chilblains) of the bilateral toes, associated with recent cold exposure",1500.0,36,59772,20812,0.017466
+budget_4000,validation,panel_team_memory,1,PMC10986904,1,5,Ischemic colitis involving the descending and sigmoid colon,2300.0,42,64370,25688,0.0206
+budget_4000,validation,panel_team_memory,1,PMC3917423,0,2,Benign prostatic hyperplasia causing prostatism,963.91,63,90388,29755,0.024872
+budget_4000,validation,panel_team_memory,1,PMC3492049,0,3,Acute infectious or reactive left axillary lymphadenitis,1240.0,85,152582,45486,0.040781
+budget_4000,validation,panel_team_memory,1,PMC4131800,0,2,Culture-negative infective endocarditis of the mitral valve,2576.19,78,144095,35525,0.034606
+budget_4000,validation,panel_team_memory,1,PMC4588337,1,5,Intra-abdominal gossypiboma (retained surgical sponge) causing possible small-bowel obstruction,2723.29,50,56973,33646,0.023287
+budget_4000,validation,panel_team_memory,1,PMC3970247,0,2,"Large complex left ovarian neoplasm (cystic adnexal mass), with malignancy and histologic subtype not determined by the documented findings.",3222.32,80,128120,44216,0.037628
+budget_4000,validation,panel_team_memory,1,PMC9907762,0,2,"Multifocal primary brain neoplasm, histologic subtype unspecified",3637.77,42,48452,27729,0.019105
+budget_4000,validation,panel_team_memory,1,PMC8193131,0,1,L5 spinal epidural angiolipoma causing bilateral lumbosacral neural compression,3992.13,18,18170,14643,0.009277
+budget_4000,validation,panel_team_memory,1,PMC11433866,0,1,Sigmoid volvulus causing bowel obstruction,3337.88,94,196415,64123,0.055355
+budget_4000,validation,panel_team_memory,1,PMC10393623,0,2,Syncope from a cardiac arrhythmia,2100,81,138507,42108,0.037362
+budget_4000,validation,panel_team_memory,1,PMC9077939,1,4,Probable malignancy-associated pulmonary tumor thrombotic microangiopathy causing severe pulmonary hypertension and right ventricular failure,3733.13,48,69625,38487,0.027384
+budget_4000,validation,panel_team_memory,1,PMC11308721,1,5,Swyer-James-MacLeod syndrome with diffuse bronchiectasis and superimposed bronchopneumonia,2846.84,51,67731,31197,0.023505
+budget_4000,validation,panel_team_memory,1,PMC7368196,1,5,SLC34A3-related hereditary hypophosphatemic rickets with hypercalciuria (HHRH),2823.81,37,53631,24780,0.018811
+budget_4000,validation,panel_team_memory,1,PMC9160170,0,2,Duodenal perforation,1373.29,21,20506,13126,0.008658
+budget_4000,validation,panel_team_memory,1,PMC3074556,0,1,Occult lung cancer,2100,82,130266,43229,0.036258
+budget_4000,validation,panel_team_memory,1,PMC11084000,1,5,Acute bilateral pseudoseptic arthritis following Synvisc viscosupplementation,1169.45,32,38602,15249,0.012129
+budget_4000,validation,panel_team_memory,1,PMC5602492,1,5,"Hepatopulmonary syndrome associated with cirrhosis and portal hypertension, with documented intrapulmonary right-to-left shunting",3876.95,39,50231,27624,0.019359
+budget_4000,validation,panel_team_memory,1,PMC6854920,0,2,"Acute promyelocytic leukemia (APL), suggested by circulating abnormal promyelocytes with coarse metachromatic granules and profound thrombocytopenia with epistaxis",3418.39,87,134406,54781,0.042482
+budget_4000,validation,panel_team_memory,1,PMC7141743,1,4,"Guillain–Barré syndrome, acute motor-predominant form (possible AMAN; axonal subtype not confirmed)",2799.25,80,152662,56257,0.045886
+budget_4000,validation,panel_team_memory,1,PMC4600550,1,5,Acute eosinophilic interstitial nephritis causing acute kidney injury,3676.17,67,118702,53398,0.04027
+budget_4000,validation,panel_team_memory,1,PMC5214568,0,3,Juvenile trabecular ossifying fibroma of the right posterior maxilla,3705.91,32,33660,20850,0.014186
+budget_4000,validation,panel_team_memory,1,PMC4352498,1,5,"Alfuzosin-induced drug-induced liver injury, predominantly hepatocellular, with conjugated jaundice.",2435.66,79,160038,46177,0.042064
+budget_4000,validation,panel_team_memory,1,PMC3934531,1,4,Vulvar leiomyoma with microcystic and hyalinizing degenerative change,3819.66,71,115624,44561,0.036098
+budget_4000,validation,panel_team_memory,1,PMC8580553,0,2,Infective endocarditis with septic pulmonary emboli and infection-associated ANCA positivity,2979.38,78,142445,57039,0.045399
+budget_4000,validation,panel_team_memory,1,PMC6159250,0,2,"Biliary colic, presumed due to cholelithiasis",1500,77,117464,36357,0.032232
+budget_4000,validation,panel_team_memory,1,PMC8334329,0,2,Ventilator-associated pneumonia with sepsis,2700,81,112191,47550,0.037302
+budget_4000,validation,panel_team_memory,1,PMC9413868,1,5,"Sinonasal actinomycosis of the left middle turbinate with ipsilateral maxillary, ethmoid, and frontal sinus involvement",2055.91,20,18783,11067,0.007516
+budget_4000,validation,panel_team_memory,1,PMC10214810,1,5,External cervical resorption of both maxillary central incisors,850.0,20,21668,10519,0.007706
+budget_4000,validation,panel_team_memory,1,PMC6006004,0,2,"Mass-forming intrahepatic cholangiocarcinoma, with additional hepatic lesions.",3900.0,47,61137,28814,0.021361
+budget_4000,validation,panel_team_memory,1,PMC7981706,1,5,Immature sacrococcygeal teratoma,3688.48,44,47764,22739,0.016787

@@ -1,0 +1,43 @@
+{
+  "name": "multi-agent-test",
+  "purpose": "Final multi-agent comparison on GPT-6 Luna, one run per team arm. The baseline and panel arms reuse the three panel-test runs.",
+  "policy": "reviewed-cpt-bedside-v4",
+  "splits": {
+    "same_source_test": 50,
+    "external_test": 50
+  },
+  "modes": [
+    "budget_1000",
+    "budget_4000"
+  ],
+  "arms": {
+    "baseline": null,
+    "panel": "evaluation/harnesses/panel.py",
+    "independent_3": {
+      "agent": "independent",
+      "agents": 3
+    },
+    "independent_5": {
+      "agent": "independent",
+      "agents": 5
+    },
+    "decentralized_3": {
+      "agent": "decentralized",
+      "agents": 3
+    },
+    "decentralized_5": {
+      "agent": "decentralized",
+      "agents": 5
+    },
+    "centralized_3": {
+      "agent": "centralized",
+      "agents": 3
+    },
+    "centralized_5": {
+      "agent": "centralized",
+      "agents": 5
+    }
+  },
+  "runs": 1,
+  "held_out": true
+}

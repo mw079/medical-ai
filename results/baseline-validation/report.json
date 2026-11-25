@@ -1,0 +1,57 @@
+{
+  "name": "baseline-validation",
+  "policy": "reviewed-cpt-bedside-v4",
+  "runs": 3,
+  "arms": {
+    "baseline": {
+      "model": "gpt-6-luna",
+      "agent": "single",
+      "agents": 1,
+      "harness": null
+    }
+  },
+  "results": {
+    "budget_1000": {
+      "validation": {
+        "baseline": {
+          "runs": 3,
+          "correct_per_run": [
+            12,
+            14,
+            13
+          ],
+          "mean_accuracy": 0.325,
+          "min_accuracy": 0.3,
+          "max_accuracy": 0.35,
+          "avg_medical_cost_usd": 669.05,
+          "avg_agent_calls": 4.5,
+          "avg_agent_input_tokens": 4101.2,
+          "avg_agent_output_tokens": 1915.3,
+          "avg_agent_reasoning_tokens": 1634.2,
+          "avg_agent_cost_usd": 0.00142
+        }
+      }
+    },
+    "budget_4000": {
+      "validation": {
+        "baseline": {
+          "runs": 3,
+          "correct_per_run": [
+            22,
+            23,
+            21
+          ],
+          "mean_accuracy": 0.55,
+          "min_accuracy": 0.525,
+          "max_accuracy": 0.575,
+          "avg_medical_cost_usd": 1598.6,
+          "avg_agent_calls": 4.3,
+          "avg_agent_input_tokens": 4067.8,
+          "avg_agent_output_tokens": 1826.6,
+          "avg_agent_reasoning_tokens": 1539.9,
+          "avg_agent_cost_usd": 0.00138
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "name": "evidence-validation",
+  "purpose": "Decision run on validation: evidence agent with reconciliation, plus playbook only, plus full memory, and the sequential panel team with and without memory, against single GPT-6 Luna. The baseline reuses the existing validation runs. One run per arm first.",
+  "policy": "reviewed-cpt-bedside-v4",
+  "splits": {
+    "validation": 40
+  },
+  "modes": [
+    "budget_1000",
+    "budget_4000"
+  ],
+  "arms": {
+    "baseline": null,
+    "evidence_reconcile": {
+      "agent": "evidence_reconcile"
+    },
+    "evidence_playbook": {
+      "agent": "evidence_playbook"
+    },
+    "evidence_memory": {
+      "agent": "evidence_memory"
+    },
+    "panel_team": {
+      "agent": "panel_team",
+      "agents": 5
+    },
+    "panel_team_memory": {
+      "agent": "panel_team_memory",
+      "agents": 5
+    }
+  },
+  "runs": 1
+}

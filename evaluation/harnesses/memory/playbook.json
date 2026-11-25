@@ -1,0 +1,15 @@
+{
+  "built": "2026-11-24",
+  "model": "gpt-6-luna",
+  "curator_prompt": "These are mistakes and lessons from a diagnostic agent's attempts on 60 different patients.\nThe agent asks questions, orders tests under a budget, then commits to one diagnosis.\nWrite a playbook of at most 10 short, general rules (each at most 200 characters) that would have\nprevented the most frequent and costly mistakes. Rules must apply across diseases: do not name any\nspecific disease, syndrome, organism or gene. Order them by how often the mistake occurred.\nReturn {\"rules\": [\"...\", \"...\"]}.",
+  "source": "harnesses/memory/dev_lessons.json",
+  "rules": [
+    "Treat a diagnosis as provisional until decisive evidence is available; appearance, risk factors, and suggestive imaging rarely establish a specific cause alone.",
+    "Use only documented findings: a planned, ordered, or repeated test is not a result, and an unanswered question is not a positive finding.",
+    "Do not anchor on one symptom, prior diagnosis, or isolated test. Reconcile the whole presentation and investigate clues that do not fit your leading explanation.",
+    "When a lesion or abnormality remains uncertain, choose the test that best localizes or characterizes it; obtain tissue confirmation when appropriate before naming its cause or subtype.",
+    "Do not stop at a syndrome or complication when important findings remain unexplained; pursue the underlying cause or source.",
+    "Choose tests and questions for a specific decision they can change. Avoid repeating completed studies or spending turns on low-yield, undocumented history.",
+    "Act promptly on red flags and progressive symptoms: prioritize the targeted imaging or evaluation needed to rule out dangerous, time-sensitive causes."
+  ]
+}

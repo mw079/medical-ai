@@ -1,0 +1,21 @@
+{
+  "name": "model-baselines",
+  "purpose": "SDBench's baseline agent with a second diagnostic model at medium reasoning. Gatekeeper and judge stay GPT-6 Luna. The baseline arm reuses the GPT-6 Luna runs of panel-test.",
+  "policy": "reviewed-cpt-bedside-v4",
+  "splits": {
+    "same_source_test": 50,
+    "external_test": 50
+  },
+  "modes": [
+    "budget_1000",
+    "budget_4000"
+  ],
+  "arms": {
+    "baseline": null,
+    "terra": {
+      "model": "gpt-6.1-terra"
+    }
+  },
+  "runs": 3,
+  "held_out": true
+}

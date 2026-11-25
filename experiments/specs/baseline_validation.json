@@ -1,0 +1,16 @@
+{
+  "name": "baseline-validation",
+  "purpose": "Single GPT-6 Luna (SDBench's baseline agent) on validation at $1,000 and $4,000, 3 runs.",
+  "policy": "reviewed-cpt-bedside-v4",
+  "splits": {
+    "validation": 40
+  },
+  "modes": [
+    "budget_1000",
+    "budget_4000"
+  ],
+  "arms": {
+    "baseline": null
+  },
+  "runs": 3
+}

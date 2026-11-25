@@ -1,0 +1,311 @@
+{
+  "name": "panel-test",
+  "policy": "reviewed-cpt-bedside-v4",
+  "runs": 3,
+  "arms": {
+    "baseline": {
+      "model": "gpt-6-luna",
+      "agent": "single",
+      "agents": 1,
+      "harness": null
+    },
+    "panel": {
+      "model": "gpt-6-luna",
+      "agent": "single",
+      "agents": 1,
+      "harness": {
+        "path": "evaluation/harnesses/panel.py",
+        "sha256": "a862aba237f1b54e483e91c87186c9e7fc47a16b61da795a4a4986881aa103e3"
+      }
+    }
+  },
+  "results": {
+    "budget_1000": {
+      "same_source_test": {
+        "baseline": {
+          "runs": 3,
+          "correct_per_run": [
+            14,
+            14,
+            17
+          ],
+          "mean_accuracy": 0.3,
+          "min_accuracy": 0.28,
+          "max_accuracy": 0.34,
+          "avg_medical_cost_usd": 667.4,
+          "avg_agent_calls": 4.4,
+          "avg_agent_input_tokens": 3888.8,
+          "avg_agent_output_tokens": 1729.2,
+          "avg_agent_reasoning_tokens": 1461.0,
+          "avg_agent_cost_usd": 0.0013
+        },
+        "panel": {
+          "runs": 3,
+          "correct_per_run": [
+            15,
+            12,
+            13
+          ],
+          "mean_accuracy": 0.2667,
+          "min_accuracy": 0.24,
+          "max_accuracy": 0.3,
+          "avg_medical_cost_usd": 631.19,
+          "avg_agent_calls": 4.5,
+          "avg_agent_input_tokens": 6891.6,
+          "avg_agent_output_tokens": 2657,
+          "avg_agent_reasoning_tokens": 2147.8,
+          "avg_agent_cost_usd": 0.00217,
+          "delta_points": -3.33,
+          "p_value": 0.5386,
+          "ci95_points": [
+            -12.0,
+            4.67
+          ],
+          "cases_better": [
+            "PMC10039813",
+            "PMC3583747",
+            "PMC5820794",
+            "PMC8544292",
+            "PMC8544693",
+            "PMC9056206"
+          ],
+          "cases_worse": [
+            "PMC10618618",
+            "PMC11658845",
+            "PMC4434215",
+            "PMC6519503",
+            "PMC7253884",
+            "PMC8265096",
+            "PMC9166963",
+            "PMC9405725"
+          ]
+        }
+      },
+      "external_test": {
+        "baseline": {
+          "runs": 3,
+          "correct_per_run": [
+            22,
+            21,
+            23
+          ],
+          "mean_accuracy": 0.44,
+          "min_accuracy": 0.42,
+          "max_accuracy": 0.46,
+          "avg_medical_cost_usd": 601.51,
+          "avg_agent_calls": 4.1,
+          "avg_agent_input_tokens": 3621.0,
+          "avg_agent_output_tokens": 1538.8,
+          "avg_agent_reasoning_tokens": 1282.3,
+          "avg_agent_cost_usd": 0.00117
+        },
+        "panel": {
+          "runs": 3,
+          "correct_per_run": [
+            22,
+            24,
+            23
+          ],
+          "mean_accuracy": 0.46,
+          "min_accuracy": 0.44,
+          "max_accuracy": 0.48,
+          "avg_medical_cost_usd": 583.06,
+          "avg_agent_calls": 4.2,
+          "avg_agent_input_tokens": 6210.3,
+          "avg_agent_output_tokens": 2239.2,
+          "avg_agent_reasoning_tokens": 1741.3,
+          "avg_agent_cost_usd": 0.00188,
+          "delta_points": 2.0,
+          "p_value": 0.7455,
+          "ci95_points": [
+            -5.33,
+            10.0
+          ],
+          "cases_better": [
+            "PMC11368706",
+            "PMC11426307",
+            "PMC11456304",
+            "PMC11477508",
+            "PMC11530288",
+            "PMC11551029",
+            "PMC11570442",
+            "PMC11581448",
+            "PMC11601975"
+          ],
+          "cases_worse": [
+            "PMC11415134",
+            "PMC11416202",
+            "PMC11445712",
+            "PMC11480928",
+            "PMC11512739",
+            "PMC11596470",
+            "PMC11628383",
+            "PMC11640520",
+            "PMC11647062"
+          ]
+        }
+      },
+      "pooled": {
+        "panel": {
+          "delta_points": -0.67,
+          "p_value": 0.909,
+          "ci95_points": [
+            -6.33,
+            4.67
+          ]
+        }
+      }
+    },
+    "budget_4000": {
+      "same_source_test": {
+        "baseline": {
+          "runs": 3,
+          "correct_per_run": [
+            20,
+            23,
+            16
+          ],
+          "mean_accuracy": 0.3933,
+          "min_accuracy": 0.32,
+          "max_accuracy": 0.46,
+          "avg_medical_cost_usd": 1634.33,
+          "avg_agent_calls": 4.6,
+          "avg_agent_input_tokens": 4409.4,
+          "avg_agent_output_tokens": 2006.5,
+          "avg_agent_reasoning_tokens": 1709.6,
+          "avg_agent_cost_usd": 0.00151
+        },
+        "panel": {
+          "runs": 3,
+          "correct_per_run": [
+            26,
+            21,
+            18
+          ],
+          "mean_accuracy": 0.4333,
+          "min_accuracy": 0.36,
+          "max_accuracy": 0.52,
+          "avg_medical_cost_usd": 1632.49,
+          "avg_agent_calls": 5.0,
+          "avg_agent_input_tokens": 8451.0,
+          "avg_agent_output_tokens": 2964.2,
+          "avg_agent_reasoning_tokens": 2417.3,
+          "avg_agent_cost_usd": 0.00251,
+          "delta_points": 4.0,
+          "p_value": 0.4206,
+          "ci95_points": [
+            -4.0,
+            12.0
+          ],
+          "cases_better": [
+            "PMC10039813",
+            "PMC11202767",
+            "PMC3350282",
+            "PMC4470191",
+            "PMC5134285",
+            "PMC5735624",
+            "PMC5820794",
+            "PMC5925152",
+            "PMC6726168",
+            "PMC7253884",
+            "PMC8544292",
+            "PMC8544693",
+            "PMC9405725",
+            "PMC9566503"
+          ],
+          "cases_worse": [
+            "PMC10618618",
+            "PMC2958974",
+            "PMC3574658",
+            "PMC3583747",
+            "PMC4434215",
+            "PMC8437670",
+            "PMC8752925",
+            "PMC8785026",
+            "PMC9056206"
+          ]
+        }
+      },
+      "external_test": {
+        "baseline": {
+          "runs": 3,
+          "correct_per_run": [
+            27,
+            27,
+            26
+          ],
+          "mean_accuracy": 0.5333,
+          "min_accuracy": 0.52,
+          "max_accuracy": 0.54,
+          "avg_medical_cost_usd": 1327.6,
+          "avg_agent_calls": 3.9,
+          "avg_agent_input_tokens": 3537.2,
+          "avg_agent_output_tokens": 1460.3,
+          "avg_agent_reasoning_tokens": 1188.1,
+          "avg_agent_cost_usd": 0.00113
+        },
+        "panel": {
+          "runs": 3,
+          "correct_per_run": [
+            31,
+            30,
+            32
+          ],
+          "mean_accuracy": 0.62,
+          "min_accuracy": 0.6,
+          "max_accuracy": 0.64,
+          "avg_medical_cost_usd": 1337.65,
+          "avg_agent_calls": 4.2,
+          "avg_agent_input_tokens": 6586.6,
+          "avg_agent_output_tokens": 2213.7,
+          "avg_agent_reasoning_tokens": 1694.9,
+          "avg_agent_cost_usd": 0.00191,
+          "delta_points": 8.67,
+          "p_value": 0.0582,
+          "ci95_points": [
+            0.67,
+            16.67
+          ],
+          "cases_better": [
+            "PMC11366406",
+            "PMC11385072",
+            "PMC11401631",
+            "PMC11415134",
+            "PMC11415135",
+            "PMC11456304",
+            "PMC11470198",
+            "PMC11527655",
+            "PMC11530288",
+            "PMC11532894",
+            "PMC11539359",
+            "PMC11550582",
+            "PMC11551029",
+            "PMC11581448",
+            "PMC11587022",
+            "PMC11593470",
+            "PMC11595676"
+          ],
+          "cases_worse": [
+            "PMC11416202",
+            "PMC11446498",
+            "PMC11446622",
+            "PMC11570442",
+            "PMC11596470",
+            "PMC11606399",
+            "PMC11628383"
+          ]
+        }
+      },
+      "pooled": {
+        "panel": {
+          "delta_points": 6.33,
+          "p_value": 0.0416,
+          "ci95_points": [
+            0.67,
+            12.0
+          ]
+        }
+      }
+    }
+  }
+}
